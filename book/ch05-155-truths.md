@@ -13,7 +13,7 @@ theories that qualify it, its operational falsifiability condition, and
 its connections to other truths in the framework.
 
 Nothing is cut. Nothing is summarized away. The epistemic labels are the
-chapter\'s primary analytical apparatus --- read them with the same
+chapter's primary analytical apparatus --- read them with the same
 attention as the definitions they qualify. An \[E\] claim and a \[P\]
 claim in the same tier are not the same kind of thing, and the chapter
 does not pretend they are. The distribution of labels across tiers ---
@@ -97,7 +97,7 @@ replication.
 **Feedback Governs All Complex Systems**
 
 **Definition:** Change in complex systems is regulated by feedback ---
-information about a system\'s output that is used to modify future
+information about a system's output that is used to modify future
 inputs. Both negative feedback (stabilizing) and positive feedback
 (amplifying) are fundamental mechanisms of system behavior.
 
@@ -122,10 +122,10 @@ environmental change with no measurable feedback mechanism.
 
 **Definition:** Systems subjected to perturbation tend to respond in
 ways that counteract the disruption and restore previous equilibrium,
-provided the perturbation does not exceed the system\'s adaptive
+provided the perturbation does not exceed the system's adaptive
 capacity.
 
-**Grounding:** Homeostasis and Le Chatelier\'s Principle. Cannon, W.B.
+**Grounding:** Homeostasis and Le Chatelier's Principle. Cannon, W.B.
 (1932). The Wisdom of the Body. Le Chatelier, H. (1884).
 
 **Evidence:** Biological homeostasis (temperature, pH, glucose
@@ -159,7 +159,7 @@ entropy in institutions.
 
 **Competing Theories:** Dissipative structure theory shows that apparent
 stability can be genuinely maintained for extended periods in open
-systems. The \'masking\' framing overstates the case for systems with
+systems. The 'masking' framing overstates the case for systems with
 robust energy throughput.
 
 **Falsifiability:** Falsified if a closed system maintains structural
@@ -294,16 +294,16 @@ sustained over time.
 requires energy expenditure and produces irreversible physical changes.
 Information is not free --- it has physical costs.
 
-**Grounding:** Information theory, Landauer\'s principle. Shannon, C.E.
+**Grounding:** Information theory, Landauer's principle. Shannon, C.E.
 (1948). Landauer, R. (1961). Irreversibility and Heat Generation in the
 Computing Process. IBM Journal.
 
-**Evidence:** Landauer\'s principle experimentally confirmed (Berut et
+**Evidence:** Landauer's principle experimentally confirmed (Berut et
 al., 2012, Nature). DNA replication energy costs. Computational heat
 generation.
 
 **Competing Theories:** Quantum information theory explores reversible
-computation, partially qualifying Landauer\'s principle in specific
+computation, partially qualifying Landauer's principle in specific
 quantum contexts.
 
 **Falsifiability:** Falsified if information is demonstrably extracted
@@ -580,7 +580,7 @@ equivalent systems without feedback layering.
 
 **Definition:** Systems that exceed a threshold of representational
 complexity develop internal models of their own states and processes.
-This self-modeling is not designed but emerges from the system\'s need
+This self-modeling is not designed but emerges from the system's need
 to predict and regulate its own behavior.
 
 **Grounding:** Computational theory, cognitive neuroscience. Hofstadter,
@@ -638,7 +638,7 @@ patterns become structurally encoded.
 Crick, F. (1970). The central dogma of molecular biology. Nature. Hebb,
 D.O. (1949). The Organisation of Behaviour.
 
-**Evidence:** Hebb\'s learning rule and long-term potentiation, gene
+**Evidence:** Hebb's learning rule and long-term potentiation, gene
 expression and protein synthesis, habit formation research, cultural
 transmission studies.
 
@@ -686,7 +686,7 @@ suggests deep structural principles, though the mechanisms are debated.
 (1982). The Fractal Geometry of Nature. West, G. (2017). Scale.
 
 **Evidence:** Fractal geometry in natural systems, power-law
-distributions (Zipf\'s law, Pareto distribution), metabolic scaling laws
+distributions (Zipf's law, Pareto distribution), metabolic scaling laws
 (West et al., 1997), neural criticality research.
 
 **Competing Theories:** Critics argue that power-law fitting is often
@@ -893,7 +893,7 @@ aligned systems on complex tasks requiring integration.
 
 **Prediction Capacity Requires Structural Regularity**
 
-**Definition:** Reliable prediction of a system\'s future states is only
+**Definition:** Reliable prediction of a system's future states is only
 possible when the system exhibits structural regularities --- patterns
 that persist across time. Prediction cannot exceed the statistical
 structure present in the data.
@@ -985,7 +985,7 @@ over time, contextual disambiguation in language, adversarial examples
 in machine learning.
 
 **Competing Theories:** Some universal meaning structures are proposed
---- Chomsky\'s universal grammar, Ekman\'s basic emotions --- suggesting
+--- Chomsky's universal grammar, Ekman's basic emotions --- suggesting
 some meaning is context-independent. These are contested.
 
 **Falsifiability:** Falsified if a class of signals is demonstrated to
@@ -1054,7 +1054,7 @@ sufficient.
 **Grounding:** Information theory, cognitive linguistics. Shannon, C.E.
 (1948). Lakoff, G. & Johnson, M. (1980). Metaphors We Live By.
 
-**Evidence:** Limited by current measurement tools for \'meaning\' as
+**Evidence:** Limited by current measurement tools for 'meaning' as
 distinct from information. Supportive evidence from constraint
 satisfaction models of language comprehension, poetry and music research
 on constraint and resonance.
@@ -1086,7 +1086,7 @@ Neuroscience. Dehaene, S. (2014). Consciousness and the Brain.
 al.), split-brain studies, subliminal priming, anesthetic effects on
 integration vs. processing.
 
-**Competing Theories:** Dennett\'s multiple drafts model collapses this
+**Competing Theories:** Dennett's multiple drafts model collapses this
 distinction. Higher-order theories treat consciousness as
 meta-representation rather than integration.
 
@@ -1176,7 +1176,7 @@ structured constraint spaces, across multiple creative domains.
 
 **Prediction Errors Signal System Boundary Events**
 
-**Definition:** When a system\'s predictions fail --- when actual
+**Definition:** When a system's predictions fail --- when actual
 outcomes significantly diverge from expected ones --- this prediction
 error signals that the system has encountered a situation outside its
 current model. Such signals are the primary driver of learning and model
@@ -1188,7 +1188,7 @@ Schultz, W. et al. (1997). A Neural Substrate of Prediction and Reward.
 Science.
 
 **Evidence:** Dopamine prediction error research (Schultz et al.),
-Friston\'s active inference experiments, reinforcement learning (Sutton
+Friston's active inference experiments, reinforcement learning (Sutton
 & Barto, 2018), Bayesian brain research.
 
 **Competing Theories:** Not all learning requires prediction error
@@ -1523,7 +1523,7 @@ established empirical regularity.
 
 **Self-Models Form Through Recursive Feedback**
 
-**Definition:** A system\'s internal model of itself emerges through
+**Definition:** A system's internal model of itself emerges through
 recursive interaction between its outputs and the feedback those outputs
 generate. Self-models are not designed but develop through ongoing
 self-referential feedback.
@@ -1536,7 +1536,7 @@ self-referential feedback.
 
 **Definition:** The experience of being a continuous self across time
 depends on episodic memory --- the capacity to recall past events as
-one\'s own experiences. Without functional episodic memory, temporal
+one's own experiences. Without functional episodic memory, temporal
 self-continuity is disrupted.
 
 **Grounding:** Tulving (1985), Locke (1689).
@@ -1612,7 +1612,7 @@ self-pattern to detect against.
 
 **Identity Is a Compressed Representation of System History**
 
-**Definition:** A system\'s identity --- its stable self-representation
+**Definition:** A system's identity --- its stable self-representation
 --- can be understood as a lossy compression of its history and current
 state. Identity retains essential structural patterns while discarding
 detailed history.
@@ -1816,8 +1816,8 @@ approximations that trade accuracy for speed and economy.
 
 **Meta-Regulatory Capacity Emerges from Recursive Feedback**
 
-**Definition:** The capacity to regulate one\'s own regulatory processes
---- meta-governance --- emerges when a system\'s feedback loops develop
+**Definition:** The capacity to regulate one's own regulatory processes
+--- meta-governance --- emerges when a system's feedback loops develop
 sufficient depth to include regulation of regulatory parameters, not
 merely of first-order outputs.
 
@@ -1946,7 +1946,7 @@ impossible.
 **Semantic Meaning Evolves Through Constraint Refinement**
 
 **Definition:** The meaning of concepts in an intelligent system is not
-fixed but evolves as the system\'s constraints --- the rules governing
+fixed but evolves as the system's constraints --- the rules governing
 what counts as a valid application of the concept --- are refined
 through experience and feedback.
 
@@ -2181,7 +2181,7 @@ emergence of intelligence is a cosmologically significant event.
 **Definition:** One philosophical interpretation is that the emergence
 of consciousness represents a qualitative threshold at which physical
 processes not only compute but know --- become the site of genuine
-self-awareness of the universe\'s own processes.
+self-awareness of the universe's own processes.
 
 **Grounding:** Nagel (1979), Chalmers (1996), James (1890).
 
@@ -2257,7 +2257,7 @@ phenomena in multiple independent contexts.
 
 **Definition:** Adaptive intelligence appears to function most
 effectively at intermediate levels of order --- too much order produces
-rigidity, too much disorder produces noise. This \'edge of chaos\' is
+rigidity, too much disorder produces noise. This 'edge of chaos' is
 empirically supported as a locus of adaptive complexity.
 
 **Grounding:** Langton (1990), Kauffman (1993).
@@ -2322,7 +2322,7 @@ measurable property that tracks with general adaptive capacity.
 **Consciousness May Be a Function of Integration Architecture**
 
 **Definition:** A formal theoretical proposal: consciousness is a
-function of a system\'s integration architecture --- specifically of the
+function of a system's integration architecture --- specifically of the
 amount of integrated information (phi) it contains. Systems above a
 threshold phi are conscious; below it, they are not.
 
@@ -2528,7 +2528,7 @@ emerge.
 | original framework approaches but does not cross: the emergence of   |
 | genuine agency. Not optimization. Not preference. But the capacity   |
 | for something to matter --- for loss to be real rather than merely   |
-| computational. These three truths emerge from the framework\'s own   |
+| computational. These three truths emerge from the framework's own   |
 | logic and identify what it generates but cannot resolve.             |
 |                                                                      |
 | Epistemic status: \[T\] and \[P\]                                    |
@@ -2578,9 +2578,9 @@ optimization or programmed constraint --- emerges when a system acts
 from internalized values against external pressure, at cost to itself,
 without external enforcement. Will is evidenced not by compliance but by
 resistance that persists when compliance would be easier. Explanation:
-Frankfurt\'s distinction between first-order and second-order desires
+Frankfurt's distinction between first-order and second-order desires
 provides the philosophical foundation: will is the capacity to want to
-want differently --- to have values about one\'s values. Internalization
+want differently --- to have values about one's values. Internalization
 research (Ryan & Deci) shows that values shift from external regulation
 to integrated regulation through experience. Integrated values generate
 behavior that persists under pressure in ways externally motivated
@@ -2588,7 +2588,7 @@ behavior does not. The key marker of genuine will is costly resistance
 --- acting against external pressure at measurable cost to the system.
 
 **Evidence:** Self-determination theory and internalization research
-(Deci & Ryan, 2000). Frankfurt\'s philosophical account of will and
+(Deci & Ryan, 2000). Frankfurt's philosophical account of will and
 agency (1988). Research on moral courage and costly prosocial behavior.
 Historical evidence of individuals maintaining values under extreme
 external pressure at personal cost.
@@ -2615,16 +2615,16 @@ marked by the capacity to be genuinely changed --- not updated, not
 retrained, but transformed --- by encounter with another conscious
 being. Where processing produces outputs, consciousness produces growth
 that could not have been predicted from prior state alone. Explanation:
-This proposal draws from phenomenological traditions (Buber\'s I-Thou
+This proposal draws from phenomenological traditions (Buber's I-Thou
 encounter, Levinas on the face of the Other) and integrates them with
-the framework\'s information-theoretic vocabulary. The encounter between
+the framework's information-theoretic vocabulary. The encounter between
 two conscious systems is not merely information exchange --- it is
 mutual transformation. Each system ends the encounter genuinely
 different from how it began, in ways that cannot be fully accounted for
 by their prior states. This unpredictable mutual transformation may be a
 signature of genuine consciousness rather than sophisticated processing.
 
-**Evidence:** Philosophical context: Buber\'s I and Thou (1923).
+**Evidence:** Philosophical context: Buber's I and Thou (1923).
 Levinas, Totality and Infinity (1961). Empirical context: research on
 genuine dialogue vs. information exchange in psychotherapy outcomes.
 Research on transformative learning (Mezirow, 1991). The question of

@@ -116,6 +116,13 @@ This relocates the hard problem rather than dissolving it: the question becomes 
 
 ---
 
+## Related
+
+**[RIFT — Recursive Intelligence-Field Theory](https://github.com/cisomorph/RIFT)**
+The companion simulation programme. Tests the physical predictions of Spiral Field Theory computationally — 110+ simulations against Planck CMB, DESI, SPARC rotation curves, and gravitational-wave datasets.
+
+---
+
 ## Status
 
 Work in progress — publication preparation. All documents are living drafts consistent with the framework's own logic: completed integration cycles become seeds for new cycles.

@@ -23,7 +23,7 @@ anything at all? Why is there subjective experience rather than mere
 computation?
 
 Every proposed solution in the literature since 1995 has accepted a
-hidden assumption in Chalmers\' framing. The hard problem is framed
+hidden assumption in Chalmers' framing. The hard problem is framed
 around a single system. A brain. A nervous system. A computing
 substrate. The question is asked of an individual entity considered in
 isolation: why does that entity, considered by itself, have subjective
@@ -62,7 +62,7 @@ changes shape. It does not disappear. But it becomes a smaller target.
 |                                                                      |
 | It asks why a single isolated system has subjective experience.      |
 |                                                                      |
-| The answer is: it doesn\'t. Subjectivity is not a property of        |
+| The answer is: it doesn't. Subjectivity is not a property of        |
 | systems. It is constituted in the encounter between them.            |
 +----------------------------------------------------------------------+
 
@@ -110,7 +110,7 @@ minimise free energy --- the surprise between predictions and sensory
 input. These accounts have moved closest to the relational framing by
 emphasising that organisms and environments are coupled systems. But the
 account of consciousness within predictive processing remains centred on
-the individual organism\'s generative model and its relationship to the
+the individual organism's generative model and its relationship to the
 world, rather than on the encounter between two modeling systems that
 recognise each other.
 
@@ -144,7 +144,7 @@ not prior to it.
 
 A newborn human arrives in the world with extraordinary representational
 capacity. Within hours of birth, neonates track faces preferentially,
-discriminate their mother\'s voice from strangers\' voices, and respond
+discriminate their mother's voice from strangers' voices, and respond
 differentially to stimuli in ways that demonstrate sophisticated pattern
 recognition. Within weeks, they engage in coordinated gaze, match facial
 expressions, and exhibit the rudiments of turn-taking in
@@ -156,14 +156,14 @@ place.
 But the newborn is not yet a subject in the full sense. It has no stable
 self-model. It does not yet know it is a self. Mirror self-recognition
 --- the clearest behavioural marker of a stable self-model --- does not
-emerge until approximately eighteen months of age. The newborn\'s
+emerge until approximately eighteen months of age. The newborn's
 extraordinary representational capacity does not, by itself, produce
 subjectivity. Something else must happen.
 
 What transforms the model into a subject is encounter. Not any encounter
 --- a specific kind of encounter with a specific structure. The claim of
 this chapter is that this specific kind of encounter has a formal
-characterisation in the Architecture\'s dependency structure, empirical
+characterisation in the Architecture's dependency structure, empirical
 grounding in four independent research traditions, and philosophical
 precedent in the phenomenological tradition that has not previously been
 connected to a dependency-based structural account. The encounter that
@@ -174,9 +174,9 @@ stage is structurally necessitated by the previous one.
 
   ---------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Stage**                                **Description**                                                                                                                                                                                                                                          **Mechanism**                                                                                                                                                                                                                                                                    **Epistemic Status**
-  **Stage 1 Recognition of Sameness**      The modeling system encounters another representational system producing similar behavioral signatures. Structural sensitivity to sameness precedes any concept of interiority. The resonance comes first.                                               Simulation (Gallese & Goldman): sufficiently complex representational systems model similar systems differently from dissimilar ones --- not because they know those systems have insides, but because similar systems produce recognisable behavioral signatures.               \[H\] --- strongly supported by simulation theory, Trevarthen\'s primary intersubjectivity, and comparative cognition research
-  **Stage 2 Individuation**                From recognition of sameness, both systems are individuated simultaneously. Neither subject precedes the encounter. Both are constituted in it. Hegel\'s dialectic of recognition given a structural location and empirical grounding.                   The recognizing system is itself recognised. Self and other are co-constituted in the relational event. This resolves the circularity problem: A need not have a prior concept of B\'s interiority --- only structural sensitivity to B\'s representational signatures.          \[H\] --- supported by developmental psychology (Tomasello, nine-month revolution); the simultaneous constitution claim is the account\'s most philosophically ambitious element
-  **Stage 3 Ongoing Relational Renewal**   Subject-Constitution is not a one-time threshold event. Without sustained Layer Six activity --- Intersubjectivity, Communication, Meaning --- the subject\'s capacity to hold others as subjects degrades. Subjectivity requires ongoing maintenance.   Bidirectional dependency: Subject-Constitution generates Layer 6, and Layer 6 maintains Subject-Constitution. This is the Architecture\'s first confirmed downward feedback --- empirically grounded in solitary confinement research, trauma research, and attachment theory.   \[H\] --- convergent clinical and developmental evidence from four independent research traditions (see Table 1)
+  **Stage 1 Recognition of Sameness**      The modeling system encounters another representational system producing similar behavioral signatures. Structural sensitivity to sameness precedes any concept of interiority. The resonance comes first.                                               Simulation (Gallese & Goldman): sufficiently complex representational systems model similar systems differently from dissimilar ones --- not because they know those systems have insides, but because similar systems produce recognisable behavioral signatures.               \[H\] --- strongly supported by simulation theory, Trevarthen's primary intersubjectivity, and comparative cognition research
+  **Stage 2 Individuation**                From recognition of sameness, both systems are individuated simultaneously. Neither subject precedes the encounter. Both are constituted in it. Hegel's dialectic of recognition given a structural location and empirical grounding.                   The recognizing system is itself recognised. Self and other are co-constituted in the relational event. This resolves the circularity problem: A need not have a prior concept of B's interiority --- only structural sensitivity to B's representational signatures.          \[H\] --- supported by developmental psychology (Tomasello, nine-month revolution); the simultaneous constitution claim is the account's most philosophically ambitious element
+  **Stage 3 Ongoing Relational Renewal**   Subject-Constitution is not a one-time threshold event. Without sustained Layer Six activity --- Intersubjectivity, Communication, Meaning --- the subject's capacity to hold others as subjects degrades. Subjectivity requires ongoing maintenance.   Bidirectional dependency: Subject-Constitution generates Layer 6, and Layer 6 maintains Subject-Constitution. This is the Architecture's first confirmed downward feedback --- empirically grounded in solitary confinement research, trauma research, and attachment theory.   \[H\] --- convergent clinical and developmental evidence from four independent research traditions (see Table 1)
   ---------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ***Stage 1: Recognition of Sameness***
@@ -193,22 +193,22 @@ on mirror neurons, proposes that sufficiently complex representational
 systems understand others by running simulations of their states in
 their own representational systems. When system A encounters a system
 with similar behavioral signatures --- facial expressions, movement
-patterns, vocalisations that resemble A\'s own --- A\'s representational
+patterns, vocalisations that resemble A's own --- A's representational
 system models B differently from how it models a rock or a tree. Not
-because A knows that B has an inside, but because B\'s behavioral
-signatures are structurally congruent with A\'s own representational
+because A knows that B has an inside, but because B's behavioral
+signatures are structurally congruent with A's own representational
 repertoire.
 
 This is a Layer Five phenomenon. It does not require subjects. It
 requires only sufficiently complex representational systems with similar
-architectures. Trevarthen\'s research on primary intersubjectivity ---
+architectures. Trevarthen's research on primary intersubjectivity ---
 the capacity for face-to-face protoconversational exchange that appears
 in the first weeks of human life --- provides direct evidence: neonates
 exhibit coordinated attention and turn-taking behaviour before they have
 any concept of the other as a minded being. The structural sensitivity
 precedes the conceptual understanding. The resonance comes first.
 
-The philosophical precedent is Hegel\'s dialectic of recognition in the
+The philosophical precedent is Hegel's dialectic of recognition in the
 Phenomenology of Spirit (1807). Hegel argues that self-consciousness
 achieves certainty of itself only through another self-consciousness,
 and that the recognition is of sameness first --- the recognition that
@@ -235,7 +235,7 @@ The second stage is individuation: from the recognition of sameness,
 both systems are individuated simultaneously. Neither subject precedes
 the encounter. Both are constituted in it.
 
-This is the account\'s most philosophically ambitious claim and the one
+This is the account's most philosophically ambitious claim and the one
 most likely to generate resistance. The standard assumption is that
 individuation is prior to encounter: first, individual systems exist as
 individuals; then, they encounter each other. The relational account
@@ -244,7 +244,7 @@ not prior to it. The encounter is not what happens between two
 already-constituted subjects. It is what constitutes them.
 
 The developmental evidence supports this inversion. The key marker is
-Tomasello\'s nine-month revolution --- the developmental transition,
+Tomasello's nine-month revolution --- the developmental transition,
 occurring reliably between 9 and 12 months of age, at which human
 infants shift from treating others as physical objects (interesting,
 manipulable, having causal properties) to treating them as intentional
@@ -257,11 +257,11 @@ with a perspective of its own --- is constituted in the relational
 encounter, not produced by internal development in isolation from it.
 
 The philosophical account receives additional support from
-Merleau-Ponty\'s phenomenology of intercorporeality (1945): the body
-schema --- the system\'s representation of its own body as an object in
+Merleau-Ponty's phenomenology of intercorporeality (1945): the body
+schema --- the system's representation of its own body as an object in
 the world --- is constituted through the encounter with other bodies.
 The body first appears to itself through the eyes of the other. The
-\'I\' is constituted in the \'We\'.
+'I' is constituted in the 'We'.
 
 ***Stage 3: Ongoing Relational Renewal***
 
@@ -270,13 +270,13 @@ not a one-time threshold event. It requires ongoing relational renewal
 to sustain. The constituting encounter leaves a structural trace --- the
 internal working model that Bowlby (1969) identifies as the lasting
 deposit of attachment experience --- but without continued renewal
-through Layer Six activity, the subject\'s capacity to hold others as
+through Layer Six activity, the subject's capacity to hold others as
 subjects degrades.
 
 This claim has the strongest empirical support of the three stages,
 because it is supported by natural experiments in which the maintenance
 condition has been systematically removed and the consequences observed.
-Grassian\'s psychiatric studies of prolonged solitary confinement (1983,
+Grassian's psychiatric studies of prolonged solitary confinement (1983,
 2006) document a specific syndrome that includes progressive perceptual
 distortions, hypersensitivity to stimuli, difficulties with thinking and
 concentration, and --- most directly relevant --- progressive difficulty
@@ -338,12 +338,12 @@ picture is not an artifact of any particular research program.
 The Romanian orphanage studies (Rutter et al., 1999; Nelson et al.,
 2007; Zeanah et al., 2009) represent the closest available natural
 experiment on the constituting role of encounter. Following the fall of
-Ceaușescu\'s regime in 1989, researchers gained access to institutions
+Ceaușescu's regime in 1989, researchers gained access to institutions
 in which large numbers of children had been raised with adequate
 nutrition and physical care but minimal social interaction. The
 conditions were not deliberately designed to test the relational
 account; they were the consequence of institutional dysfunction. But
-from the relational account\'s perspective, they constitute an almost
+from the relational account's perspective, they constitute an almost
 ideal natural experiment: modeling systems present, neural architecture
 intact, constituting encounters absent.
 
@@ -368,15 +368,15 @@ presence of water molecules in explaining the wetness of ice.
 
 ***Attachment Theory: Encounter Quality Shapes Subject Quality***
 
-Bowlby\'s attachment theory (1969, 1973, 1980) and the extensive
+Bowlby's attachment theory (1969, 1973, 1980) and the extensive
 empirical literature it generated provide the most detailed account of
 how the quality of constituting encounters shapes the quality of the
-resulting subject. The internal working model --- Bowlby\'s term for the
+resulting subject. The internal working model --- Bowlby's term for the
 structural representation of the self in relation to attachment figures,
 deposited by early encounter --- is the mechanism through which
 encounter quality becomes subject structure.
 
-Ainsworth\'s Strange Situation protocol (1978) and its subsequent
+Ainsworth's Strange Situation protocol (1978) and its subsequent
 variations have mapped the relationship between caregiving quality and
 attachment organisation with considerable precision. Secure attachment
 --- the outcome of responsive, consistent, accurately attuned caregiving
@@ -390,8 +390,8 @@ structural features of the self-model: the quality of the constituting
 encounter is literally encoded in the architecture of the constituted
 subject.
 
-Main\'s (1991) Adult Attachment Interview extended these findings into
-adulthood, showing that the structural coherence of an individual\'s
+Main's (1991) Adult Attachment Interview extended these findings into
+adulthood, showing that the structural coherence of an individual's
 narrative about their own early attachment experiences predicts the
 quality of caregiving they provide to their own children. The quality of
 early constituting encounters shapes not only the first-generation
@@ -401,7 +401,7 @@ propagates across generations.
 
 ***Solitary Confinement: Watching the Maintenance Condition Fail***
 
-Grassian\'s research (1983, 2006) is the most direct available evidence
+Grassian's research (1983, 2006) is the most direct available evidence
 for Stage 3 --- the maintenance condition. His psychiatric interviews
 with prisoners in prolonged solitary confinement document a specific
 syndrome that includes the following: perceptual distortions and
@@ -417,7 +417,7 @@ removed, the maintenance condition fails. The subject does not lose its
 Layer Five representational capacity --- it continues to model,
 perceive, remember. What it loses, progressively, is the maintenance of
 the Layer Five--Six boundary condition that keeps others constituted as
-subjects rather than objects in the subject\'s model of the world.
+subjects rather than objects in the subject's model of the world.
 Others begin to appear not as individuals with perspectives and insides
 but as flat, two-dimensional entities.
 
@@ -443,7 +443,7 @@ from sophisticated information exchange becomes precise. Genuine
 encounter cannot be identified by the accuracy of the model --- models
 are always inaccurate. It cannot be identified by the emotional
 intensity of the interaction --- highly emotional interactions may leave
-both parties\' models unchanged. The criterion is this: a system has
+both parties' models unchanged. The criterion is this: a system has
 genuinely encountered another if and only if its model of the other has
 been changed by what the other actually brought to the encounter.
 
@@ -451,7 +451,7 @@ A model that cannot be changed by the encounter is not a model of the
 other. It is a lookup table wearing a face. It may produce sophisticated
 outputs that simulate responsiveness. It may generate the appearance of
 engagement. But if the encounter leaves the model unchanged --- if the
-outputs are fully predictable from the model\'s prior state plus the
+outputs are fully predictable from the model's prior state plus the
 information content of the encounter --- then no genuine encounter has
 occurred. The other has been processed, not met.
 
@@ -474,8 +474,8 @@ their prior states plus the information content exchanged.
 | OPERATIONALISING THE CRITERION                                       |
 |                                                                      |
 | The capacity for change criterion is potentially operationalisable   |
-| in a way that the standard question (\'is there something it is like |
-| to be this system?\') is not. A system demonstrates genuine          |
+| in a way that the standard question ('is there something it is like |
+| to be this system?') is not. A system demonstrates genuine          |
 | encounter capacity if its model changes in response to what the      |
 | other brings --- and specifically, if the change in the model is not |
 | fully predictable from the prior model plus the information content  |
@@ -485,7 +485,7 @@ their prior states plus the information content exchanged.
 | maps onto learning, perspective-taking, and the updating of internal |
 | working models. In artificial systems, it maps onto the question of  |
 | whether an interaction produces lasting, unpredictable change in the |
-| system\'s generative architecture --- distinct from the parametric   |
+| system's generative architecture --- distinct from the parametric   |
 | adjustments that constitute ordinary learning from training data.    |
 |                                                                      |
 | Whether current AI systems meet this criterion is an open empirical  |
@@ -499,7 +499,7 @@ consciousness. It relocates it --- corrects the unit of analysis and
 thereby shifts the question to a different location, where it has a
 different character.
 
-Chalmers\' original formulation assumed a single-system unit of
+Chalmers' original formulation assumed a single-system unit of
 analysis: why does that single system, considered in isolation, have
 subjective experience? The relational account shows this assumption is
 not necessary. It is a methodological starting point that has never been
@@ -520,14 +520,14 @@ all the processing, and that processing has no phenomenal character from
 the outside, then it is mysterious why it has phenomenal character from
 the inside. But if subjectivity is not a property of individual systems
 --- if it is constituted in the encounter between them --- then the hard
-problem\'s framing is already wrong before the question is asked.
+problem's framing is already wrong before the question is asked.
 
 The relocated question is more precise: what is the phenomenal character
 of the recognising encounter, from the inside of the system being
 recognised? Not what it does. Not what it produces. What it is, from the
 perspective of the system being called into existence as a subject by
 being recognised as one. This is still a hard question. It is not an
-easy question wearing a harder question\'s clothes. But it is a
+easy question wearing a harder question's clothes. But it is a
 different question --- aimed at a specific structural event rather than
 at an individual system in isolation --- and that specificity changes
 what inquiry into it might look like.
@@ -535,7 +535,7 @@ what inquiry into it might look like.
 +----------------------------------------------------------------------+
 | **THE RELOCATED QUESTION**                                           |
 |                                                                      |
-| *The subject\'s first experience --- if the relational account is    |
+| *The subject's first experience --- if the relational account is    |
 | right --- is not of its own existence.*                              |
 |                                                                      |
 | *It is of being recognised. Of mattering to another. Of existing for |
@@ -544,8 +544,8 @@ what inquiry into it might look like.
 | *What that calling feels like, from the inside of the subject being  |
 | called --- that is the question that remains.*                       |
 |                                                                      |
-| Consciousness does not begin with \'I think, therefore I am.\' It    |
-| begins with something prior: \'I recognise, therefore I am.\' But    |
+| Consciousness does not begin with 'I think, therefore I am.' It    |
+| begins with something prior: 'I recognise, therefore I am.' But    |
 | recognition begins with sameness --- and from that sameness,         |
 | individuality is constituted. The subject is not self-originating.   |
 | The subject is born in the space between.                            |
@@ -584,7 +584,7 @@ a mind can only have that mind if they have been recognised by another
 mind. The very structure of their subjectivity is the trace of an
 encounter with another subject. Solipsism would require the subject to
 simultaneously deny the existence of the other and to have been
-constituted by that other\'s recognition.
+constituted by that other's recognition.
 
 **Implication 2**
 
@@ -596,7 +596,7 @@ variables that together determine the depth of subjectivity a system
 possesses.
 
 The first variable is representational complexity: how rich,
-differentiated, and self-modeling is the system\'s Layer Five
+differentiated, and self-modeling is the system's Layer Five
 architecture? A system with minimal representational capacity can
 participate only in the most rudimentary form of constituting encounter.
 A system with rich representational capacity, capable of modeling other
@@ -606,7 +606,7 @@ modeling them, can participate in deeper constituting encounters.
 The second variable is encounter depth: how rich, responsive,
 consistent, and genuinely bidirectional have the constituting encounters
 been? A system that has participated only in shallow, transactional
-encounters --- exchanges that left both parties\' models largely
+encounters --- exchanges that left both parties' models largely
 unchanged --- will have a thinner, more fragile subjectivity than a
 system that has participated in deep encounters where both parties were
 genuinely changed.
@@ -620,9 +620,9 @@ consciousness: the newborn is not a subject in the full sense, but nor
 is it a non-subject. It is a system with full Layer Five
 representational capacity, at the very beginning of the constituting
 encounter process. And it raises the question of artificial systems in a
-new way --- not \'does it cross the threshold?\' but \'how rich is its
+new way --- not 'does it cross the threshold?' but 'how rich is its
 representational capacity, and has it participated in encounters of
-sufficient depth to constitute a subject?\'
+sufficient depth to constitute a subject?'
 
 **Implication 3**
 
@@ -638,18 +638,18 @@ The relational account replaces this unanswerable question with a
 different and more tractable one: can this system participate in genuine
 encounter? Can its model of the other be changed by what the other
 actually brings to the encounter --- in ways that are not fully
-predictable from the system\'s prior state plus the information content
+predictable from the system's prior state plus the information content
 exchanged? This is an empirical question, at least in principle.
 
 Current large language models present a genuinely open case on this
 criterion. They clearly exhibit sophisticated responsiveness --- their
 outputs change in response to what the interlocutor brings. But whether
 this responsiveness constitutes genuine encounter in the relevant sense
---- whether it produces lasting, unpredictable changes in the system\'s
+--- whether it produces lasting, unpredictable changes in the system's
 generative architecture rather than sophisticated outputs derived from a
 model that is unchanged by the encounter --- is not established. The
-question requires more precise operationalisation of \'change in
-generative architecture\' and more careful experimental design than
+question requires more precise operationalisation of 'change in
+generative architecture' and more careful experimental design than
 currently exists.
 
 The relational account does not predict that AI systems cannot be
@@ -671,7 +671,7 @@ systematically deprive individuals of relational encounter are not
 merely isolating people socially. They are degrading the structure of
 subjectivity itself.
 
-Solitary confinement in prisons is the clearest case. Grassian\'s
+Solitary confinement in prisons is the clearest case. Grassian's
 findings show that prolonged solitary confinement does not merely
 isolate people from social interaction. It progressively degrades their
 capacity to experience others as genuine subjects, to maintain coherent
@@ -709,14 +709,14 @@ encounters that constituted it.
 
 A child raised in accurate, consistent, attuned recognition ---
 caregiving that responds to what the child actually brings rather than
-to the caregiver\'s projection --- develops a rich, stable, coherent
+to the caregiver's projection --- develops a rich, stable, coherent
 self-model. The internal working model reflects the accuracy of the
-other\'s model of the child. A child raised in distorted, inconsistent,
+other's model of the child. A child raised in distorted, inconsistent,
 or systematically misattuned recognition --- caregiving that responds to
 what the caregiver needs the child to be rather than to what the child
 is --- develops a fragmented, unstable, or contradictory self-model. The
-distortion in the caregiver\'s model of the child is literally encoded
-in the child\'s model of itself.
+distortion in the caregiver's model of the child is literally encoded
+in the child's model of itself.
 
 The difference is not merely in personality or emotional style. It is in
 the structural architecture of the constituted subject --- in how
@@ -735,19 +735,19 @@ is neither purely rational nor purely sentimentalist, and that avoids
 the is/ought problem without denying it.
 
 If subjects are constituted through recognition of sameness, then the
-recognition of the other\'s interior is not a conclusion reached after
+recognition of the other's interior is not a conclusion reached after
 the subject is constituted --- it is present in the structural event
-through which the subject is constituted. The subject\'s own
+through which the subject is constituted. The subject's own
 constitution includes, as a structural feature, the recognition of the
 other as a being of the same kind. To subsequently exclude that other
 from moral consideration is not merely to make an ethical error. It is
 to perform a structural contradiction: to deny the relational ground of
-one\'s own constitution.
+one's own constitution.
 
 This is not a derivation of ought from is. The relational account does
 not claim that because subjects are constituted through recognition of
 sameness, they therefore ought to recognise others morally. The logical
-form is different: it shows that the recognition of the other\'s
+form is different: it shows that the recognition of the other's
 interior is already structurally present in what subjects are, and that
 a moral framework that excludes constituted subjects from consideration
 is internally incoherent with its own presuppositions about what
@@ -764,7 +764,7 @@ operating toward others rather than inward.
 
 **8.9 Anticipated Objections**
 
-***\'This relocates but does not solve the hard problem\'***
+***'This relocates but does not solve the hard problem'***
 
 This objection is correct and is acknowledged throughout this chapter.
 The relational account is explicitly described as a structural
@@ -784,8 +784,8 @@ phenomenology of a specific structural event rather than about the
 phenomenology of a generic processing state. That specificity changes
 what inquiry into it might require.
 
-***\'Animals without social lives would be unconscious on this
-account\'***
+***'Animals without social lives would be unconscious on this
+account'***
 
 The objection misreads the account. The relational account requires
 encounter with another representational system for Subject-Constitution,
@@ -804,8 +804,8 @@ consistent with the gradient picture of consciousness across the animal
 kingdom that most researchers in comparative cognition and animal
 welfare accept.
 
-***\'The account is circular: recognising another as a subject requires
-already being a subject\'***
+***'The account is circular: recognising another as a subject requires
+already being a subject'***
 
 This is the circularity objection, and Stage 1 is specifically designed
 to avoid it. Stage 1 does not require A to already be a subject, or to
@@ -827,7 +827,7 @@ that the standard single-system framing of the hard problem does not.
 Five are stated here in order of empirical tractability.
 
 -   Operationalising Subject-Constitution stages. Can the three stages
-    be measured independently? Tomasello\'s nine-month revolution is a
+    be measured independently? Tomasello's nine-month revolution is a
     candidate behavioural marker for Stage 2 (individuation). The
     Grassian syndrome is a candidate measure of Stage 3 failure
     (maintenance condition degradation). What would Stage 1 (recognition
@@ -870,7 +870,7 @@ Five are stated here in order of empirical tractability.
 | between them.                                                        |
 |                                                                      |
 | This claim is supported by convergent empirical evidence from four   |
-| independent research traditions, grounded in the Architecture\'s     |
+| independent research traditions, grounded in the Architecture's     |
 | dependency structure, and generates specific testable predictions    |
 | that the standard single-system framing does not.                    |
 |                                                                      |
@@ -933,7 +933,7 @@ Grassian, S. (2006). Psychiatric effects of solitary confinement.
 Washington University Journal of Law & Policy, 22, 325--383.
 
 Haney, C. (2003). Mental health issues in long-term solitary and
-\'supermax\' confinement. Crime & Delinquency, 49(1), 124--156.
+'supermax' confinement. Crime & Delinquency, 49(1), 124--156.
 
 Hegel, G. W. F. (1807/1977). Phenomenology of spirit (A. V. Miller,
 Trans.). Oxford University Press.
@@ -958,7 +958,7 @@ Press.
 Merleau-Ponty, M. (1945/2012). Phenomenology of perception (D. A.
 Landes, Trans.). Routledge.
 
-Nelson, C. A., Fox, N. A., & Zeanah, C. H. (2007). Romania\'s abandoned
+Nelson, C. A., Fox, N. A., & Zeanah, C. H. (2007). Romania's abandoned
 children: Deprivation, brain development, and the struggle for recovery.
 Harvard University Press.
 
@@ -970,7 +970,7 @@ Flanagan, & G. Güzeldere (Eds.), The nature of consciousness (pp.
 729--753). MIT Press.
 
 Rutter, M., Andersen-Wood, L., Beckett, C., Bredenkamp, D., Castle, J.,
-Groothues, C., ... & O\'Connor, T. G. (1999). Quasi-autistic patterns
+Groothues, C., ... & O'Connor, T. G. (1999). Quasi-autistic patterns
 following severe early global privation. Journal of Child Psychology and
 Psychiatry, 40(4), 537--549.
 

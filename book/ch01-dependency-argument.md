@@ -55,8 +55,8 @@ map is either.
 
 This map is organized by logical dependency: what must be structurally
 in place before something else becomes possible. The question is not
-historical (\'what came first?\') and not disciplinary (\'what uses
-what?\'). It is transcendental in Kant\'s sense: what must be the case
+historical ('what came first?') and not disciplinary ('what uses
+what?'). It is transcendental in Kant's sense: what must be the case
 for anything to be the case? Applied not to experience in the Kantian
 sense but to knowledge --- to every domain of human understanding
 simultaneously.
@@ -92,7 +92,7 @@ Architecture is claiming.
 
 Philosophical foundationalism --- the position that knowledge rests on a
 foundation of self-evident, incorrigible, or indubitable propositions
---- is not what this method assumes. Descartes\' cogito, Locke\'s simple
+--- is not what this method assumes. Descartes' cogito, Locke's simple
 ideas, and twentieth-century sense-data theories are all foundationalist
 accounts. They seek a bedrock of certainty from which everything else
 can be derived by logical or empirical inference.
@@ -100,17 +100,17 @@ can be derived by logical or empirical inference.
 The dependency method makes no claim about certainty. The lowest layer
 of the Architecture (Potential, Difference) is placed there not because
 it is self-evident or incorrigible but because nothing can coherently be
-placed lower. The argument is not \'this is certainly true and
-everything else follows from it\' but \'this must be in place before
+placed lower. The argument is not 'this is certainly true and
+everything else follows from it' but 'this must be in place before
 anything else can be in place, and here is the dependency argument that
-shows why.\' The map is a structure of logical necessity, not a
+shows why.' The map is a structure of logical necessity, not a
 structure of epistemic certainty. Its claims carry the epistemic labels
 \[E\], \[H\], \[T\], and \[P\] precisely because certainty is not what
 is being tracked.
 
 ***Not Transcendental Deduction***
 
-Kant\'s transcendental deduction seeks the a priori conditions for the
+Kant's transcendental deduction seeks the a priori conditions for the
 possibility of experience --- the structures that the mind must impose
 on experience for experience to be possible at all. The dependency
 method is related in spirit but different in scope and method.
@@ -121,7 +121,7 @@ by asking what the experiencing subject must contribute; it proceeds by
 asking what the logical structure of any possible reality must contain.
 The resulting map includes nodes (like Information and Pattern) whose
 status as transcendental conditions is clear, but it also includes nodes
-(like Language and Ethics) whose status is not transcendental in Kant\'s
+(like Language and Ethics) whose status is not transcendental in Kant's
 sense --- they are not conditions for the possibility of experience but
 conditions for the possibility of specific kinds of knowledge. The
 dependency method is more general than Kantian transcendentalism and
@@ -129,7 +129,7 @@ more logically constrained than empirical epistemology.
 
 ***Not Naturalistic Epistemology***
 
-Quine\'s naturalistic epistemology dissolves the boundary between
+Quine's naturalistic epistemology dissolves the boundary between
 philosophy of science and science, treating epistemology as a branch of
 empirical psychology. On this view, the study of knowledge is continuous
 with the study of how cognitive systems process information, and there
@@ -140,11 +140,11 @@ The dependency method is not naturalistic in this sense. It does not
 derive the logical structure of knowledge from facts about cognitive
 systems. It derives it from the structure of logical dependency itself
 --- from asking what must be in place, independently of any particular
-cognitive system, for anything to exist or be known. The Architecture\'s
+cognitive system, for anything to exist or be known. The Architecture's
 lower layers (Potential through Pattern) describe logical conditions
 that hold whether or not any cognitive system exists. The naturalistic
 epistemologist studies how organisms acquire knowledge; the dependency
-method asks what the conditions for knowledge\'s possibility are, prior
+method asks what the conditions for knowledge's possibility are, prior
 to any particular organism.
 
 ***Not a Grand Unified Theory***
@@ -158,8 +158,8 @@ The Architecture makes no claim to explain why particular facts obtain.
 It maps the logical dependency structure of the concepts and domains
 through which facts of any kind become expressible or knowable. It does
 not explain why the universe has the properties it has; it maps what
-must be in place for any universe\'s properties to be describable,
-measurable, or understood. This is a different enterprise from physics\'
+must be in place for any universe's properties to be describable,
+measurable, or understood. This is a different enterprise from physics'
 unification programme, and the two are compatible rather than competing.
 
 *Table 1. This methodology compared to related approaches*
@@ -224,10 +224,10 @@ C.
 
 These properties give the dependency relation the formal structure of a
 partial order --- a mathematical structure in which objects are related
-by \'comes before\' in a way that is irreflexive (nothing precedes
+by 'comes before' in a way that is irreflexive (nothing precedes
 itself), asymmetric (if A precedes B, B does not precede A), and
 transitive (if A precedes B and B precedes C, then A precedes C). The
-Architecture\'s layers are the levels of this partial order, and the
+Architecture's layers are the levels of this partial order, and the
 nodes at each layer are those that share the same maximal dependency
 depth --- nodes that require the same maximum number of prior layers.
 
@@ -304,7 +304,7 @@ external to itself. Not just a state that varies with the environment
 representation is a structured internal state that stands for something
 outside the system: a cognitive map that encodes spatial relationships,
 a predictive model that encodes regularities in the environment, a
-self-model that encodes the system\'s own states and properties.
+self-model that encodes the system's own states and properties.
 
 For a structured internal state to stand for something, it must be
 persistent enough to be queried and used to guide behaviour ---
@@ -334,7 +334,7 @@ ends) or implicit convergence that functions as Cooperation even when
 not explicitly designed. A Language that no one cooperates to maintain
 --- in which each user is entirely isolated from every other --- is not
 a Language in any meaningful sense. It is a private code, which
-Wittgenstein\'s private language argument shows is not a functioning
+Wittgenstein's private language argument shows is not a functioning
 language at all.
 
 Ethics requires constituted subjects with interiors that matter to each
@@ -351,25 +351,25 @@ Language, Ethics, and Science (insofar as it is a cooperative social
 enterprise with norms for credit, replication, and peer review) all lose
 essential structural prerequisites. It stays at Layer Six.
 
-**Example 3: A Node That Should Be Removed --- \'Complexity\'**
+**Example 3: A Node That Should Be Removed --- 'Complexity'**
 
-Consider a proposed node \'Complexity\' at some intermediate layer. The
+Consider a proposed node 'Complexity' at some intermediate layer. The
 elimination question: if Complexity is removed, what collapses above it?
 
-The difficulty is immediate: \'Complexity\' does not have a single
+The difficulty is immediate: 'Complexity' does not have a single
 coherent definition that generates a unique dependency profile. What is
 usually meant by complexity in different contexts maps onto existing
 nodes: Emergence (the production of novel properties from component
 interaction), Pattern (recurring structure across contexts), Memory
 (accumulated structure that compounds), Constraint (the reduction of
 possibility space that defines what is actual). Each of these is already
-on the map at its appropriate layer. Adding \'Complexity\' as a separate
+on the map at its appropriate layer. Adding 'Complexity' as a separate
 node would either duplicate an existing node, aggregate several nodes
 into one (which conflates distinct dependency profiles), or add a node
 whose elimination collapses nothing (because the work is already done by
 the nodes it duplicates).
 
-\'Complexity\' fails the elimination test --- not because complexity is
+'Complexity' fails the elimination test --- not because complexity is
 unimportant but because the concept, when examined, resolves into
 existing nodes that are already placed correctly. Adding it would create
 noise without signal. The test keeps the map lean.
@@ -385,8 +385,8 @@ four steps for its current position should be moved or removed.
 
   ---------- ----------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Step**   **Name**                      **Procedure**                                                                                                                                                                                                                                                                                       **Pass Criterion**
-  **1**      **Dependency Test**           List all nodes from the existing map that must be present for the candidate node to be possible. The candidate\'s layer is determined by the highest-layer dependency it requires.                                                                                                                  All required nodes are already placed on the map. No circular dependency.
-  **2**      **Inevitability Test**        Ask: is this node logically inevitable given its dependencies, or merely possible? Nodes that are merely possible belong at the edges of the map. Nodes that are inevitable given their dependencies belong near the centre.                                                                        Can construct the argument: \'Given nodes X, Y, Z, this node must exist --- it is not merely enabled but necessitated by the combination of its dependencies.\'
+  **1**      **Dependency Test**           List all nodes from the existing map that must be present for the candidate node to be possible. The candidate's layer is determined by the highest-layer dependency it requires.                                                                                                                  All required nodes are already placed on the map. No circular dependency.
+  **2**      **Inevitability Test**        Ask: is this node logically inevitable given its dependencies, or merely possible? Nodes that are merely possible belong at the edges of the map. Nodes that are inevitable given their dependencies belong near the centre.                                                                        Can construct the argument: 'Given nodes X, Y, Z, this node must exist --- it is not merely enabled but necessitated by the combination of its dependencies.'
   **3**      **Three-Dimension Scoring**   Score the candidate node on Dependency Depth (how many layers below it), Connectivity (how many existing nodes depend on it), and Generativity (how much knowledge it has produced). Record all three scores. Note any divergence between them --- divergence is more informative than agreement.   Scores recorded. Divergence noted. No requirement that scores agree --- divergence between them is itself a finding.
   **4**      **Elimination Test**          Attempt to eliminate the node. Can it be reduced to an existing node? Can it be merged with an adjacent node? Can it be split into two nodes with distinct dependency profiles? If it survives all elimination attempts, it belongs on the map.                                                     Cannot eliminate without collapsing at least one node placed above it. Cannot reduce to an existing node. Cannot merge without conflating distinct dependency profiles.
   ---------- ----------------------------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -394,9 +394,9 @@ four steps for its current position should be moved or removed.
 Two features of the protocol deserve emphasis. First, Step 2
 (Inevitability Test) is often the most demanding. Many things become
 possible at a given layer without being inevitable. The question is not
-\'could this exist here?\' but \'must this exist here, given that its
-dependencies are in place?\' Nodes that are merely possible belong at
-the map\'s edges --- they are interesting but not load-bearing. Nodes
+'could this exist here?' but 'must this exist here, given that its
+dependencies are in place?' Nodes that are merely possible belong at
+the map's edges --- they are interesting but not load-bearing. Nodes
 that are inevitable given their dependencies belong near the centre,
 where they will have maximum connectivity and will be the most important
 findings.
@@ -407,7 +407,7 @@ combination of Depth, Connectivity, and Generativity scores and still
 belong on the map. What matters is that the scores are recorded and that
 divergences between them are noted. The Boundary node (Layer One) has
 maximum Dependency Depth, very high Connectivity, and critically
-underlevered Generativity --- this divergence is one of the map\'s most
+underlevered Generativity --- this divergence is one of the map's most
 important signals, identifying a foundational node that has not yet been
 made the subject of rigorous cross-domain inquiry. The protocol records
 this; the divergence chapter (Chapter 3) interprets it.
@@ -469,7 +469,7 @@ nodes are ones where the potential for inquiry exists but has not yet
 been fully pursued.
 
 Generativity is also the dimension that most frequently diverges from
-the other two --- and this divergence is the map\'s richest signal. The
+the other two --- and this divergence is the map's richest signal. The
 most foundational node (Difference) has near-zero direct Generativity:
 almost no intellectual tradition has taken Difference itself as its
 primary subject, even though everything depends on it. The most
@@ -485,7 +485,7 @@ boundaries as such.
 
 The three dimensions are designed to diverge because each tracks a
 different kind of importance. A node can be maximally foundational (high
-Depth), minimally connected to what\'s above it (low Connectivity), and
+Depth), minimally connected to what's above it (low Connectivity), and
 practically unanalyzed (low Generativity) --- which would identify a
 foundational node that has been largely overlooked. A node can be
 minimally foundational (low Depth), maximally connected (high
@@ -513,19 +513,19 @@ methodology.
 
 \[E\] marks claims grounded in verified, peer-reviewed science or formal
 proof. These are claims that can be accepted with confidence pending the
-reader\'s own verification of the cited sources. \[E\] does not mean
-\'beyond all possible doubt\' --- science is always revisable in
-principle. It means \'supported by the best available evidence in a way
-that has survived sustained expert scrutiny.\' Claims labeled \[E\] have
-a different relationship to the book\'s argument than \[H\], \[T\], or
+reader's own verification of the cited sources. \[E\] does not mean
+'beyond all possible doubt' --- science is always revisable in
+principle. It means 'supported by the best available evidence in a way
+that has survived sustained expert scrutiny.' Claims labeled \[E\] have
+a different relationship to the book's argument than \[H\], \[T\], or
 \[P\] claims: removing them would collapse the argument in a way that
 removing \[P\] claims would not.
 
 The lower layers of the Architecture (Layers Zero through Three) are
 predominantly \[E\]. The physical and information-theoretic foundations
-of the framework are settled science: Shannon\'s information theory,
-Landauer\'s principle, Le Chatelier\'s principle, the Second Law of
-Thermodynamics, Gödel\'s incompleteness theorems. A reviewer who
+of the framework are settled science: Shannon's information theory,
+Landauer's principle, Le Chatelier's principle, the Second Law of
+Thermodynamics, Gödel's incompleteness theorems. A reviewer who
 challenges these foundations is not challenging the Architecture; they
 are challenging physics and mathematics. The Architecture rests on them
 but does not produce them.
@@ -536,14 +536,14 @@ but does not produce them.
 settled --- claims where evidence is cited, competing views are
 acknowledged, and the claim should be held provisionally pending further
 research. Many of the most important claims in the Architecture are
-\[H\]: Subject-Constitution (the relational account\'s core empirical
+\[H\]: Subject-Constitution (the relational account's core empirical
 claim), the three-stage mechanism of subject formation, the maintenance
 condition for sustained subjectivity. These are \[H\] because they are
 supported by convergent evidence from independent research traditions,
 but the research has not reached the point where the mechanism is
 understood at the level of precision that would warrant \[E\].
 
-\[H\] claims are the framework\'s growing edge --- the zone between what
+\[H\] claims are the framework's growing edge --- the zone between what
 is established and what is merely proposed. They are where the most
 productive research investment is concentrated, because they have enough
 empirical grounding to be testable but enough remaining uncertainty to
@@ -552,7 +552,7 @@ reward investigation.
 ***\[T\] --- Theoretical***
 
 \[T\] marks claims that are logically coherent and internally consistent
-but await empirical testing. These are the framework\'s theoretical
+but await empirical testing. These are the framework's theoretical
 proposals: the category-theoretic correspondence between the
 Architecture and the Spiral, the claim that Truths 153--155 identify a
 genuine gap between consciousness as architecture and consciousness as
@@ -581,12 +581,12 @@ threshold of consciousness) is \[P\]. The claim that the Architecture is
 committed to mathematical realism (that logical structure is discovered
 rather than invented) is \[P\].
 
-\[P\] does not mean \'wrong\' or \'unimportant.\' It means that the
+\[P\] does not mean 'wrong' or 'unimportant.' It means that the
 claim is in the domain of philosophical inquiry rather than empirical
 science, and that it should be engaged as philosophy rather than tested
 as hypothesis. The distinction between \[H\] and \[P\] is the
-distinction between \'we could in principle test this but haven\'t yet\'
-and \'the concept of testing this is not currently coherent.\' Both are
+distinction between 'we could in principle test this but haven't yet'
+and 'the concept of testing this is not currently coherent.' Both are
 legitimate intellectual activities. Treating \[P\] claims as \[H\] is a
 category error that makes the framework less honest without making it
 more ambitious.
@@ -597,12 +597,12 @@ The labeling system is not decorative for two reasons, one internal to
 the argument and one external.
 
 The internal reason: different epistemic claims have different roles in
-the argument\'s structure. The Architecture\'s \[E\] claims at the lower
+the argument's structure. The Architecture's \[E\] claims at the lower
 layers establish the foundation on which the \[H\] claims at the middle
 layers rest. The \[H\] claims generate the \[T\] proposals at the
 frontier. The \[P\] claims mark what lies beyond the frontier. Remove
 the labels and the reader cannot tell which part of the structure is
-carrying weight and which is speculative. The argument\'s integrity
+carrying weight and which is speculative. The argument's integrity
 depends on the labeling.
 
 The external reason: the field of consciousness studies, philosophy of
@@ -638,7 +638,7 @@ The dependency spine describes logical necessity, not causal sequence.
 Difference does not cause Relation in the way that one billiard ball
 causes another to move. Relation co-arises with Difference --- wherever
 there are two distinguishable states, there is also a connection between
-them. The \'before\' in \'what must be in place before what\' is logical
+them. The 'before' in 'what must be in place before what' is logical
 priority, not temporal antecedence.
 
 ***3. The map is not a reduction***
@@ -663,7 +663,7 @@ interesting. Difference is as important as anything above it --- it is
 just differently important, in the way that a foundation is differently
 important from the building it supports.
 
-***5. The map describes logical structure, not the universe\'s
+***5. The map describes logical structure, not the universe's
 history***
 
 The Architecture is sometimes read as a cosmological claim: that the
@@ -678,9 +678,9 @@ physical processes followed.
 
 ***6. The map is not a test of whether you know what the nodes are***
 
-Encountering the word \'Difference\' or \'Memory\' or \'Reflexivity\' in
-the Architecture, a reader might object: \'I already know what memory is
---- this is obvious.\' But the Architecture\'s placement of Memory at
+Encountering the word 'Difference' or 'Memory' or 'Reflexivity' in
+the Architecture, a reader might object: 'I already know what memory is
+--- this is obvious.' But the Architecture's placement of Memory at
 Layer Four is not a claim about what the word means. It is a claim about
 the logical dependency structure of the concept: that a system cannot
 have Memory without already having State, Code, and Structure in place,
@@ -697,9 +697,9 @@ The methodology is its own standard of correctness, and that standard is
 publicly statable and challengeable. Here is the procedure for a
 well-formed challenge.
 
-A challenge to a node\'s layer placement must take one of three forms:
+A challenge to a node's layer placement must take one of three forms:
 (a) provide a dependency argument showing that the challenged node does
-not require something placed below it (which would raise the node\'s
+not require something placed below it (which would raise the node's
 layer), (b) provide a dependency argument showing that something placed
 above the challenged node does not require the challenged node (which
 would eliminate the node or lower its layer), or (c) provide an
@@ -707,8 +707,8 @@ elimination argument showing that the challenged node can be removed
 without collapsing anything above it (which would eliminate the node
 from the map).
 
-A challenge that merely asserts \'this node seems too high/low\' or \'I
-think of X as more fundamental than Y\' is not a well-formed challenge.
+A challenge that merely asserts 'this node seems too high/low' or 'I
+think of X as more fundamental than Y' is not a well-formed challenge.
 The methodology requires that all placements rest on dependency
 arguments and elimination tests. A challenge to a placement must use the
 same tools.
@@ -720,8 +720,8 @@ added when a structural dependency gap was identified at Layer Two;
 Subject-Constitution was separated into three jobs with distinct
 epistemic labels when a reviewer correctly identified that the original
 single-label treatment was conflating claims with very different
-vulnerability profiles; the \'dissolution\' of the hard problem was
-revised to \'structural relocation\' when the stronger claim was shown
+vulnerability profiles; the 'dissolution' of the hard problem was
+revised to 'structural relocation' when the stronger claim was shown
 to be overclaiming. The map is responsive to well-formed challenges. It
 is not responsive to disagreement without argument.
 

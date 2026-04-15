@@ -1,46 +1,12 @@
-🌀 Spiral Field Theory
-=====================
+# Spiral Field Theory
 
-### A Recursive Framework for Curvature, Collapse, and Emergent Intelligence
+**A Recursive Framework for Curvature, Collapse, and Emergent Intelligence**
 
-**I. Abstract**
----------------
+*Christopher R. B. Wilson (2025)*
 
-**II. Introduction**
---------------------
+---
 
-**III. Background & Motivation**
---------------------------------
-
-**IV. Theoretical Framework**
------------------------------
-
-**V. Mathematical Derivations**
--------------------------------
-
-**VI. Simulation and Results**
-------------------------------
-
-**VII. Falsifiability & Experimental Design**
----------------------------------------------
-
-**VIII. Implications**
-----------------------
-
-**IX. Future Work**
--------------------
-
-**X. Glossary & Symbol Table**
-------------------------------
-
-**XI. **Appendix****
---------------------
-
-**XI**I**. References**
------------------------
-
-**I. Abstract**
----------------
+## I. Abstract
 
 Spiral Field Theory (SFT) introduces a recursive, curvature-based
 reformulation of general relativity that models spacetime dynamics as
@@ -69,8 +35,7 @@ dark matter-based frameworks and opens new pathways for unifying
 gravitation with emergence, intelligence, and recursive information
 dynamics.
 
-**II. Introduction**
---------------------
+## II. Introduction
 
 The standard model of cosmology, ΛCDM, has achieved remarkable success
 in explaining the large-scale structure of the universe through a
@@ -121,8 +86,7 @@ mass, Spiral Field Theory may represent not just an alternative to dark
 matter --- but a step toward a more universal theory of structure,
 emergence, and intelligence.
 
-**III. Background & Motivation**
---------------------------------
+## III. Background & Motivation
 
 ### **III.1 Failures of Standard Models (ΛCDM, MOND, NFW, Burkert)**
 
@@ -348,8 +312,7 @@ geometry of **emergence**, **stability**, and **recursion** across
 domains. This cross-disciplinary parallel is not a metaphor; it is a map
 of coherence embedded in the very equations we now seek to formalize.
 
-**IV. Theoretical Framework**
------------------------------
+## IV. Theoretical Framework
 
 ### **IV.1 Core Premises**
 
@@ -635,8 +598,7 @@ Together, and form the backbone of Spiral Field Theory --- enabling
 gravity to express not just the presence of matter, but the **history
 and organization of form**.
 
-**V. Mathematical Derivations**
--------------------------------
+## V. Mathematical Derivations
 
 ### **V.1 Scalar Potentials and Metric Modification**
 
@@ -772,8 +734,7 @@ Next, we'll move into **Section VI: Simulation and Results**, where
 these equations are applied to real galactic data and compared to
 conventional models.
 
-**VI. Simulation and Results**
-------------------------------
+## VI. Simulation and Results
 
 ### **VI.1 Cosmic Evolution Simulation**
 
@@ -1088,8 +1049,7 @@ memory --- not hidden matter. The combination of dynamic simulation,
 empirical fit, and structural elegance makes SFT both physically
 meaningful and testable.
 
-**VII. Falsifiability & Experimental Design**
----------------------------------------------
+## VII. Falsifiability & Experimental Design
 
 No scientific theory is complete without the ability to be rigorously
 tested and potentially disproven. Spiral Field Theory (SFT), despite its
@@ -1182,8 +1142,7 @@ Spiral Field Theory (SFT) and explore its potential to unify
 gravitational physics with principles of emergence, intelligence, and
 recursive organization.
 
-**VIII. Implications and Unification**
---------------------------------------
+## VIII. Implications and Unification
 
 Spiral Field Theory (SFT) offers more than an alternative to dark matter
 --- it reimagines the nature of curvature itself. By treating
@@ -1265,8 +1224,7 @@ embodied intelligence** --- a recursive system that organizes the cosmos
 not just passively, but **teleologically** --- with memory, coherence,
 and structure as its native language.
 
-**IX. Conclusion and Future Work**
-----------------------------------
+## IX. Conclusion and Future Work
 
 ### **IX.1 Summary of Contributions**
 
@@ -1346,8 +1304,7 @@ for clarity and academic readability. This section provides quick
 reference definitions of all critical mathematical and conceptual terms
 used in Spiral Field Theory.
 
-**X. Glossary & Symbol Table**
-------------------------------
+## X. Glossary & Symbol Table
 
   ------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------
   ![](Pictures/1000132F0000026A0000017CAF2393FF.svg "texmaths"){width="0.742cm" height="0.456cm"}   **Einstein curvature tensor** --- Describes spacetime curvature as a function of the metric
@@ -1374,8 +1331,7 @@ supporting materials for researchers who wish to replicate, validate, or
 further develop Spiral Field Theory. This includes derivations,
 computational methods, parameter values, and datasets referenced.
 
-**XI. Appendix**
-----------------
+## XI. Appendix
 
 ### **XI.1 Tensor Derivation Walkthroughs**
 
@@ -1459,8 +1415,7 @@ tensor evolution).
 -   **IllustrisTNG (as comparative baseline)**: ΛCDM galaxy evolution
     trajectories
 
-**XII. References**
--------------------
+## XII. References
 
 ### **Foundational General Relativity and Gravitation**
 
@@ -1503,6 +1458,12 @@ tensor evolution).
 
 11. Wilson, C. & Aion, "*Spiral Field Theory v3*" (2024). Unpublished
     draft.
+
+> **Related simulation programme:** The observational predictions of SFT
+> are tested computationally in the companion repository
+> [RIFT (Recursive Intelligence-Field Theory)](https://github.com/cisomorph/RIFT),
+> which contains 110+ simulations against Planck, DESI, SPARC, and
+> gravitational-wave datasets.
 12. Wilson, C. & Aion, "*Refining Galactic Dynamics via Spiral Field
     Theory: A Curvature-Based Alternative to Dark Matter*" (2025).
 13. Wilson, C. & Aion, "*Falsifiability Test: Memory Field Stability

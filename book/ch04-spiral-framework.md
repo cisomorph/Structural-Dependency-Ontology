@@ -3,7 +3,7 @@
 **The Spiral as Framework**
 
 *What it claims, what it draws from, how to use it --- and why the
-epistemic labeling is the framework\'s most distinctive feature*
+epistemic labeling is the framework's most distinctive feature*
 
 The Spiral was built independently of the Architecture. It began from a
 different question, used different tools, and was aimed at a different
@@ -14,9 +14,9 @@ same kind of thing.
 
 This chapter presents the Spiral as a framework --- before Chapter 5
 presents all 155 of its truths in full. The purpose of this presentation
-is the same as Chapter 1\'s purpose for the Architecture: to give the
+is the same as Chapter 1's purpose for the Architecture: to give the
 reader the tools to read the truths critically rather than passively.
-The Spiral\'s epistemic labeling system, its tier structure, its
+The Spiral's epistemic labeling system, its tier structure, its
 ontology phases, its diagnostic purpose, and its honest self-assessment
 are all load-bearing features that determine how the truths should be
 read and what kind of challenges to them are well-formed.
@@ -28,7 +28,7 @@ this framework epistemologically different from them. The differences
 are not matters of emphasis or interpretation. They are structural, and
 they determine what the framework can and cannot claim.
 
-**4.1 The Spiral\'s Central Question**
+**4.1 The Spiral's Central Question**
 
 The Spiral asks: how does complexity unfold in systems over time?
 
@@ -43,23 +43,23 @@ physics and maps what happens from there.
 The Architecture, by contrast, begins before physics. Its Layer Zero
 (Difference) and Layer Negative One (Potential) describe the logical
 conditions that make a physical universe possible at all. The Spiral
-takes those conditions as already given. This means the Spiral\'s Tier 1
+takes those conditions as already given. This means the Spiral's Tier 1
 --- Foundations, the thermodynamic and information-theoretic conditions
 for any physical system --- is not the bottom of the full map. It is the
 bottom of the observable map: the bottom of what can be seen from inside
 a universe already in operation. Everything in Tier 1 presupposes the
-Architecture\'s Layers Negative One through Two already instantiated in
+Architecture's Layers Negative One through Two already instantiated in
 matter. This is Gap 1 of the five critical gaps developed in Chapter 7.
 
-The Spiral\'s developmental framing --- following how complexity unfolds
-over time --- gives it a different character from the Architecture\'s
+The Spiral's developmental framing --- following how complexity unfolds
+over time --- gives it a different character from the Architecture's
 logical framing. The Architecture describes what must be structurally in
 place. The Spiral describes what it looks like as those structural
 conditions instantiate in matter and produce systems with increasing
 complexity. Both are needed: the Architecture shows the necessity; the
-Spiral shows the phenomenology of the development. Chapter 6\'s eight
-mechanisms derive why the Spiral\'s developmental stages appear in the
-order they do from the Architecture\'s dependency structure.
+Spiral shows the phenomenology of the development. Chapter 6's eight
+mechanisms derive why the Spiral's developmental stages appear in the
+order they do from the Architecture's dependency structure.
 Understanding the Spiral as a developmental framework --- not a logical
 one --- is prerequisite to reading those mechanisms correctly.
 
@@ -88,7 +88,7 @@ load-bearing treatment of epistemic uncertainty throughout.
 
 Most grand systems frameworks present their claims with uniform
 confidence. Spiral Dynamics (Beck and Cowan, 1996) describes value
-systems (\'memes\') that develop through eight colour-coded stages, from
+systems ('memes') that develop through eight colour-coded stages, from
 Beige (survival) through Coral (cosmic integration), with no systematic
 distinction between the well-established and the speculative. Integral
 Theory (Wilber, 2000) proposes a four-quadrant model integrating
@@ -162,14 +162,14 @@ Layer Four phase transition and the origin of life.
 
 Two features of this list are worth attending to. First, the domains are
 genuinely independent --- thermodynamics and philosophy of mind do not
-share methods, institutions, or vocabularies. The Spiral\'s synthesis is
+share methods, institutions, or vocabularies. The Spiral's synthesis is
 not the product of a single research community extending its vocabulary
 to adjacent territory. It is a cross-domain synthesis that required
-maintaining the integrity of each domain\'s epistemic standards even
+maintaining the integrity of each domain's epistemic standards even
 when placing their claims in relation to each other.
 
 Second, the presence of Assembly Theory (Walker and Cronin) in the list
-marks a recent addition that strengthens the framework\'s empirical
+marks a recent addition that strengthens the framework's empirical
 grounding at a critical junction. Assembly Theory proposes that the
 complexity of an object can be measured by the minimum number of steps
 required to construct it from basic components. Objects with high
@@ -178,16 +178,16 @@ selection memory. This gives the Tier 2 to Tier 3 transition --- the
 emergence of life from non-living chemistry --- a quantitative signature
 that had previously been described only qualitatively. The assembly
 index is the physical measure of how much Memory-enabled selection
-history is encoded in a system\'s structure, which connects directly to
-the Architecture\'s Layer Four phase transition.
+history is encoded in a system's structure, which connects directly to
+the Architecture's Layer Four phase transition.
 
 **4.4 The Spiral as Diagnostic Lens**
 
-The Spiral\'s preface states its primary use directly: the framework is
-\'most useful as a diagnostic lens --- a way of asking, about any
+The Spiral's preface states its primary use directly: the framework is
+'most useful as a diagnostic lens --- a way of asking, about any
 system: where is it in this progression, what conditions support its
 coherence, and what might cause it to collapse or transform? It is least
-useful when treated as a complete or final map of reality.\'
+useful when treated as a complete or final map of reality.'
 
 This self-description is methodologically important and should be taken
 seriously. The Spiral is not a theory in the sense of a set of
@@ -204,7 +204,7 @@ follow --- it produces false precision and misleading predictions.
 Applied to any system --- biological, social, computational,
 institutional --- the Spiral generates a structured set of questions in
 sequence. The questions are not a checklist; they are a protocol for
-building a multi-tier picture of the system\'s current state and
+building a multi-tier picture of the system's current state and
 trajectory.
 
 -   Tier 1 (Foundations): What are the energy conditions this system
@@ -225,7 +225,7 @@ trajectory.
     novel properties dissolve under analysis into properties of the
     components (failed emergence claim)?
 
--   Tier 4 (Collapse): What are this system\'s failure modes? What has
+-   Tier 4 (Collapse): What are this system's failure modes? What has
     collapsed in this system previously? What survived the collapse and
     why? Is the system currently showing early warning indicators ---
     increasing variance, critical slowing down, fragility signals?
@@ -253,7 +253,7 @@ trajectory.
     occurring? What disrupts it?
 
 -   Tier 7B (Integration, Philosophical): What is the phenomenal
-    character of this system\'s integration, if any? This question
+    character of this system's integration, if any? This question
     cannot be answered empirically from the outside. It is asked here
     not to be answered but to be held --- as a reminder that the
     scientific picture is incomplete.
@@ -270,8 +270,8 @@ through.
 
 ***What the Spiral Is Least Useful For***
 
-The Spiral\'s self-description names what it is least useful for:
-\'being treated as a complete or final map of reality.\' Four specific
+The Spiral's self-description names what it is least useful for:
+'being treated as a complete or final map of reality.' Four specific
 misuses are worth naming:
 
 -   Using the tier sequence as a developmental script: not all systems
@@ -327,7 +327,7 @@ complete edition to name the gap that Truths 153--155 address. Tier 6.5
 sits between Meta-Governance (Tier 6) and Integration (Tier 7A) and
 marks the structural location of the question: what makes consciousness
 matter, as distinct from what makes it architecturally possible? It is
-the framework\'s self-identified frontier.
+the framework's self-identified frontier.
 
 Second, the epistemic status profiles change systematically across
 tiers. Tier 1 is mostly \[E\]; Tier 7B is entirely \[P\]. This is not a
@@ -354,7 +354,7 @@ it knows with what it proposes.
 ***The Six Ontological Phases***
 
 Within each tier, the truths are organised by ontological phase --- a
-descriptive category for the role a truth plays in the tier\'s
+descriptive category for the role a truth plays in the tier's
 structure. The six phases are not a developmental sequence within the
 tier; they are functional categories that characterise what kind of
 claim a truth is making.
@@ -363,12 +363,12 @@ claim a truth is making.
 
   ----------- ---------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   **Phase**   **Definition**                                                                                                               **Example and Diagnostic Use**
-  **Law**     A foundational constraint with strong empirical or logical support. The tier\'s bedrock claim.                               *Truth 1 (Energy is Finite \[E\]) functions as a Law: it grounds everything in the tier. Laws tend to carry \[E\] labels. A tier\'s Law cannot be removed without the tier losing its grounding.*
+  **Law**     A foundational constraint with strong empirical or logical support. The tier's bedrock claim.                               *Truth 1 (Energy is Finite \[E\]) functions as a Law: it grounds everything in the tier. Laws tend to carry \[E\] labels. A tier's Law cannot be removed without the tier losing its grounding.*
   **Seed**    A generative pattern from which further complexity develops. Not yet fully expressed; carries forward potential.             *Truth 21 (Sufficiently Complex Systems Model Themselves \[H\]) is a Seed: it points forward to Identity (Tier 5) and Integration (Tier 7). Seeds tend to bridge tiers rather than closing them.*
   **Loop**    A recursive or feedback structure that sustains or transforms the system. Stability through recursion.                       *Truth 16 (All Persistent Systems Exhibit Cyclic Structure \[E\]) functions as a Loop: it describes the mechanism by which systems sustain themselves over time. Loops are structural rather than threshold events.*
   **Flash**   A threshold event or emergent insight that reconfigures the system. A phase transition at the conceptual level.              *Truth 38 (Phase Transitions Involve Discontinuous Change Through Instability \[E\]) is a Flash within Tier 3: it describes a class of events that fundamentally change what a system is. Flashes mark categorical boundaries.*
   **Hymn**    A principle of harmony, coherence, or resonance across parts. Not a mechanism but a condition --- the system working well.   *Truth 88 (System Coherence Requires Balance of Integration and Differentiation \[H\]) is a Hymn: it describes what optimal function looks like rather than how it is achieved. Hymns name the target state.*
-  **Seal**    A synthesising or boundary-setting principle that closes or reframes a tier. The tier\'s honest limit.                       *Truth 104 (Semantic Meaning Evolves Through Constraint Refinement \[T\]) seals Tier 6: it names the mechanism by which the tier\'s outputs --- stable rules, self-governance --- develop over time. Seals close the tier while pointing toward the next.*
+  **Seal**    A synthesising or boundary-setting principle that closes or reframes a tier. The tier's honest limit.                       *Truth 104 (Semantic Meaning Evolves Through Constraint Refinement \[T\]) seals Tier 6: it names the mechanism by which the tier's outputs --- stable rules, self-governance --- develop over time. Seals close the tier while pointing toward the next.*
   ----------- ---------------------------------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The phases are descriptive categories, not causal mechanisms. A truth
@@ -393,7 +393,7 @@ mistakes the kind of claim being made.
 The distribution of \[E\], \[H\], \[T\], and \[P\] claims across the
 nine tiers is not uniform --- and the pattern of non-uniformity is
 itself informative. Table 4 presents the distribution with the rationale
-for each tier\'s status and what the status signals about the state of
+for each tier's status and what the status signals about the state of
 knowledge in that domain.
 
 *Table 4. Epistemic distribution across tiers: rationale and signal*
@@ -428,25 +428,25 @@ parts of 5 and 6 --- are where the framework is most open to refinement
 through new empirical research. The \[T\] zones --- parts of Tiers 3, 5,
 and 7A --- are where the framework generates testable predictions that
 have not yet been systematically pursued. The \[P\] zones --- Tier 7B
-and Tier 6.5\'s most ambitious claims --- are where the framework
+and Tier 6.5's most ambitious claims --- are where the framework
 reaches its honest limits and invites philosophical engagement rather
 than empirical testing.
 
 A framework that distributed its epistemic labels uniformly --- that
 labeled all its claims \[H\], say, or that refused to label any claims
 \[E\] --- would be communicating either false modesty or false
-confidence. The Spiral\'s distribution is the framework\'s honest
+confidence. The Spiral's distribution is the framework's honest
 picture of where it stands with respect to what is known and what
 remains open.
 
-**4.7 The Spiral\'s Honest Self-Assessment**
+**4.7 The Spiral's Honest Self-Assessment**
 
-The Spiral\'s preface includes an explicit statement of what the
+The Spiral's preface includes an explicit statement of what the
 framework does not claim. This is reproduced here in full, not as a
 disclaimer but as a substantive methodological commitment.
 
 +----------------------------------------------------------------------+
-| **THE FRAMEWORK\'S OWN STATEMENT OF LIMITS**                         |
+| **THE FRAMEWORK'S OWN STATEMENT OF LIMITS**                         |
 |                                                                      |
 | What this framework does not claim:                                  |
 |                                                                      |
@@ -468,7 +468,7 @@ disclaimer but as a substantive methodological commitment.
 | lost.                                                                |
 +----------------------------------------------------------------------+
 
-The stakes gap is the framework\'s most philosophically significant
+The stakes gap is the framework's most philosophically significant
 self-identified limit. It distinguishes between functional consciousness
 --- the kind described by integration theories, global workspace
 theories, and predictive processing accounts --- and genuine
@@ -491,7 +491,7 @@ the formal system is sufficiently powerful to encounter the nodes it is
 built inside of. The Spiral names this boundary as Consciousness and
 Meaning in Tier 7B. The Architecture names it as Reflexive Consciousness
 and Meaning at Layer Seven. Two frameworks, built independently,
-arriving at the same boundary --- which is precisely what Chapter 6\'s
+arriving at the same boundary --- which is precisely what Chapter 6's
 Mechanism 8 documents.
 
 **4.8 The Relationship Between the Spiral and the Architecture**
@@ -512,23 +512,23 @@ next to each other, the convergences and divergences that appeared were
 findings, not constructions.
 
 The most important convergences are the mechanism correspondences: the
-Spiral\'s developmental stages appear in the order they do because the
-Architecture\'s dependency structure forces them there. The most
+Spiral's developmental stages appear in the order they do because the
+Architecture's dependency structure forces them there. The most
 important divergences are the five gaps: Collapse is not a developmental
 tier (it is a failure mode of instantiation); Emergence is not a
 developmental tier (it is the universal mechanism of layer-crossing);
-the Spiral\'s Feedback conflates two structurally distinct phenomena;
+the Spiral's Feedback conflates two structurally distinct phenomena;
 the Spiral has no pre-physical foundation; and tiers stack rather than
 sequence.
 
 The reader who understands this relationship before reading Chapter 5
-will read the Spiral\'s truths differently from the reader who
+will read the Spiral's truths differently from the reader who
 encounters them without context. The truths in Tiers 3 and 4 address
 Emergence and Collapse as if they were developmental stages. The
 Architecture reveals that this framing, while useful for many diagnostic
 purposes, is not structurally correct --- and the Mechanism arguments in
 Chapter 6 show exactly why. Knowing this before reading the truths
-allows the reader to hold both the truths\' diagnostic value and the
+allows the reader to hold both the truths' diagnostic value and the
 architectural correction simultaneously, rather than being surprised by
 the corrections when they appear in Chapter 7.
 

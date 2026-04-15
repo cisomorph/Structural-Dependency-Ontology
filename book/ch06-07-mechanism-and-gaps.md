@@ -2,7 +2,7 @@
 
 **The Mechanism**
 
-*Why the Spiral\'s developmental stages are not contingent --- deriving
+*Why the Spiral's developmental stages are not contingent --- deriving
 the order from the dependency structure*
 
 +----------------------------------------------------------------------+
@@ -25,9 +25,9 @@ the other in mind.
 
 When they are placed next to each other, something unexpected becomes
 visible: the dependency structure of the Architecture is the reason the
-Spiral\'s stages appear in the order they do. Not merely consistent with
-that order. Not merely compatible with it. The Architecture\'s logical
-structure generates the Spiral\'s developmental sequence. Each stage is
+Spiral's stages appear in the order they do. Not merely consistent with
+that order. Not merely compatible with it. The Architecture's logical
+structure generates the Spiral's developmental sequence. Each stage is
 the specific stage that becomes possible when the architectural layer
 below it is in place --- and becomes inevitable when sufficient time,
 energy, and matter are present.
@@ -41,7 +41,7 @@ derivation.
 
 The chapter proceeds in two parts. Part One presents the eight
 mechanisms --- the causal bridges at each junction between the
-Architecture\'s layers and the Spiral\'s tiers. Part Two (Chapter 7)
+Architecture's layers and the Spiral's tiers. Part Two (Chapter 7)
 presents the five critical gaps --- the places where the frameworks
 diverge, which are more informative than where they agree. Both parts
 are necessary: the convergences establish the claim; the divergences
@@ -61,7 +61,7 @@ important rows on the map.
   **Layers 0--2 · Difference, Relation, Boundary, Identity, Information, Structure**   When these nodes instantiate in matter, a physical universe with distinct objects, energy, and information becomes possible.                                                                                                                   Tier 1 (substrate) · Energy, Constraint, Entropy
   **Layer 3 · Pattern, Causality, State, Code**                                        Physical law emerges. Thermodynamics, conservation laws, and causal sequence are what these nodes look like operating on matter at scale.                                                                                                      Tier 1 (continued) · Physical Feedback, Information flow
   **Layer 4 · Constraint, Emergence, Memory**                                          When Memory and Code combine in a chemical system with energy throughput, hereditary replication becomes possible. Evolution begins --- not as a designed process but as the inevitable consequence of these nodes operating simultaneously.   Tier 2 · Evolution, Recursion, Adaptation
-  **Layer 5 · Representation, (Cybernetic) Feedback, Selection, Adaptation**           When a system\'s model of its environment becomes rich enough to include a model of itself, phenomenological identity becomes possible. Not gradual change --- discontinuous phase transition.                                                 Tier 2--3 boundary · Emergence threshold
+  **Layer 5 · Representation, (Cybernetic) Feedback, Selection, Adaptation**           When a system's model of its environment becomes rich enough to include a model of itself, phenomenological identity becomes possible. Not gradual change --- discontinuous phase transition.                                                 Tier 2--3 boundary · Emergence threshold
   *GAP: No collapse layer*                                                             *Collapse is the failure mode of physical instantiation at any tier, not a developmental stage. The logical structure does not collapse --- only the physical implementation does.*                                                            *Tier 4 · Collapse*
   **Layers 5--6 · Subject-Constitution, Intersubjectivity, Communication, Meaning**    Social mind is the inevitable consequence of Representation achieving sufficient depth in multiple co-present systems. Recognition of sameness enables individuation. Both subjects constituted simultaneously in the relational event.        Tier 5 · Identity, Selfhood, Coherence
   **Layers 6--7 · Reflexivity applied to regulatory structure**                        Meta-Governance is Reflexivity applied to regulatory structure. Requires Language to represent rules, Intersubjectivity to negotiate them, Reflexivity to examine rather than just follow them.                                                Tier 6 · Meta-Governance, Recursive Constraint
@@ -120,7 +120,7 @@ without additional ingredients. A bounded, related state has identity. A
 difference that can travel across a boundary is information. Relations
 that persist are structure.
 
-Everything in the Spiral\'s Tier 1 --- energy, entropy, constraint,
+Everything in the Spiral's Tier 1 --- energy, entropy, constraint,
 information --- is what these Architecture nodes look like when they
 operate on matter at scale. The laws of thermodynamics are not laws
 imposed on the universe from outside. They are Pattern, Causality,
@@ -131,7 +131,7 @@ and Constraint operating together. There are more ways to be disordered
 than ordered.
 
 Energy is what Information looks like when it has physical currency.
-Landauer\'s principle (1961) establishes this formally: the erasure of
+Landauer's principle (1961) establishes this formally: the erasure of
 one bit of information requires a minimum energy expenditure of kT ln 2.
 Information processing is physically irreversible and thermodynamically
 costly. This is not an analogy between information and energy. It is
@@ -145,15 +145,15 @@ same phenomenon described in different vocabularies.
 | Difference into a physical universe is the sufficient condition for  |
 | Spiral Tier 1 to exist. No additional ingredients are required.      |
 |                                                                      |
-| The Spiral\'s Tier 1 is not the foundation of reality. It is the     |
+| The Spiral's Tier 1 is not the foundation of reality. It is the     |
 | foundation of the observable, physically instantiated part of        |
-| reality. The Architecture\'s Layers −1 through 2 constitute the      |
+| reality. The Architecture's Layers −1 through 2 constitute the      |
 | logical substrate that makes physical reality possible. Tier 1 is    |
 | those layers viewed through the lens of physics rather than logic.   |
 |                                                                      |
 | Implication: The Spiral cannot explain why thermodynamic laws hold.  |
 | The Architecture can. The laws hold because they are what the        |
-| Architecture\'s lower nodes look like when instantiated in matter    |
+| Architecture's lower nodes look like when instantiated in matter    |
 | --- and those nodes are logically necessary, not empirically         |
 | contingent.                                                          |
 +----------------------------------------------------------------------+
@@ -195,7 +195,7 @@ structure that carries specific meaning across a boundary. When Code is
 combined with Memory (Layer Four) and energy throughput, locally ordered
 structures can be sustained against the entropic gradient by
 continuously exporting entropy to their environment. This is
-Prigogine\'s dissipative structures: the logic of Code and Memory
+Prigogine's dissipative structures: the logic of Code and Memory
 instantiated in thermodynamically open chemical systems.
 
 +----------------------------------------------------------------------+
@@ -212,8 +212,8 @@ instantiated in thermodynamically open chemical systems.
 | disorder. No additional physical assumption is required.             |
 |                                                                      |
 | Energy and Information are the same phenomenon at different levels   |
-| of description. Landauer\'s principle is the precise formal          |
-| statement of this identity. The Spiral\'s Tier 1 treatment of energy |
+| of description. Landauer's principle is the precise formal          |
+| statement of this identity. The Spiral's Tier 1 treatment of energy |
 | and information as foundational is correct --- but the Architecture  |
 | explains why they are foundational, rather than treating them as     |
 | brute physical facts.                                                |
@@ -226,7 +226,7 @@ instantiated in thermodynamically open chemical systems.
 **Architecture:** Layer 4 · Constraint, Emergence, Memory **→ Spiral:**
 *Tier 2 · Evolution, Recursion, Adaptation*
 
-Darwin\'s theory of evolution by natural selection is among the most
+Darwin's theory of evolution by natural selection is among the most
 powerful explanatory frameworks in science. It explains the diversity of
 life, the fit between organisms and their environments, the molecular
 basis of heredity, and the direction of biological complexity over time.
@@ -253,10 +253,10 @@ imperfect replication. Once variation exists, Constraint filters which
 variants persist. Once filtered variants accumulate through Memory,
 adaptive complexity compounds through time.
 
-Darwin\'s insight was not the discovery of a new physical principle. It
+Darwin's insight was not the discovery of a new physical principle. It
 was the recognition that Memory, Constraint, and Variation operating
-together in chemistry produce what we call life. The Spiral\'s Tier 2
---- evolution, recursion, adaptation --- is the Architecture\'s Layer
+together in chemistry produce what we call life. The Spiral's Tier 2
+--- evolution, recursion, adaptation --- is the Architecture's Layer
 Four instantiated in molecular biology. The biological implementation
 (carbon-based chemistry, nucleic acid heredity, protein enzymes) is
 contingent. The logical inevitability of the stage, given the Layer Four
@@ -328,7 +328,7 @@ explicit what that something is and why it appears at this point in the
 developmental sequence rather than any other.
 
 The self-modeling consequence deserves particular attention. When a
-system\'s model of its environment becomes sufficiently rich, it
+system's model of its environment becomes sufficiently rich, it
 eventually includes the system itself as an object in the environment.
 The system begins to model itself modeling its environment --- the
 strange loop that Hofstadter (1979) identified as the basis of
@@ -351,7 +351,7 @@ not.
 |                                                                      |
 | MECHANISM 4: The Tier 2→3 transition is not a mysterious emergent    |
 | leap. It is the predictable consequence of Representation achieving  |
-| sufficient depth that the system\'s model of its environment         |
+| sufficient depth that the system's model of its environment         |
 | includes a model of itself.                                          |
 |                                                                      |
 | Below this threshold: adaptation through physical coupling. Above    |
@@ -361,7 +361,7 @@ not.
 | complexity of the model, not on the substrate that implements it.    |
 | Any sufficiently complex representational system will cross it.      |
 |                                                                      |
-| The Spiral\'s Tier 3 (Emergence) correctly identifies that something |
+| The Spiral's Tier 3 (Emergence) correctly identifies that something |
 | qualitatively new appears at this boundary. The Architecture         |
 | explains why: it is specifically Representation crossing the         |
 | self-modeling threshold that produces the novel properties the       |
@@ -376,8 +376,8 @@ not.
 4 · Collapse, Decay, Entropy Spikes*
 
 This mechanism is structurally different from the others. In Mechanisms
-1 through 4 and 6 through 8, the Architecture\'s layers generate the
-Spiral\'s tiers through causal instantiation. Mechanism 5 works
+1 through 4 and 6 through 8, the Architecture's layers generate the
+Spiral's tiers through causal instantiation. Mechanism 5 works
 differently: it explains why the Spiral contains a tier that the
 Architecture does not have.
 
@@ -404,7 +404,7 @@ social substrate instantiating those nodes at that level has broken
 down.
 
 The logical structure survives intact as possibility space. What
-collapses is the system\'s ability to access that space --- its ability
+collapses is the system's ability to access that space --- its ability
 to sustain the instantiation of nodes above a certain layer. After
 collapse, the surviving elements of the system retain access to the
 lower layers, because lower layers require less energetic maintenance to
@@ -417,7 +417,7 @@ The reframing has significant consequences for how collapse should be
 analysed. The Spiral treats Collapse as a developmental stage that
 systems pass through in a linear progression. The Architecture reveals
 it as a recurring mode of transition between instantiation states that
-can occur at any tier and at any point in a system\'s development. A
+can occur at any tier and at any point in a system's development. A
 Tier 1 physical system can collapse. A Tier 6 social institution can
 collapse. Collapse is not something systems pass through once on the way
 to higher tiers. It is the failure mode of instantiation itself ---
@@ -438,12 +438,12 @@ foundation.
 | rebuilds instantiation upward from the surviving foundation.         |
 |                                                                      |
 | Collapse is not a developmental stage. It is a recurring failure     |
-| mode that can occur at any tier and at any point in a system\'s      |
+| mode that can occur at any tier and at any point in a system's      |
 | development. This reframing changes what collapse predicts: not a    |
 | linear recovery through prior stages, but a rebuilding from whatever |
 | layer remains instantiated in surviving components.                  |
 |                                                                      |
-| Implication: the Architecture\'s approach predicts that              |
+| Implication: the Architecture's approach predicts that              |
 | post-collapse reorganisation should always begin from the most       |
 | foundational layer still instantiated in surviving elements, and     |
 | should produce stages in the same order as original development ---  |
@@ -459,7 +459,7 @@ foundation.
 Communication, Meaning **→ Spiral:** *Tier 5 · Identity, Selfhood,
 Coherence*
 
-The Spiral\'s Tier 5 addresses identity, selfhood, and coherence --- the
+The Spiral's Tier 5 addresses identity, selfhood, and coherence --- the
 emergence of systems with stable self-models, persistent identities, and
 the capacity to maintain coherence under perturbation. The Architecture
 maps this territory across the Layer Five--Six boundary, where the most
@@ -494,9 +494,9 @@ representation that matters in the context of mutual recognition. From
 Meaning, Language emerges: a generative system of shared representation
 that can express an infinite range of meanings from finite elements.
 
-Everything that follows in the Spiral\'s Tier 5 --- the development of
+Everything that follows in the Spiral's Tier 5 --- the development of
 stable self-models, narrative identity, coherence maintenance --- is the
-Architecture\'s Layer Five through Six boundary viewed from inside the
+Architecture's Layer Five through Six boundary viewed from inside the
 developmental process. The Architecture shows the logical prerequisites.
 The Spiral shows what it looks like to be a system crossing that
 threshold. The Mechanism shows why the crossing is structurally
@@ -522,7 +522,7 @@ in multiple systems.
 | logical development of that initial recognition, each step following |
 | necessarily from the ones below it.                                  |
 |                                                                      |
-| The Spiral\'s Tier 5 describes the phenomenology of this transition  |
+| The Spiral's Tier 5 describes the phenomenology of this transition  |
 | from inside a system crossing the threshold. The Architecture        |
 | explains why the threshold exists where it does in the dependency    |
 | structure.                                                           |
@@ -535,7 +535,7 @@ in multiple systems.
 **Architecture:** Layers 6--7 · Reflexivity applied to regulatory
 structure **→ Spiral:** *Tier 6 · Meta-Governance, Recursive Constraint*
 
-The Spiral\'s Tier 6 --- Meta-Governance, the regulation of regulation
+The Spiral's Tier 6 --- Meta-Governance, the regulation of regulation
 --- describes the emergence of systems that not only operate under rules
 but examine, modify, and regenerate the rules they operate under. The
 Architecture places this capacity at the Layer Six--Seven boundary:
@@ -543,8 +543,8 @@ Reflexivity applied to regulatory structure.
 
 The transition requires a specific combination of Layer Six and Layer
 Seven capacities operating simultaneously. Reflexivity --- the
-Architecture\'s first Layer Seven node --- is the capacity of a system
-to take itself as its own object. Applied specifically to a system\'s
+Architecture's first Layer Seven node --- is the capacity of a system
+to take itself as its own object. Applied specifically to a system's
 regulatory structure, it produces Meta-Governance: the system does not
 merely follow rules; it models its rules, evaluates whether they are
 achieving their intended effects, generates modified rules, and modifies
@@ -567,7 +567,7 @@ social structures that persist across individual lifetimes, that outlast
 any particular agent, that constitute institutions, legal systems,
 scientific communities, and cultural norms --- these require Social
 Reflexivity: the mutual examination and negotiation of rules among
-multiple reflective agents. Mead\'s (1934) social theory of the self
+multiple reflective agents. Mead's (1934) social theory of the self
 provides empirical grounding: even individual Reflexivity requires the
 internalisation of the perspective of the generalized other --- social
 structure is already present inside the apparently private act of
@@ -590,7 +590,7 @@ individual reflection.
 | examination and negotiation of operating rules among multiple        |
 | reflective agents.                                                   |
 |                                                                      |
-| The Spiral\'s Tier 6 describes what Meta-Governance looks like in    |
+| The Spiral's Tier 6 describes what Meta-Governance looks like in    |
 | biological, social, and institutional systems. The Architecture      |
 | explains why it cannot appear before Layer 7 is in place, and why it |
 | requires the full Layer 6 social infrastructure rather than merely   |
@@ -605,25 +605,25 @@ individual reflection.
 limit **→ Spiral:** *Tier 7A & 7B · Integration (Scientific and
 Philosophical)*
 
-The Spiral\'s Tier 7 --- Integration --- is what the Architecture\'s
+The Spiral's Tier 7 --- Integration --- is what the Architecture's
 Layer Seven looks like when all its nodes operate simultaneously on a
 system with full instantiation of Layers One through Six. It is not a
 new stage beyond what has come before. It is the full operation of what
 has been built across all preceding layers, examined reflexively.
 
-Tier 7A (scientific integration) maps onto the Architecture\'s Layer
+Tier 7A (scientific integration) maps onto the Architecture's Layer
 Seven operational nodes: Reflexivity, Logic and Mathematics,
 Epistemology, Science, Ethics. These nodes allow a system to not merely
 use knowledge but examine knowledge --- to ask not only what it knows
 but how it knows, to build systematic procedures for distinguishing
 reliable representations from unreliable ones, to act on the recognition
 that other constituted subjects have interiors that matter. The
-Spiral\'s description of integration as the binding of distributed
-processing into a coherent whole corresponds to the Architecture\'s
+Spiral's description of integration as the binding of distributed
+processing into a coherent whole corresponds to the Architecture's
 characterisation of Layer Seven as Reflexivity simultaneously applied
 across all prior domains.
 
-Tier 7B (philosophical integration) maps onto the Architecture\'s honest
+Tier 7B (philosophical integration) maps onto the Architecture's honest
 edges: Reflexive Consciousness and Meaning --- the two nodes the map
 cannot fully contain. Here both frameworks arrive at precisely the same
 boundary, having been built by entirely different methods from entirely
@@ -646,7 +646,7 @@ arrived independently at the same wall. The wall is real.
 +----------------------------------------------------------------------+
 | **M8 --- MECHANISM STATEMENT**                                       |
 |                                                                      |
-| MECHANISM 8: The Spiral\'s Tier 7 Integration is the logical         |
+| MECHANISM 8: The Spiral's Tier 7 Integration is the logical         |
 | consequence of a system that has instantiated all eight layers of    |
 | the Architecture operating in a mode of full Reflexivity ---         |
 | examining its own structure, knowledge, values, and existence        |
@@ -685,7 +685,7 @@ four forms, from most compressed to most developed.
 
 ***Thesis 1 --- The Stages Are Not Contingent***
 
-The Spiral\'s developmental stages appear, from inside biology and
+The Spiral's developmental stages appear, from inside biology and
 history, as if they might have been otherwise. Evolution could have
 taken different paths. Intelligence might have developed differently.
 Consciousness might not have emerged, or might have emerged in radically
@@ -766,8 +766,8 @@ constraints that produce the most precise answers.
 than convergence*
 
 The eight mechanisms in Chapter 6 establish where the Architecture and
-the Spiral converge: the Spiral\'s developmental stages are logically
-generated by the Architecture\'s dependency structure. This chapter
+the Spiral converge: the Spiral's developmental stages are logically
+generated by the Architecture's dependency structure. This chapter
 examines where they diverge. The five gaps documented here are not
 errors to be corrected or embarrassments to be minimised. They are the
 most informative outputs of the synthesis.
@@ -792,7 +792,7 @@ more precise picture of what remains unknown.
 | ongoing development of the Architecture. Divergence is more valuable |
 | than agreement. A gap that points toward undiscovered territory is   |
 | worth more than a new node that confirms what is already known. The  |
-| five gaps in this chapter are the Architecture\'s highest-priority   |
+| five gaps in this chapter are the Architecture's highest-priority   |
 | outputs from the synthesis with the Spiral.                          |
 +----------------------------------------------------------------------+
 
@@ -815,7 +815,7 @@ presupposes Potential --- structured potentiality before actualization.
 Neither Difference nor Potential is a physical phenomenon. They are the
 logical conditions that make physical phenomena possible.
 
-This means the Spiral\'s Tier 1 is not the foundation of reality. It is
+This means the Spiral's Tier 1 is not the foundation of reality. It is
 the foundation of the observable, physically instantiated part of
 reality. There is a deeper level --- the logical conditions that make a
 physical universe possible in the first place --- that the Spiral does
@@ -827,9 +827,9 @@ before that universe could exist.
 +----------------------------------------------------------------------+
 | **GAP 1 --- PRE-PHYSICAL FOUNDATION**                                |
 |                                                                      |
-| STRUCTURAL CORRECTION: The Spiral\'s Tier 1 (Foundations) is not the |
+| STRUCTURAL CORRECTION: The Spiral's Tier 1 (Foundations) is not the |
 | bottom of the map. It is the bottom of the observable map.           |
-| Everything in Tier 1 presupposes the Architecture\'s Layers −1       |
+| Everything in Tier 1 presupposes the Architecture's Layers −1       |
 | through 2 already instantiated in matter.                            |
 |                                                                      |
 | UNDISCOVERED TERRITORY: What is the relationship between logical     |
@@ -841,17 +841,17 @@ before that universe could exist.
 |                                                                      |
 | PRACTICAL IMPLICATION: Analyses that treat thermodynamics as         |
 | foundational without acknowledging the logical substrate beneath it  |
-| are working within the Spiral\'s frame. This is appropriate for many |
+| are working within the Spiral's frame. This is appropriate for many |
 | diagnostic purposes. It becomes a limitation when asking why         |
 | thermodynamic laws hold --- a question that requires the             |
-| Architecture\'s lower layers.                                        |
+| Architecture's lower layers.                                        |
 +----------------------------------------------------------------------+
 
 **Gap 2**
 
 **Tiers Stack --- They Do Not Sequence**
 
-The Spiral\'s presentation implies a developmental sequence: systems
+The Spiral's presentation implies a developmental sequence: systems
 pass through tiers as they grow in complexity. A Tier 5 system has moved
 through Tiers 1, 2, 3, and 4 and arrived at Tier 5. This framing, while
 useful for some diagnostic purposes, is structurally misleading in an
@@ -871,9 +871,9 @@ social institution (Tier 6 in the Spiral) is simultaneously subject to
 energy constraints (Tier 1), evolutionary selection pressure (Tier 2),
 emergent properties of its component interactions (Tier 3), collapse
 dynamics (Tier 4), identity coherence requirements (Tier 5), and
-meta-governance demands. Analysing it as if it has \'moved through\'
+meta-governance demands. Analysing it as if it has 'moved through'
 lower tiers and left them behind produces a systematically incomplete
-picture. The lower tiers are not in the institution\'s past. They are in
+picture. The lower tiers are not in the institution's past. They are in
 its present, operating simultaneously with the higher-tier processes.
 
 The stacking picture also changes what collapse means diagnostically. If
@@ -881,7 +881,7 @@ tiers stack rather than sequence, then a system in collapse does not
 regress through tiers it has passed --- it loses the ability to
 instantiate higher-layer nodes while retaining the substrate of
 lower-layer nodes. The lower layers do not return; they were never
-absent. What changes is the system\'s capacity to sustain the
+absent. What changes is the system's capacity to sustain the
 higher-order instantiations that depend on them.
 
 +----------------------------------------------------------------------+
@@ -911,15 +911,15 @@ higher-order instantiations that depend on them.
 **One Word for Two Structurally Distinct Phenomena**
 
 The Spiral places Feedback at Tier 1 as foundational and empirically
-established, citing Wiener\'s Cybernetics (1948) as the grounding
+established, citing Wiener's Cybernetics (1948) as the grounding
 source. This is correct in intent but structurally imprecise in a way
 that obscures the most important threshold in the transition from
 physical to biological systems.
 
 The Architecture distinguishes two phenomena that travel under the name
-\'feedback\' but belong at different dependency levels with different
+'feedback' but belong at different dependency levels with different
 necessary conditions. Physical feedback (Layer Three) is what Le
-Chatelier\'s principle describes: a system perturbed from equilibrium
+Chatelier's principle describes: a system perturbed from equilibrium
 generates forces opposing the perturbation through direct physical
 coupling. No internal model is required. The system does not represent
 its current state or its target state; it physically responds to
@@ -939,12 +939,12 @@ no discrepancy signal. Without a discrepancy signal, there is no
 cybernetic feedback --- only physical response.
 
 The distinction matters because it marks the most important threshold in
-the Spiral\'s Tier 1 to Tier 2 transition: the shift from physical
+the Spiral's Tier 1 to Tier 2 transition: the shift from physical
 self-regulation to representational self-regulation. These are not the
 same kind of thing. Physical feedback operates in thermostats and
 chemical equilibria. Cybernetic feedback operates in organisms,
 organisations, and minds. The difference between them is Representation
---- one of the Architecture\'s most consequential nodes. Conflating them
+--- one of the Architecture's most consequential nodes. Conflating them
 under one word means conflating a process that requires no mind with a
 process that is constitutive of what minds do.
 
@@ -964,13 +964,13 @@ feedback types empirically.
 | no internal model. Cybernetic feedback requires Representation as    |
 | its necessary condition.                                             |
 |                                                                      |
-| The Spiral\'s placement of both under \'Feedback\' at Tier 1         |
+| The Spiral's placement of both under 'Feedback' at Tier 1         |
 | conflates a Layer 3 phenomenon with a Layer 5 phenomenon and         |
 | attributes to Tier 1 a capacity --- goal-directed self-regulation    |
 | --- that only becomes possible at Layer 5.                           |
 |                                                                      |
 | UNDISCOVERED TERRITORY: A precise taxonomy of feedback types         |
-| organised by the Architecture\'s dependency structure would clarify  |
+| organised by the Architecture's dependency structure would clarify  |
 | which scientific results about feedback apply to which systems. Many |
 | apparent contradictions in the feedback literature --- particularly  |
 | between systems biology, control engineering, and cognitive science  |
@@ -978,15 +978,15 @@ feedback types empirically.
 |                                                                      |
 | STANDALONE PAPER: This gap constitutes the most directly publishable |
 | standalone contribution of the Architecture. See companion paper:    |
-| \'Two Concepts of Feedback: Physical Coupling and Cybernetic         |
-| Self-Regulation as Structurally Distinct Phenomena\'.                |
+| 'Two Concepts of Feedback: Physical Coupling and Cybernetic         |
+| Self-Regulation as Structurally Distinct Phenomena'.                |
 +----------------------------------------------------------------------+
 
 **Gap 4**
 
 **Emergence Is Not a Tier**
 
-The Spiral\'s Tier 3 treats Emergence as a developmental stage that
+The Spiral's Tier 3 treats Emergence as a developmental stage that
 systems pass through: a tier in which complex, novel properties appear
 that were not present in prior tiers. This treatment is understandable
 --- the Tier 2 to Tier 3 transition (the Representation threshold) is
@@ -1006,13 +1006,13 @@ complexity. Intersubjectivity emerges when Representation encounters
 itself in another system. Reflexivity emerges when Language turns back
 on itself.
 
-Every one of these is an emergence event. The Architecture\'s entire
+Every one of these is an emergence event. The Architecture's entire
 structure is a map of emergence events stacked sequentially. The
-Spiral\'s Tier 3 isolates the Layer Five threshold as a developmental
+Spiral's Tier 3 isolates the Layer Five threshold as a developmental
 stage because it is the most visually and behaviourally dramatic
 emergence event in biological systems --- the transition from physical
 to living, from responding to predicting. But calling this threshold
-\'Emergence\' and treating it as a tier suggests that emergence happens
+'Emergence' and treating it as a tier suggests that emergence happens
 once in the middle of the developmental sequence. It happens at every
 transition.
 
@@ -1031,18 +1031,18 @@ state of the science.
 |                                                                      |
 | STRUCTURAL CORRECTION: Emergence is not a developmental stage. It is |
 | the universal mechanism of every layer-crossing in the Architecture. |
-| Calling Tier 3 \'Emergence\' and treating it as a developmental      |
+| Calling Tier 3 'Emergence' and treating it as a developmental      |
 | stage obscures the universal character of emergence across all       |
 | transitions.                                                         |
 |                                                                      |
-| The Spiral\'s Tier 3 is better understood as the emergence of        |
+| The Spiral's Tier 3 is better understood as the emergence of        |
 | Representation specifically --- the most consequential single        |
 | emergence event in biological development --- rather than emergence  |
 | as such.                                                             |
 |                                                                      |
 | UNDISCOVERED TERRITORY: If emergence is the mechanism of every       |
 | layer-crossing, a precise formal theory of emergence should be       |
-| derivable from the Architecture\'s dependency structure. What is the |
+| derivable from the Architecture's dependency structure. What is the |
 | exact formal relationship between the nodes at one layer and the     |
 | emergent properties at the next? Category theory (see Appendix E)    |
 | may be the right mathematical tool for this question. This is an     |
@@ -1060,7 +1060,7 @@ state of the science.
 
 **Collapse Is Not a Tier**
 
-This is the most structurally important gap. The Spiral\'s Tier 4 treats
+This is the most structurally important gap. The Spiral's Tier 4 treats
 Collapse as a developmental stage --- something systems pass through in
 their progression toward higher complexity. The Architecture has no
 collapse tier. This asymmetry is not an oversight in either framework.
@@ -1082,7 +1082,7 @@ instantiation of the logical structure. A cell that loses membrane
 integrity loses its ability to instantiate the Layer Six processes ---
 Intersubjectivity, Communication, Meaning --- that its social context
 had been producing. It loses this instantiation not because Meaning has
-been destroyed but because the physical substrate sustaining Meaning\'s
+been destroyed but because the physical substrate sustaining Meaning's
 instantiation at that level has failed. The logical structure survives
 intact as possibility space. What the cell loses is access to that
 space.
@@ -1101,7 +1101,7 @@ intact; the physical substrate that previously could not sustain
 higher-layer instantiation may, after reorganisation, be able to sustain
 it again.
 
-The reframing also produces a prediction that the Spiral\'s framework
+The reframing also produces a prediction that the Spiral's framework
 does not: post-collapse reorganisation should always begin from the
 lowest layer still instantiated in surviving components, and should
 proceed upward through the architectural layers in their original order,
@@ -1118,7 +1118,7 @@ systems.
 | conditions required to sustain its current level of instantiation.   |
 |                                                                      |
 | The logical structure does not collapse. What collapses is the       |
-| system\'s capacity to instantiate higher-order nodes. Lower-order    |
+| system's capacity to instantiate higher-order nodes. Lower-order    |
 | nodes survive because they require less energetic maintenance. The   |
 | logical possibility space remains intact.                            |
 |                                                                      |
@@ -1130,13 +1130,13 @@ systems.
 |                                                                      |
 | UNDISCOVERED TERRITORY: A formal theory of collapse grounded in the  |
 | dependency structure would specify, for any system, the energetic    |
-| maintenance requirements of each layer\'s instantiation and the      |
+| maintenance requirements of each layer's instantiation and the      |
 | threshold at which instantiation failure occurs. This would give     |
 | collapse theory predictive power beyond the retrospective            |
 | pattern-matching that current resilience theory provides.            |
 |                                                                      |
 | PRACTICAL IMPLICATION: Collapse can occur at any tier, at any point  |
-| in a system\'s development. Analysing collapse as a Tier 4 stage     |
+| in a system's development. Analysing collapse as a Tier 4 stage     |
 | that complex systems pass through once on the way to higher          |
 | integration systematically underpredicts the collapse risk of        |
 | sophisticated systems and mistraces the reorganisation pathways      |
@@ -1159,13 +1159,13 @@ framework.
 
 -   If Emergence is the mechanism of every layer-crossing (Gap 4), can a
     precise formal definition of emergence be derived from the
-    Architecture\'s dependency structure? What is the relationship
+    Architecture's dependency structure? What is the relationship
     between the nodes at one layer and emergent properties at the next,
     expressed in category-theoretic terms?
 
 -   Can the conditions for instantiation failure (Gap 5) be derived
-    formally from the Architecture\'s dependency structure? What is the
-    relationship between a layer\'s nodes and its energetic maintenance
+    formally from the Architecture's dependency structure? What is the
+    relationship between a layer's nodes and its energetic maintenance
     requirements?
 
 ***Empirical questions (requiring experimental design)***
@@ -1183,7 +1183,7 @@ framework.
     different substrate types?
 
 -   Mechanism 5 (Collapse as instantiation failure): can the energetic
-    maintenance requirements of each layer\'s instantiation be
+    maintenance requirements of each layer's instantiation be
     quantified in biological, social, or computational systems? Is the
     prediction that lower layers survive collapse better than higher
     layers measurable?
@@ -1213,7 +1213,7 @@ framework.
 +----------------------------------------------------------------------+
 | **CLOSING PRINCIPLE**                                                |
 |                                                                      |
-| The gaps are not failures of either framework. They are the map\'s   |
+| The gaps are not failures of either framework. They are the map's   |
 | most valuable outputs --- the places where independently constructed |
 | frameworks, each using its own tools and beginning from its own      |
 | starting point, reached boundaries that neither could see past       |

@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Structural Dependency Ontology"
+abstract: >
+  A dependency-ordered map of logical structure from which developmental
+  stages are derived. Three independently constructed frameworks — the
+  Architecture of Knowledge, the Spiral (155 truths with explicit epistemic
+  labeling), and the Mechanism connecting them — converge on the thesis that
+  reality has a logical structure and time is what that structure looks like
+  as it instantiates in matter. Companion papers address the Intelligence
+  Formula (recursive refinement against entropy), the Feedback Split
+  (physical vs. cybernetic feedback as structurally distinct phenomena), and
+  Spiral Field Theory (recursive tensor extension of general relativity).
+authors:
+  - family-names: Wilson
+    given-names: Christopher R. B.
+    alias: cisomorph
+    orcid: ""
+repository-code: "https://github.com/cisomorph/Structural-Dependency-Ontology"
+keywords:
+  - structural dependency
+  - architecture of knowledge
+  - recursive intelligence
+  - philosophy of mind
+  - systems theory
+  - emergence
+  - consciousness
+  - spiral field theory
+  - feedback
+  - cybernetics
+license: CC-BY-4.0
+version: "0.1.0"
+date-released: "2025-04-14"
+
+references:
+  - type: software
+    title: "RIFT: Recursive Intelligence-Field Theory"
+    authors:
+      - family-names: Wilson
+        given-names: Christopher R. B.
+    repository-code: "https://github.com/cisomorph/RIFT"
+    notes: >
+      Companion simulation programme testing RIFT/SFT predictions against
+      Planck, DESI, SPARC, and gravitational-wave datasets.
