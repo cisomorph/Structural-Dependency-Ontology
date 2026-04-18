@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Structural Dependency Ontology</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400&family=Cinzel:wght@400;600&display=swap');
+  :root {
+    --bg:#080c12; --bg2:#0d1520; --line:#1a2d45;
+    --accent:#4a9eff; --accent2:#7bc3ff;
+    --gold:#c9a84c; --gold2:#e8cc7a;
+    --text:#c8d8e8; --text-dim:#5a7a9a; --text-faint:#2a4a6a;
+    --white:#e8f0f8; --glow:rgba(74,158,255,0.15);
+    --l0:#c9a84c; --l1:#7b68ee; --l2:#4a9eff; --l3:#3cb371;
+    --l4:#e05a3a; --l5:#d4a017; --l56:#ff6b9d; --l6:#a855f7; --l7:#ec4899;
+    --gap:#ff4444;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Cormorant Garamond',serif;overflow:hidden;height:100vh;width:100vw;}
+
+  /* ── Nav ── */
+  #nav{position:fixed;top:0;left:0;right:0;z-index:300;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 24px;border-bottom:1px solid var(--line);
+    background:rgba(8,12,18,0.97);backdrop-filter:blur(8px);}
+  .nav-brand{display:flex;flex-direction:column;}
+  .nav-title{font-family:'Cinzel',serif;font-size:14px;letter-spacing:.1em;color:var(--white);}
+  .nav-sub{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-top:1px;}
+  .nav-tabs{display:flex;gap:4px;}
+  .nav-tab{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;
+    padding:6px 18px;border:1px solid var(--line);background:none;
+    color:var(--text-dim);cursor:pointer;transition:all .2s;text-transform:uppercase;}
+  .nav-tab:hover{border-color:var(--accent);color:var(--accent2);}
+  .nav-tab.active{border-color:var(--accent);color:var(--accent2);background:var(--glow);}
+  .nav-right{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);text-align:right;line-height:1.6;}
+
+  /* ── Views ── */
+  .view{position:fixed;inset:0;top:52px;display:none;}
+  .view.active{display:block;}
+
+  /* ══════════ ARCHITECTURE VIEW ══════════ */
+  #view-arch canvas{position:absolute;inset:0;}
+  #arch-ui{position:absolute;inset:0;pointer-events:none;}
+  #arch-header{pointer-events:all;padding:14px 24px 10px;display:flex;align-items:flex-end;justify-content:space-between;
+    border-bottom:1px solid var(--line);background:linear-gradient(to bottom,rgba(8,12,18,.95),rgba(8,12,18,.6));backdrop-filter:blur(4px);}
+  .ah-title{font-family:'Cinzel',serif;font-size:16px;font-weight:600;color:var(--white);letter-spacing:.08em;}
+  .ah-sub{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:var(--text-dim);margin-top:2px;}
+  .ah-controls{display:flex;gap:6px;}
+  .ctrl-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;
+    padding:5px 12px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+    color:var(--text-dim);cursor:pointer;transition:all .2s;text-transform:uppercase;}
+  .ctrl-btn:hover,.ctrl-btn.active{border-color:var(--accent);color:var(--accent2);background:var(--glow);}
+  #arch-legend{pointer-events:all;position:absolute;left:16px;top:76px;
+    background:rgba(8,12,18,.88);border:1px solid var(--line);padding:10px 12px;backdrop-filter:blur(8px);}
+  .legend-title{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+  .legend-item{display:flex;align-items:center;gap:8px;cursor:pointer;opacity:.7;transition:opacity .2s;padding:2px 3px;}
+  .legend-item:hover{opacity:1;}
+  .legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+  .legend-label{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text);white-space:nowrap;}
+  .legend-num{font-size:8px;color:var(--text-faint);margin-left:auto;padding-left:8px;}
+  .legend-divider{height:1px;background:var(--line);margin:5px 0;}
+  .legend-special{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--l56);display:flex;align-items:center;gap:8px;padding:2px 3px;}
+
+  /* ── Architecture Panel ── */
+  #arch-panel{pointer-events:all;position:absolute;right:0;top:60px;bottom:0;width:360px;
+    background:rgba(8,12,18,.96);border-left:1px solid var(--line);backdrop-filter:blur(12px);
+    transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);
+    display:flex;flex-direction:column;overflow:hidden;}
+  #arch-panel.open{transform:translateX(0);}
+  .panel-header{padding:20px 20px 12px;border-bottom:1px solid var(--line);flex-shrink:0;}
+  .panel-layer-tag{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px;}
+  .panel-node-name{font-family:'Cinzel',serif;font-size:22px;font-weight:600;color:var(--white);line-height:1.1;margin-bottom:3px;}
+  .panel-close{position:absolute;top:16px;right:16px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;
+    border:1px solid var(--line);color:var(--text-dim);cursor:pointer;font-family:'JetBrains Mono',monospace;font-size:12px;transition:all .2s;background:none;}
+  .panel-close:hover{border-color:var(--accent);color:var(--accent);}
+  .panel-body{padding:16px 20px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:var(--line) transparent;}
+  .panel-section{margin-bottom:16px;}
+  .panel-section-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
+  .panel-def{font-size:14px;line-height:1.65;color:var(--text);font-style:italic;}
+  .dim-item{display:flex;flex-direction:column;gap:3px;margin-bottom:9px;}
+  .dim-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.15em;color:var(--text-dim);text-transform:uppercase;}
+  .dim-bar-track{height:3px;background:var(--line);border-radius:2px;overflow:hidden;}
+  .dim-bar-fill{height:100%;border-radius:2px;}
+  .dim-text{font-size:12px;color:var(--text);line-height:1.5;}
+  .dep-list{display:flex;flex-wrap:wrap;gap:5px;}
+  .dep-tag{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;border:1px solid var(--line);color:var(--text-dim);cursor:pointer;transition:all .2s;}
+  .dep-tag:hover{border-color:var(--accent);color:var(--accent2);}
+  .signal-box{border-left:2px solid var(--gold);padding:9px 13px;background:rgba(201,168,76,.06);font-size:12px;line-height:1.6;color:var(--text);font-style:italic;}
+  .relational-box{border-left:2px solid var(--l56);padding:9px 13px;background:rgba(255,107,157,.06);font-size:12px;line-height:1.6;color:var(--text);margin-top:8px;}
+  .relational-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--l56);text-transform:uppercase;margin-bottom:5px;}
+  .spiral-link{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;
+    border:1px solid var(--l56);color:var(--l56);cursor:pointer;transition:all .2s;display:inline-block;margin:2px;}
+  .spiral-link:hover{background:rgba(255,107,157,.1);}
+
+  #arch-footer{pointer-events:none;position:absolute;bottom:0;left:0;right:0;
+    padding:7px 24px;display:flex;align-items:center;justify-content:space-between;
+    border-top:1px solid var(--line);background:rgba(8,12,18,.88);backdrop-filter:blur(4px);}
+  .footer-info{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;color:var(--text-faint);}
+  #tooltip{position:fixed;pointer-events:none;padding:5px 9px;background:rgba(8,12,18,.96);
+    border:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:10px;
+    color:var(--text);letter-spacing:.05em;opacity:0;transition:opacity .15s;white-space:nowrap;
+    backdrop-filter:blur(8px);z-index:400;}
+
+  /* ══════════ SPIRAL VIEW ══════════ */
+  #view-spiral{overflow:hidden;display:none;flex-direction:column;}
+  #view-spiral.active{display:flex;}
+  #spiral-toolbar{flex-shrink:0;padding:12px 24px;border-bottom:1px solid var(--line);
+    background:rgba(8,12,18,.95);display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .spiral-filter-group{display:flex;gap:4px;align-items:center;}
+  .spiral-filter-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-right:4px;}
+  .filter-btn{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.08em;
+    padding:4px 10px;border:1px solid var(--line);background:none;color:var(--text-dim);
+    cursor:pointer;transition:all .2s;text-transform:uppercase;}
+  .filter-btn:hover,.filter-btn.active{border-color:var(--accent);color:var(--accent2);background:var(--glow);}
+  .filter-btn.fE.active{border-color:#3cb371;color:#3cb371;background:rgba(60,179,113,.08);}
+  .filter-btn.fH.active{border-color:#4a9eff;color:#4a9eff;background:rgba(74,158,255,.08);}
+  .filter-btn.fT.active{border-color:#d4a017;color:#d4a017;background:rgba(212,160,23,.08);}
+  .filter-btn.fP.active{border-color:#a855f7;color:#a855f7;background:rgba(168,85,247,.08);}
+  .spiral-count{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-faint);margin-left:auto;}
+
+  #spiral-main{display:flex;flex:1;overflow:hidden;}
+  #spiral-grid-wrap{flex:1;overflow-y:auto;padding:20px 24px;scrollbar-width:thin;scrollbar-color:var(--line) transparent;}
+  #spiral-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;}
+
+  .truth-card{border:1px solid var(--line);padding:14px;cursor:pointer;transition:all .2s;
+    background:rgba(13,21,32,.6);position:relative;}
+  .truth-card:hover{border-color:var(--accent);background:rgba(74,158,255,.04);}
+  .truth-card.selected{border-color:var(--accent2);background:rgba(74,158,255,.08);}
+  .tc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;}
+  .tc-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-faint);letter-spacing:.1em;}
+  .tc-label{font-family:'JetBrains Mono',monospace;font-size:8px;padding:2px 6px;border:1px solid currentColor;}
+  .lbl-E{color:#3cb371;border-color:#3cb371;background:rgba(60,179,113,.08);}
+  .lbl-H{color:#4a9eff;border-color:#4a9eff;background:rgba(74,158,255,.08);}
+  .lbl-T{color:#d4a017;border-color:#d4a017;background:rgba(212,160,23,.08);}
+  .lbl-P{color:#a855f7;border-color:#a855f7;background:rgba(168,85,247,.08);}
+  .tc-tier{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);margin-bottom:5px;}
+  .tc-title{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--white);line-height:1.3;margin-bottom:6px;}
+  .tc-def{font-size:12px;color:var(--text-dim);line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+
+  /* ── Spiral Detail Panel ── */
+  #spiral-panel{width:360px;flex-shrink:0;border-left:1px solid var(--line);
+    background:rgba(8,12,18,.96);display:flex;flex-direction:column;overflow:hidden;
+    transform:translateX(100%);transition:transform .4s cubic-bezier(.16,1,.3,1);width:0;}
+  #spiral-panel.open{transform:translateX(0);width:360px;}
+  .sp-header{padding:20px 20px 12px;border-bottom:1px solid var(--line);flex-shrink:0;}
+  .sp-num{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-faint);margin-bottom:3px;}
+  .sp-title{font-family:'Cinzel',serif;font-size:18px;color:var(--white);line-height:1.2;margin-bottom:4px;}
+  .sp-meta{display:flex;gap:8px;align-items:center;margin-top:6px;}
+  .sp-body{padding:16px 20px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:var(--line) transparent;}
+  .sp-section{margin-bottom:16px;}
+  .sp-section-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:7px;}
+  .sp-def{font-size:14px;line-height:1.65;color:var(--text);}
+  .arch-link{font-family:'JetBrains Mono',monospace;font-size:9px;padding:3px 8px;
+    border:1px solid var(--accent);color:var(--accent);cursor:pointer;transition:all .2s;display:inline-block;margin:2px;}
+  .arch-link:hover{background:var(--glow);}
+
+  /* ── Tier Bands ── */
+  .tier-band{margin-bottom:28px;}
+  .tier-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .tier-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.15em;color:var(--white);}
+  .tier-sub{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);letter-spacing:.1em;}
+  .tier-count{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);margin-left:auto;}
+
+  /* ══════════ MECHANISM VIEW ══════════ */
+  #view-mech{overflow:hidden;display:none;flex-direction:column;}
+  #view-mech.active{display:flex;}
+  #mech-header{flex-shrink:0;padding:14px 24px;border-bottom:1px solid var(--line);
+    background:rgba(8,12,18,.95);display:flex;align-items:center;justify-content:space-between;}
+  .mech-title{font-family:'Cinzel',serif;font-size:15px;letter-spacing:.1em;color:var(--white);}
+  .mech-sub{font-family:'Cormorant Garamond',serif;font-size:12px;font-style:italic;color:var(--text-dim);margin-top:2px;}
+  #mech-legend{display:flex;gap:16px;align-items:center;}
+  .ml-item{display:flex;gap:6px;align-items:center;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-dim);}
+  .ml-line{width:24px;height:2px;}
+
+  #mech-main{flex:1;display:flex;overflow:hidden;}
+  #mech-canvas-wrap{flex:1;position:relative;overflow:hidden;}
+  #mech-svg{position:absolute;inset:0;width:100%;height:100%;}
+
+  .mech-col{position:absolute;top:0;bottom:0;width:240px;overflow-y:auto;
+    scrollbar-width:thin;scrollbar-color:var(--line) transparent;padding:20px 16px;}
+  #mech-col-arch{left:0;border-right:1px solid var(--line);}
+  #mech-col-spiral{right:0;border-left:1px solid var(--line);}
+  .mech-col-title{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;
+    color:var(--gold);text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--line);}
+  .mech-layer{border:1px solid var(--line);padding:10px 12px;margin-bottom:10px;cursor:pointer;
+    transition:all .2s;background:rgba(13,21,32,.4);}
+  .mech-layer:hover,.mech-layer.highlight{background:rgba(74,158,255,.06);border-color:var(--accent);}
+  .mech-layer-id{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:3px;}
+  .mech-layer-name{font-family:'Cinzel',serif;font-size:13px;color:var(--white);}
+  .mech-layer-nodes{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);margin-top:4px;line-height:1.6;}
+
+  .mech-tier{border:1px solid var(--line);padding:10px 12px;margin-bottom:10px;cursor:pointer;
+    transition:all .2s;background:rgba(13,21,32,.4);}
+  .mech-tier:hover,.mech-tier.highlight{background:rgba(255,107,157,.06);border-color:var(--l56);}
+  .mech-tier-id{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:3px;}
+  .mech-tier-name{font-family:'Cinzel',serif;font-size:13px;color:var(--white);}
+  .mech-tier-range{font-family:'JetBrains Mono',monospace;font-size:8px;color:var(--text-faint);margin-top:4px;}
+
+  /* ── Mechanism Detail Panel ── */
+  #mech-panel{width:0;flex-shrink:0;border-left:1px solid var(--line);
+    background:rgba(8,12,18,.96);display:flex;flex-direction:column;overflow:hidden;
+    transition:width .4s cubic-bezier(.16,1,.3,1);}
+  #mech-panel.open{width:340px;}
+  .mp-header{padding:20px 20px 12px;border-bottom:1px solid var(--line);flex-shrink:0;}
+  .mp-type{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:4px;}
+  .mp-title{font-family:'Cinzel',serif;font-size:16px;color:var(--white);line-height:1.3;}
+  .mp-body{padding:16px 20px;overflow-y:auto;flex:1;scrollbar-width:thin;scrollbar-color:var(--line) transparent;}
+  .mp-desc{font-size:14px;line-height:1.7;color:var(--text);}
+  .gap-box{border-left:2px solid var(--gap);padding:10px 13px;background:rgba(255,68,68,.05);
+    font-size:13px;line-height:1.6;color:var(--text);margin-top:12px;}
+  .gap-label{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.2em;color:var(--gap);text-transform:uppercase;margin-bottom:5px;}
+
+  /* ── Intro ── */
+  #intro{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:12px;z-index:500;transition:opacity .8s;}
+  #intro.hidden{opacity:0;pointer-events:none;}
+  .intro-title{font-family:'Cinzel',serif;font-size:36px;font-weight:600;color:var(--white);letter-spacing:.1em;text-align:center;}
+  .intro-rule{width:60px;height:1px;background:var(--gold);}
+  .intro-sub{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--text-dim);text-align:center;}
+  .intro-thesis{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--text-faint);text-align:center;max-width:480px;line-height:1.7;margin-top:4px;}
+  .intro-meta{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--text-faint);text-align:center;line-height:2;}
+  .intro-btn{margin-top:18px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.2em;
+    padding:9px 28px;border:1px solid var(--gold);background:none;color:var(--gold);
+    cursor:pointer;transition:all .3s;text-transform:uppercase;}
+  .intro-btn:hover{background:rgba(201,168,76,.1);color:var(--gold2);}
+
+  body::after{content:'';position:fixed;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);
+    z-index:600;}
+</style>
+</head>
+<body>
+
+<div id="nav">
+  <div class="nav-brand">
+    <div class="nav-title">Structural Dependency Ontology</div>
+    <div class="nav-sub">C. R. B. Wilson · 2025</div>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="switchView('arch')">Architecture</button>
+    <button class="nav-tab" onclick="switchView('spiral')">Spiral · 155 Truths</button>
+    <button class="nav-tab" onclick="switchView('mech')">Mechanism</button>
+  </div>
+  <div class="nav-right">
+    33 Nodes · 8 Layers · 155 Truths<br>
+    <a href="https://github.com/cisomorph/Structural-Dependency-Ontology" target="_blank"
+       style="color:var(--text-faint);text-decoration:none;font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.1em;">
+      github.com/cisomorph/SDO ↗
+    </a>
+  </div>
+</div>
+
+<!-- ══════════ ARCHITECTURE VIEW ══════════ -->
+<div class="view active" id="view-arch">
+  <canvas id="arch-canvas"></canvas>
+  <div id="arch-ui">
+    <div id="arch-header">
+      <div>
+        <div class="ah-title">The Architecture of Knowledge</div>
+        <div class="ah-sub">Seven Layers · Thirty-Three Nodes · Subject-Constitution at the 5–6 Boundary</div>
+      </div>
+      <div class="ah-controls">
+        <button class="ctrl-btn active" id="btn-radial" onclick="setLayout('radial')">Radial</button>
+        <button class="ctrl-btn" id="btn-spine" onclick="setLayout('spine')">Spine</button>
+        <button class="ctrl-btn" onclick="resetView()">Reset</button>
+      </div>
+    </div>
+    <div id="arch-legend"><div class="legend-title">Layers</div></div>
+    <div id="arch-panel">
+      <div class="panel-header">
+        <div class="panel-layer-tag" id="p-layer"></div>
+        <div class="panel-node-name" id="p-name"></div>
+        <button class="panel-close" onclick="closeArchPanel()">×</button>
+      </div>
+      <div class="panel-body">
+        <div class="panel-section">
+          <div class="panel-section-label">Definition</div>
+          <div class="panel-def" id="p-def"></div>
+        </div>
+        <div class="panel-section" id="p-relational-section" style="display:none">
+          <div class="relational-label">Relational Event</div>
+          <div class="relational-box" id="p-relational"></div>
+        </div>
+        <div class="panel-section">
+          <div class="panel-section-label">Three Dimensions</div>
+          <div id="p-dims"></div>
+        </div>
+        <div class="panel-section">
+          <div class="panel-section-label">Dependencies</div>
+          <div class="dep-list" id="p-deps"></div>
+        </div>
+        <div class="panel-section" id="p-signal-section" style="display:none">
+          <div class="panel-section-label">Signal</div>
+          <div class="signal-box" id="p-signal"></div>
+        </div>
+        <div class="panel-section" id="p-spiral-section">
+          <div class="panel-section-label">Spiral Connection</div>
+          <div id="p-spiral-links"></div>
+        </div>
+      </div>
+    </div>
+    <div id="arch-footer">
+      <div class="footer-info">v2.0 · 33 nodes · scroll to zoom · drag to pan</div>
+      <div class="footer-info">click node to inspect · click Spiral Connection to cross-navigate</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ SPIRAL VIEW ══════════ -->
+<div class="view" id="view-spiral">
+  <div id="spiral-toolbar">
+    <div class="spiral-filter-group">
+      <span class="spiral-filter-label">Tier</span>
+      <button class="filter-btn active" data-tier="all" onclick="setSpiralFilter('tier','all')">All</button>
+      <button class="filter-btn" data-tier="1" onclick="setSpiralFilter('tier','1')">1 · Existence</button>
+      <button class="filter-btn" data-tier="2" onclick="setSpiralFilter('tier','2')">2 · Evolution</button>
+      <button class="filter-btn" data-tier="3" onclick="setSpiralFilter('tier','3')">3 · Emergence</button>
+      <button class="filter-btn" data-tier="4" onclick="setSpiralFilter('tier','4')">4 · Collapse</button>
+      <button class="filter-btn" data-tier="5" onclick="setSpiralFilter('tier','5')">5 · Identity</button>
+      <button class="filter-btn" data-tier="6" onclick="setSpiralFilter('tier','6')">6 · Meta-System</button>
+      <button class="filter-btn" data-tier="7" onclick="setSpiralFilter('tier','7')">7 · Integration</button>
+      <button class="filter-btn" data-tier="6.5" onclick="setSpiralFilter('tier','6.5')">6.5 · Agency ★</button>
+    </div>
+    <div class="spiral-filter-group" style="margin-left:12px;">
+      <span class="spiral-filter-label">Epistemic</span>
+      <button class="filter-btn fE" data-ep="E" onclick="setSpiralFilter('ep','E')">[E] Established</button>
+      <button class="filter-btn fH" data-ep="H" onclick="setSpiralFilter('ep','H')">[H] Hypothesis</button>
+      <button class="filter-btn fT" data-ep="T" onclick="setSpiralFilter('ep','T')">[T] Theoretical</button>
+      <button class="filter-btn fP" data-ep="P" onclick="setSpiralFilter('ep','P')">[P] Philosophical</button>
+    </div>
+    <div class="spiral-count" id="spiral-count">155 truths</div>
+  </div>
+  <div id="spiral-main">
+    <div id="spiral-grid-wrap">
+      <div id="spiral-grid"></div>
+    </div>
+    <div id="spiral-panel">
+      <div class="sp-header">
+        <div class="sp-num" id="sp-num"></div>
+        <div class="sp-title" id="sp-title"></div>
+        <div class="sp-meta">
+          <span class="tc-label" id="sp-label"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-faint)" id="sp-tier"></span>
+        </div>
+      </div>
+      <div class="sp-body">
+        <div class="sp-section">
+          <div class="sp-section-label">Definition</div>
+          <div class="sp-def" id="sp-def"></div>
+        </div>
+        <div class="sp-section">
+          <div class="sp-section-label">Architecture Connection</div>
+          <div id="sp-arch-links"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ MECHANISM VIEW ══════════ -->
+<div class="view" id="view-mech">
+  <div id="mech-header">
+    <div>
+      <div class="mech-title">The Mechanism</div>
+      <div class="mech-sub">Eight causal bridges · Five gaps · Architecture generates Spiral</div>
+    </div>
+    <div id="mech-legend">
+      <div class="ml-item"><div class="ml-line" style="background:var(--accent)"></div>Causal Bridge</div>
+      <div class="ml-item"><div class="ml-line" style="background:var(--gap);border-top:2px dashed var(--gap);height:0"></div>Gap</div>
+      <div class="ml-item" style="font-size:9px;color:var(--text-faint)">click connection to inspect</div>
+    </div>
+  </div>
+  <div id="mech-main">
+    <div id="mech-canvas-wrap">
+      <svg id="mech-svg"></svg>
+      <div class="mech-col" id="mech-col-arch">
+        <div class="mech-col-title">Architecture of Knowledge</div>
+      </div>
+      <div class="mech-col" id="mech-col-spiral">
+        <div class="mech-col-title">The Spiral — 155 Truths</div>
+      </div>
+    </div>
+    <div id="mech-panel">
+      <div class="mp-header">
+        <div class="mp-type" id="mp-type"></div>
+        <div class="mp-title" id="mp-title"></div>
+      </div>
+      <div class="mp-body">
+        <div class="mp-desc" id="mp-desc"></div>
+        <div id="mp-gap-box" style="display:none">
+          <div class="gap-box">
+            <div class="gap-label">Structural Gap</div>
+            <div id="mp-gap-text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Intro ── -->
+<div id="intro">
+  <div class="intro-title">Structural Dependency<br>Ontology</div>
+  <div class="intro-rule"></div>
+  <div class="intro-sub">The Architecture of Knowledge · The Spiral · The Mechanism</div>
+  <div class="intro-thesis">Reality has a logical structure.<br>Time is what that structure looks like as it instantiates in matter.</div>
+  <div class="intro-meta">
+    33 Nodes · 8 Layers · 155 Truths<br>
+    Christopher R. B. Wilson · 2025
+  </div>
+  <button class="intro-btn" onclick="enterSite()">Enter</button>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+// ════════════════════════════════════════════════
+// ARCHITECTURE DATA
+// ════════════════════════════════════════════════
+const LAYERS = [
+  { id:0,    label:"Layer Zero",  name:"Foundation",   color:"#c9a84c" },
+  { id:1,    label:"Layer One",   name:"Topology",     color:"#7b68ee" },
+  { id:2,    label:"Layer Two",   name:"Identity",     color:"#4a9eff" },
+  { id:3,    label:"Layer Three", name:"Dynamics",     color:"#3cb371" },
+  { id:4,    label:"Layer Four",  name:"Accumulation", color:"#e05a3a" },
+  { id:5,    label:"Layer Five",  name:"Life",         color:"#d4a017" },
+  { id:"56", label:"Layer 5–6",   name:"Threshold",    color:"#ff6b9d" },
+  { id:6,    label:"Layer Six",   name:"Social Mind",  color:"#a855f7" },
+  { id:7,    label:"Layer Seven", name:"Reflexivity",  color:"#ec4899" },
+];
+
+const NODES = [
+  { id:"difference", name:"Difference", layer:0,
+    def:"The existence of at least two distinguishable states. The minimum condition for anything to be a thing. Nothing precedes it.",
+    dep_depth:"Total foundation. Zero dependencies.", dep_depth_val:1.0,
+    connectivity:"Total — every node on the map ultimately depends on this.", conn_val:1.0,
+    generativity:"Low directly. Substrate of all generativity.", gen_val:0.15,
+    deps:[], spiralTiers:[1],
+    signal:"The only node that survives the elimination test absolutely. Remove it and the map has nothing to map." },
+  { id:"relation", name:"Relation", layer:1,
+    def:"The connection between two distinguishable states. The fact that they are not isolated from each other.",
+    dep_depth:"Requires Difference only.", dep_depth_val:0.95,
+    connectivity:"Enormous — causality, logic, mathematics, language, physics.", conn_val:0.95,
+    generativity:"Extremely high — category theory, network science, ecology, linguistics.", gen_val:0.88,
+    deps:["difference"], spiralTiers:[1,2] },
+  { id:"boundary", name:"Boundary", layer:1,
+    def:"The condition that makes two states two rather than one. Co-arises with Relation — the two faces of a single event.",
+    dep_depth:"Requires Difference only.", dep_depth_val:0.95,
+    connectivity:"Enormous — identity, membrane biology, law, thermodynamics, selfhood.", conn_val:0.88,
+    generativity:"High but critically underleveraged. No dedicated science of boundary exists.", gen_val:0.45,
+    deps:["difference"], spiralTiers:[1],
+    signal:"Most underleveraged node on the map. A science of boundary does not yet exist." },
+  { id:"identity", name:"Identity", layer:2,
+    def:"A thing being itself. The intersection of boundary and relation. Identity is never intrinsic — always relational and bounded simultaneously.",
+    dep_depth:"Requires Boundary + Relation.", dep_depth_val:0.9,
+    connectivity:"Extremely high — logic, mathematics, law, selfhood, biology, chemistry.", conn_val:0.9,
+    generativity:"Moderate directly. Load-bearing for almost everything above.", gen_val:0.6,
+    deps:["boundary","relation"], spiralTiers:[2,5] },
+  { id:"information", name:"Information", layer:2,
+    def:"Difference that makes a difference. A change in state on one side of a boundary that produces a change in relation on the other.",
+    dep_depth:"Requires Difference + Relation + Boundary.", dep_depth_val:0.88,
+    connectivity:"Total — physics, biology, computation, cognition, communication.", conn_val:0.98,
+    generativity:"Extraordinarily high. Arrived formally in 1948 — millennia late.", gen_val:0.96,
+    deps:["difference","relation","boundary"], spiralTiers:[1,2],
+    signal:"Most generative node at Layer Two, yet it only arrived formally in 1948." },
+  { id:"structure", name:"Structure", layer:2,
+    def:"Stable relation. When connections between bounded identities persist rather than dissolve. Not yet pattern — that requires recurrence.",
+    dep_depth:"Requires Identity + Relation.", dep_depth_val:0.85,
+    connectivity:"High — mathematics, physics, linguistics, social science.", conn_val:0.78,
+    generativity:"High as a platform for what sits above it.", gen_val:0.7,
+    deps:["identity","relation"], spiralTiers:[2,3] },
+  { id:"pattern", name:"Pattern", layer:3,
+    def:"Structure that recurs across different contexts. The foundation of prediction — if this structure has appeared before, it will likely appear again.",
+    dep_depth:"Requires Structure + Information.", dep_depth_val:0.82,
+    connectivity:"Enormous — mathematics, physics, biology, music, language, cognition.", conn_val:0.92,
+    generativity:"Extremely high. The primary tool of human understanding.", gen_val:0.9,
+    deps:["structure","information"], spiralTiers:[2,3] },
+  { id:"causality", name:"Causality", layer:3,
+    def:"Directed information transfer that produces state change. The direction matters: cause precedes effect, implying sequence.",
+    dep_depth:"Requires Information + Relation + Identity.", dep_depth_val:0.82,
+    connectivity:"Total — almost nothing in human knowledge is causality-independent.", conn_val:0.97,
+    generativity:"Extraordinarily high. Science is largely the mapping of causal structure.", gen_val:0.95,
+    deps:["information","relation","identity"], spiralTiers:[1,2] },
+  { id:"state", name:"State", layer:3,
+    def:"The complete description of a system's configuration at a moment. What identity looks like when change becomes possible.",
+    dep_depth:"Requires Identity + Boundary + Structure.", dep_depth_val:0.8,
+    connectivity:"High — thermodynamics, computation, biology, psychology.", conn_val:0.75,
+    generativity:"Moderate. Load-bearing for dynamics.", gen_val:0.55,
+    deps:["identity","boundary","structure"], spiralTiers:[1,2] },
+  { id:"code", name:"Code", layer:3,
+    def:"Structure that carries specific meaning across a boundary. A sequence that stands for something other than itself. DNA, language, mathematics: all are code.",
+    dep_depth:"Requires Identity + Information + Structure.", dep_depth_val:0.8,
+    connectivity:"Total — genetics, linguistics, computation, culture, cognition.", conn_val:0.95,
+    generativity:"Highest of any node through Layer Three.", gen_val:0.97,
+    deps:["identity","information","structure"], spiralTiers:[2,3],
+    signal:"Code is the compounding threshold. Everything above is, in meaningful terms, a consequence of code existing." },
+  { id:"constraint", name:"Constraint", layer:4,
+    def:"The set of conditions that limit the possible and define the actual. Not the enemy of complexity — its generator.",
+    dep_depth:"Requires Causality + Pattern + State.", dep_depth_val:0.75,
+    connectivity:"Total — nothing complex exists without it.", conn_val:0.93,
+    generativity:"Extremely high. Every science is partly the mapping of constraints in its domain.", gen_val:0.88,
+    deps:["causality","pattern","state"], spiralTiers:[1,3] },
+  { id:"emergence", name:"Emergence", layer:4,
+    def:"Production of properties that cannot be predicted from components alone. The whole becomes qualitatively different from the sum of its parts.",
+    dep_depth:"Requires Code + Constraint + Pattern + Causality.", dep_depth_val:0.72,
+    connectivity:"Enormous — biology, neuroscience, economics, sociology, philosophy of mind.", conn_val:0.88,
+    generativity:"Extremely high. Every major scientific revolution recognizes a new emergence layer.", gen_val:0.87,
+    deps:["code","constraint","pattern","causality"], spiralTiers:[3] },
+  { id:"memory", name:"Memory", layer:4,
+    def:"State that persists across time and influences future states. Any system where history matters. DNA is molecular memory. Culture is collective memory.",
+    dep_depth:"Requires State + Code + Structure.", dep_depth_val:0.74,
+    connectivity:"High — biology, neuroscience, culture, evolution, computation, psychology.", conn_val:0.82,
+    generativity:"Extraordinarily high. Memory makes learning possible.", gen_val:0.91,
+    deps:["state","code","structure"], spiralTiers:[2,5] },
+  { id:"representation", name:"Representation", layer:5,
+    def:"A system carrying an internal model of something other than itself. Not just memory — mapped memory. A structure inside the system that stands for something outside it.",
+    dep_depth:"Requires Memory + Code + Structure.", dep_depth_val:0.68,
+    connectivity:"Total for everything above — perception, learning, language, thought, culture.", conn_val:0.92,
+    generativity:"Foundational rather than directly generative.", gen_val:0.65,
+    deps:["memory","code","structure"], spiralTiers:[5,6] },
+  { id:"feedback", name:"Feedback", layer:5,
+    def:"Causality that loops — output becomes input through a system that can represent its own state. Distinct from physical feedback loops which require no representation.",
+    dep_depth:"Requires Representation + Causality + State.", dep_depth_val:0.65,
+    connectivity:"Enormous — biology, engineering, economics, psychology, epistemology.", conn_val:0.85,
+    generativity:"Extremely high — cybernetics, control theory, evolutionary biology, neuroscience.", gen_val:0.86,
+    deps:["representation","causality","state"], spiralTiers:[1,2],
+    signal:"This is cybernetic feedback — requiring Representation. Physical feedback (Le Chatelier) belongs at Layer 3. The Spiral conflates these two structurally distinct phenomena." },
+  { id:"selection", name:"Selection", layer:5,
+    def:"When variants exist under constraint and memory means consequences persist, some survive and others do not.",
+    dep_depth:"Requires Constraint + Memory + Emergence.", dep_depth_val:0.63,
+    connectivity:"High — evolutionary biology, economics, neuroscience, epistemology, cultural theory.", conn_val:0.82,
+    generativity:"Extraordinarily high. Darwinian evolution is the most powerful generative process the universe has produced.", gen_val:0.94,
+    deps:["constraint","memory","emergence"], spiralTiers:[2,4] },
+  { id:"adaptation", name:"Adaptation", layer:5,
+    def:"Accumulation of successful responses into a system's architecture. Learning at the structural level. When feedback and selection operate together through memory.",
+    dep_depth:"Requires Feedback + Selection + Memory + Representation.", dep_depth_val:0.6,
+    connectivity:"High — biology, neuroscience, psychology, economics, cultural evolution.", conn_val:0.78,
+    generativity:"High. Adaptation is the engine driving all biological and cultural complexity.", gen_val:0.82,
+    deps:["feedback","selection","memory","representation"], spiralTiers:[2,4] },
+  { id:"subject_constitution", name:"Subject-Constitution", layer:"56",
+    def:"The constituting event at the Layer 5–6 boundary. The moment a representational system encounters another representational system and both mutually recognize each other as having an inside. Neither subject precedes the encounter. Both are constituted simultaneously in it.",
+    dep_depth:"Requires Representation + Encounter with another Representational system + Mutual Recognition.", dep_depth_val:0.62,
+    connectivity:"Total for everything experiential — all consciousness, all genuine intersubjectivity, all meaning that is felt.", conn_val:0.97,
+    generativity:"The origin point of all subjective experience.", gen_val:0.85,
+    deps:["representation","intersubjectivity"],
+    relational:"This node is constituted differently from all others on the map. It is not a property of a single system. It is a relational event — it exists between systems, not within them. Subjects are what models become when they encounter each other in mutual recognition.",
+    spiralTiers:[5],
+    signal:"Lifeforms are born as models. Only through interaction do they become subjects. The subject is born in the space between." },
+  { id:"intersubjectivity", name:"Intersubjectivity", layer:6,
+    def:"The mutual recognition between two modeling systems that each is a modeling system. The ground that makes communication, cooperation, conflict, love, and culture possible.",
+    dep_depth:"Requires Representation + Emergence + Identity.", dep_depth_val:0.55,
+    connectivity:"Total for everything above — language, culture, morality, knowledge, society.", conn_val:0.95,
+    generativity:"The most important threshold on the map — the condition of Subject-Constitution.", gen_val:0.6,
+    deps:["representation","emergence","identity"], spiralTiers:[5,6] },
+  { id:"communication", name:"Communication", layer:6,
+    def:"Representation that crosses a boundary intentionally. Not just information transfer — directed representation exchange between systems that mutually recognize each other.",
+    dep_depth:"Requires Intersubjectivity + Representation + Code + Boundary.", dep_depth_val:0.52,
+    connectivity:"Enormous — language, culture, science, law, art.", conn_val:0.88,
+    generativity:"Extremely high — allows representations to compound across individuals.", gen_val:0.85,
+    deps:["intersubjectivity","representation","code","boundary"], spiralTiers:[5,6] },
+  { id:"meaning", name:"Meaning", layer:6,
+    def:"Representation that matters to a modeling system in relation to other modeling systems. Not information — significance. Irreducibly relational.",
+    dep_depth:"Requires Intersubjectivity + Representation + Communication.", dep_depth_val:0.5,
+    connectivity:"Total for everything above — without meaning, language is noise, culture is behavior.", conn_val:0.96,
+    generativity:"Foundational — converts information into knowledge.", gen_val:0.7,
+    deps:["intersubjectivity","representation","communication"], spiralTiers:[6,7],
+    signal:"Meaning is the node the entire map has been building toward. Every layer below was required infrastructure." },
+  { id:"language", name:"Language", layer:6,
+    def:"A generative system of representation stabilized across a community of modeling systems. Infinite meanings from finite elements.",
+    dep_depth:"Requires Communication + Meaning + Memory + Pattern + Code.", dep_depth_val:0.48,
+    connectivity:"Total — thought, culture, science, law, philosophy, art.", conn_val:0.99,
+    generativity:"Highest of any node on the entire map. The primary engine of all human knowledge.", gen_val:1.0,
+    deps:["communication","meaning","memory","pattern","code"], spiralTiers:[6,7],
+    signal:"Language scores highest on generativity of any node on the map. It is the engine of engines." },
+  { id:"cooperation", name:"Cooperation / Conflict", layer:6,
+    def:"Two faces of the same phenomenon. Both require mutual recognition. Every institution is a structure built to manage their tension.",
+    dep_depth:"Requires Intersubjectivity + Communication + Meaning.", dep_depth_val:0.46,
+    connectivity:"High — economics, politics, law, ethics, evolutionary biology, history.", conn_val:0.8,
+    generativity:"Extremely high — managing their tension has driven most of human cultural evolution.", gen_val:0.85,
+    deps:["intersubjectivity","communication","meaning"], spiralTiers:[5,6] },
+  { id:"reflexivity", name:"Reflexivity", layer:7,
+    def:"The capacity of a system to take itself as its own object. To model its own modeling. Without it: knowledge but not epistemology, inference but not logic, behavior but not ethics.",
+    dep_depth:"Requires Representation + Language + Intersubjectivity.", dep_depth_val:0.42,
+    connectivity:"Total for everything at Layer Seven.", conn_val:0.9,
+    generativity:"Foundational — enables everything at Layer Seven.", gen_val:0.55,
+    deps:["representation","language","intersubjectivity"], spiralTiers:[6,7] },
+  { id:"logic", name:"Logic & Mathematics", layer:7,
+    def:"Reflexivity applied to pattern and relation formally. The discovery that certain relations hold necessarily, not contingently.",
+    dep_depth:"Requires Reflexivity + Pattern + Relation + Structure.", dep_depth_val:0.4,
+    connectivity:"Total — every quantitative science depends on mathematics.", conn_val:0.95,
+    generativity:"Extraordinarily high. Mathematics has unlocked more knowledge than any other formal tool.", gen_val:0.97,
+    deps:["reflexivity","pattern","relation","structure"], spiralTiers:[6,7] },
+  { id:"epistemology", name:"Epistemology", layer:7,
+    def:"Reflexivity applied to knowledge itself. Not just what we know but how we know it, what justifies it, and where it might fail.",
+    dep_depth:"Requires Reflexivity + Representation + Language + Meaning.", dep_depth_val:0.38,
+    connectivity:"High — science, philosophy, law, journalism.", conn_val:0.78,
+    generativity:"High — determines which knowledge survives.", gen_val:0.72,
+    deps:["reflexivity","representation","language","meaning"], spiralTiers:[6,7] },
+  { id:"ethics", name:"Ethics", layer:7,
+    def:"Reflexivity applied to cooperation, conflict, and meaning. Grounded in intersubjectivity — the recognition that the other's interior matters as much as one's own.",
+    dep_depth:"Requires Reflexivity + Intersubjectivity + Meaning + Cooperation/Conflict.", dep_depth_val:0.37,
+    connectivity:"High — law, politics, medicine, economics, philosophy.", conn_val:0.78,
+    generativity:"High. Ethics has shaped more human behavior than any other reflexive system.", gen_val:0.75,
+    deps:["reflexivity","intersubjectivity","meaning","cooperation"], spiralTiers:[6,7] },
+  { id:"science", name:"Science", layer:7,
+    def:"Epistemology, language, mathematics, and cooperation combined into a systematic collective practice of building and testing representations against reality.",
+    dep_depth:"Requires Epistemology + Logic + Language + Cooperation + Feedback + Selection.", dep_depth_val:0.35,
+    connectivity:"Enormous — every empirical discipline is a branch of it.", conn_val:0.92,
+    generativity:"Second highest on the entire map after language.", gen_val:0.96,
+    deps:["epistemology","logic","language","cooperation","feedback","selection"], spiralTiers:[6,7] },
+  { id:"philosophy", name:"Philosophy", layer:7,
+    def:"Reflexivity applied to everything simultaneously. The attempt to map the whole map. Generates questions more than answers — but the questions are load-bearing.",
+    dep_depth:"Requires Reflexivity + Language + Meaning + Epistemology + Ethics.", dep_depth_val:0.33,
+    connectivity:"Total — every discipline has philosophical foundations whether it acknowledges them or not.", conn_val:0.88,
+    generativity:"Low directly, extraordinarily high indirectly.", gen_val:0.5,
+    deps:["reflexivity","language","meaning","epistemology","ethics"], spiralTiers:[6,7],
+    signal:"Without philosophy, every discipline mistakes its region for the whole territory." },
+  { id:"consciousness", name:"Reflexive Consciousness", layer:7,
+    def:"What it is like to be a fully constituted subject examining its own existence. Distinguished from Subject-Constitution: this is what consciousness becomes once fully instantiated — reflexive, narrative, integrated across a lifetime. The map is built inside this node.",
+    dep_depth:"Requires Subject-Constitution + Reflexivity + Language + Representation.", dep_depth_val:0.3,
+    connectivity:"Total — it is what every other node is experienced through.", conn_val:0.99,
+    generativity:"The question itself has generated enormous knowledge even without resolution.", gen_val:0.6,
+    deps:["subject_constitution","reflexivity","language","representation"], spiralTiers:[6.5,7],
+    signal:"Two nodes the map cannot fully contain: Reflexive Consciousness and Meaning. Consciousness is what Difference looks like from the inside of a subject born in the space between." },
+];
+
+const nodeMap = {};
+NODES.forEach(n => nodeMap[n.id] = n);
+
+// ════════════════════════════════════════════════
+// SPIRAL DATA
+// ════════════════════════════════════════════════
+let TRUTHS = [];
+(async () => {
+  try {
+    const r = await fetch('./truths.json');
+    TRUTHS = await r.json();
+    if (currentView === 'spiral') renderSpiral();
+    if (currentView === 'mech') renderMechCols();
+  } catch(e) { console.warn('truths.json load failed', e); }
+})();
+
+// ════════════════════════════════════════════════
+// MECHANISM DATA
+// ════════════════════════════════════════════════
+const BRIDGES = [
+  { id:'B1', layerId:0, toTier:1, label:'Difference → Existence',
+    desc:'Physical difference — the first fact — generates all existential constraints. The laws governing energy, entropy, and temporal direction emerge directly from the primordial condition of distinguishable states.' },
+  { id:'B2', layerId:1, toTier:2, label:'Topology → Evolution',
+    desc:'Relation and Boundary make change directional. Once connections and separations exist, propagation becomes possible — and evolution follows propagation under constraint.' },
+  { id:'B3', layerId:2, toTier:2, label:'Identity → Evolution',
+    desc:'Stable identity creates persistence. Persistence under selective pressure generates evolutionary dynamics. Structures must persist long enough to evolve.' },
+  { id:'B4', layerId:3, toTier:3, label:'Dynamics → Emergence',
+    desc:'Causal patterns operating at scale generate emergent phenomena. Code enables inheritance; causality enables amplification. Together they produce everything in the Emergence tier.' },
+  { id:'B5', layerId:4, toTier:4, label:'Accumulation → Collapse',
+    desc:'Memory, Selection, and Constraint create systems that accumulate complexity until they stabilize or collapse. The Collapse tier is the structural shadow of Accumulation.' },
+  { id:'B6', layerId:5, toTier:5, label:'Life → Identity',
+    desc:'Representation and Feedback constitute the self-model. When a system models its own state, identity becomes reflexive — and the Spiral truths about selfhood and agency become structurally possible.' },
+  { id:'B7', layerId:6, toTier:6, label:'Social Mind → Meta-System',
+    desc:'Intersubjectivity, Meaning, and Language constitute the social substrate from which institutions, cultures, and knowledge systems emerge as second-order phenomena.' },
+  { id:'B8', layerId:7, toTier:7, label:'Reflexivity → Integration',
+    desc:'Only a reflexive system can integrate its own map. Logic, Science, and Philosophy operate on their own outputs — generating the recursive architecture of the Integration tier.' },
+];
+const GAPS = [
+  { id:'G1', layerId:3, toTier:3, label:'The Complexity Gap',
+    desc:'How constraint generates novelty rather than merely limiting it. Emergence is not reducible to its conditions — the gap between constraint and genuine emergence remains formally unresolved in every science.' },
+  { id:'G2', layerId:5, toTier:5, label:'The Consciousness Gap',
+    desc:'Subject-Constitution at the 5–6 boundary cannot be explained by representational machinery alone. Why there is something it is like to be a modeling system remains the deepest structural opening in the map.' },
+  { id:'G3', layerId:6, toTier:6, label:'The Meaning Gap',
+    desc:'How shared meaning becomes normative — why language generates obligation and value rather than merely coordination — is not derivable from intersubjectivity alone.' },
+  { id:'G4', layerId:5, toTier:6, label:'The Agency Gap',
+    desc:'Agency presupposes a subject who acts rather than merely responds. How representation generates genuine choice rather than determined output is the deepest gap in the causal architecture.' },
+  { id:'G5', layerId:7, toTier:7, label:'The Integration Gap',
+    desc:'Reflexivity enables meta-cognition but does not guarantee integration. The unification of knowledge across domains — the long-horizon project of philosophy — has no guaranteed mechanism.' },
+];
+
+// ════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════
+let currentView = 'arch';
+const archS = {
+  layout:'radial', zoom:1, tx:0, ty:0,
+  drag:false, dragged:false, lastX:0, lastY:0,
+  dragStart:{x:0,y:0}, hovered:null, selected:null
+};
+const spiralS = { tier:'all', ep:null, selected:null };
+let mechSel = null;
+let nodePos = {};
+
+// ════════════════════════════════════════════════
+// UTIL
+// ════════════════════════════════════════════════
+function layerColor(id) {
+  const l = LAYERS.find(x => String(x.id) === String(id));
+  return l ? l.color : '#4a9eff';
+}
+function layerLabel(id) {
+  const l = LAYERS.find(x => String(x.id) === String(id));
+  return l ? l.label : 'Unknown';
+}
+
+// ════════════════════════════════════════════════
+// INTRO + NAV
+// ════════════════════════════════════════════════
+function enterSite() {
+  document.getElementById('intro').classList.add('hidden');
+}
+
+function switchView(name) {
+  const tabs = document.querySelectorAll('.nav-tab');
+  const names = ['arch', 'spiral', 'mech'];
+  tabs.forEach((t, i) => t.classList.toggle('active', names[i] === name));
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  currentView = name;
+  if (name === 'spiral') initSpiral();
+  else if (name === 'mech') initMech();
+  else if (name === 'arch' && archCanvas) archResize();
+}
+
+// ════════════════════════════════════════════════
+// ARCHITECTURE CANVAS
+// ════════════════════════════════════════════════
+let archCanvas, archCtx;
+
+function nodeRadius(n) { return 3.5 + (n.gen_val || 0.5) * 7.5; }
+
+function archInit() {
+  archCanvas = document.getElementById('arch-canvas');
+  archCtx = archCanvas.getContext('2d');
+  archCanvas.style.cursor = 'grab';
+
+  archCanvas.addEventListener('wheel', e => {
+    e.preventDefault();
+    const rect = archCanvas.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    const delta = e.deltaY < 0 ? 1.12 : 0.89;
+    const nz = Math.max(0.25, Math.min(6, archS.zoom * delta));
+    archS.tx = mx - (mx - archS.tx) * nz / archS.zoom;
+    archS.ty = my - (my - archS.ty) * nz / archS.zoom;
+    archS.zoom = nz;
+    archDraw();
+  }, { passive: false });
+
+  archCanvas.addEventListener('mousedown', e => {
+    archS.drag = true; archS.dragged = false;
+    archS.dragStart = { x: e.clientX, y: e.clientY };
+    archS.lastX = e.clientX; archS.lastY = e.clientY;
+    archCanvas.style.cursor = 'grabbing';
+  });
+
+  archCanvas.addEventListener('mousemove', e => {
+    if (archS.drag) {
+      if (Math.hypot(e.clientX - archS.dragStart.x, e.clientY - archS.dragStart.y) > 4)
+        archS.dragged = true;
+      archS.tx += e.clientX - archS.lastX;
+      archS.ty += e.clientY - archS.lastY;
+      archS.lastX = e.clientX; archS.lastY = e.clientY;
+      archDraw(); return;
+    }
+    const rect = archCanvas.getBoundingClientRect();
+    const wx = (e.clientX - rect.left - archS.tx) / archS.zoom;
+    const wy = (e.clientY - rect.top  - archS.ty) / archS.zoom;
+    let hit = null;
+    for (const n of NODES) {
+      const p = nodePos[n.id]; if (!p) continue;
+      if (Math.hypot(wx - p.x, wy - p.y) < nodeRadius(n) + 4) { hit = n.id; break; }
+    }
+    if (hit !== archS.hovered) { archS.hovered = hit; archDraw(); }
+    const tt = document.getElementById('tooltip');
+    if (hit) {
+      tt.textContent = nodeMap[hit].name;
+      tt.style.left = (e.clientX + 14) + 'px';
+      tt.style.top  = (e.clientY - 10) + 'px';
+      tt.style.opacity = '1';
+      archCanvas.style.cursor = 'pointer';
+    } else {
+      tt.style.opacity = '0';
+      archCanvas.style.cursor = 'grab';
+    }
+  });
+
+  archCanvas.addEventListener('mouseup', e => {
+    if (!archS.dragged) archHandleClick(e);
+    archS.drag = false; archS.dragged = false;
+    archCanvas.style.cursor = archS.hovered ? 'pointer' : 'grab';
+  });
+
+  archCanvas.addEventListener('mouseleave', () => {
+    archS.drag = false; archS.hovered = null;
+    document.getElementById('tooltip').style.opacity = '0';
+    archDraw();
+  });
+
+  buildLegend();
+  archResize();
+}
+
+function archResize() {
+  archCanvas.width  = archCanvas.offsetWidth  || window.innerWidth;
+  archCanvas.height = archCanvas.offsetHeight || (window.innerHeight - 52);
+  computeNodePositions();
+  archDraw();
+}
+
+function computeNodePositions() {
+  const W = archCanvas.width, H = archCanvas.height;
+  const cx = W / 2, cy = H / 2;
+  nodePos = {};
+  const layerOrder = ['0','1','2','3','4','5','56','6','7'];
+  const byLayer = {};
+  NODES.forEach(n => {
+    const k = String(n.layer);
+    (byLayer[k] = byLayer[k] || []).push(n);
+  });
+
+  if (archS.layout === 'radial') {
+    const maxR = Math.min(W, H) * 0.42;
+    const radii = { '0':0,'1':maxR*.15,'2':maxR*.27,'3':maxR*.40,'4':maxR*.54,'5':maxR*.67,'56':maxR*.75,'6':maxR*.87,'7':maxR };
+    layerOrder.forEach(lid => {
+      const nodes = byLayer[lid] || [];
+      const r = radii[lid] || 0;
+      nodes.forEach((n, i) => {
+        if (r === 0) { nodePos[n.id] = { x:cx, y:cy }; return; }
+        const angle = -Math.PI/2 + 2*Math.PI*i/nodes.length;
+        nodePos[n.id] = { x: cx + r*Math.cos(angle), y: cy + r*Math.sin(angle) };
+      });
+    });
+  } else {
+    const margin = 60, usableH = H - 2*margin;
+    layerOrder.forEach((lid, li) => {
+      const y = margin + usableH * li / (layerOrder.length - 1);
+      const nodes = byLayer[lid] || [];
+      const totalW = W * 0.72, startX = (W - totalW) / 2;
+      nodes.forEach((n, i) => {
+        nodePos[n.id] = {
+          x: nodes.length === 1 ? W/2 : startX + totalW*i/(nodes.length-1),
+          y
+        };
+      });
+    });
+  }
+}
+
+function archDraw() {
+  if (!archCanvas || !archCtx) return;
+  const ctx = archCtx, W = archCanvas.width, H = archCanvas.height;
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.fillStyle = '#080c12';
+  ctx.fillRect(0, 0, W, H);
+  ctx.setTransform(archS.zoom, 0, 0, archS.zoom, archS.tx, archS.ty);
+
+  // Edges
+  NODES.forEach(node => {
+    const p2 = nodePos[node.id]; if (!p2) return;
+    (node.deps||[]).forEach(depId => {
+      const p1 = nodePos[depId]; if (!p1) return;
+      ctx.beginPath();
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
+      ctx.strokeStyle = layerColor(nodeMap[depId]?.layer) + '28';
+      ctx.lineWidth = 1 / archS.zoom;
+      ctx.stroke();
+    });
+  });
+
+  // Nodes
+  NODES.forEach(node => {
+    const p = nodePos[node.id]; if (!p) return;
+    const isSel = archS.selected === node.id;
+    const isHov = archS.hovered === node.id;
+    const col = layerColor(node.layer);
+    const r   = nodeRadius(node);
+
+    if (isSel || isHov) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r * 2.2, 0, Math.PI*2);
+      ctx.fillStyle = col + '18';
+      ctx.fill();
+    }
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, r, 0, Math.PI*2);
+    ctx.fillStyle = isSel ? col : isHov ? col + 'bb' : col + '70';
+    ctx.fill();
+    if (isSel || isHov) {
+      ctx.strokeStyle = col;
+      ctx.lineWidth = 1.5 / archS.zoom;
+      ctx.stroke();
+    }
+
+    if (isSel || isHov || archS.zoom > 1.6) {
+      const fs = Math.max(8, Math.min(13, 11 / archS.zoom));
+      ctx.font = `${fs}px "JetBrains Mono",monospace`;
+      ctx.textAlign = 'center';
+      ctx.fillStyle = (isSel || isHov) ? '#e8f0f8' : '#5a7a9a88';
+      ctx.fillText(node.name, p.x, p.y + r + fs + 2);
+    }
+  });
+}
+
+function archHandleClick(e) {
+  const rect = archCanvas.getBoundingClientRect();
+  const wx = (e.clientX - rect.left - archS.tx) / archS.zoom;
+  const wy = (e.clientY - rect.top  - archS.ty) / archS.zoom;
+  for (const n of NODES) {
+    const p = nodePos[n.id]; if (!p) continue;
+    if (Math.hypot(wx - p.x, wy - p.y) < nodeRadius(n) + 4) {
+      archS.selected = n.id; openArchPanel(n); archDraw(); return;
+    }
+  }
+  archS.selected = null;
+  document.getElementById('arch-panel').classList.remove('open');
+  archDraw();
+}
+
+function openArchPanel(node) {
+  const col = layerColor(node.layer);
+  document.getElementById('p-layer').textContent = layerLabel(node.layer);
+  document.getElementById('p-layer').style.color = col;
+  document.getElementById('p-name').textContent = node.name;
+  document.getElementById('p-def').textContent = node.def;
+
+  const relSect = document.getElementById('p-relational-section');
+  if (node.relational) {
+    relSect.style.display = '';
+    document.getElementById('p-relational').textContent = node.relational;
+  } else { relSect.style.display = 'none'; }
+
+  document.getElementById('p-dims').innerHTML = [
+    { label:'Depth of dependency', val:node.dep_depth_val, text:node.dep_depth },
+    { label:'Connectivity',        val:node.conn_val,      text:node.connectivity },
+    { label:'Generativity',        val:node.gen_val,       text:node.generativity },
+  ].map(d => `<div class="dim-item">
+    <div class="dim-label">${d.label}</div>
+    <div class="dim-bar-track"><div class="dim-bar-fill" style="width:${Math.round((d.val||0)*100)}%;background:${col}"></div></div>
+    <div class="dim-text">${d.text||''}</div>
+  </div>`).join('');
+
+  document.getElementById('p-deps').innerHTML = (node.deps||[]).length
+    ? node.deps.map(d => `<span class="dep-tag" onclick="openArchPanelById('${d}')">${nodeMap[d]?.name||d}</span>`).join('')
+    : '<span style="font-size:12px;color:var(--text-faint)">None — foundational</span>';
+
+  const sigSect = document.getElementById('p-signal-section');
+  if (node.signal) {
+    sigSect.style.display = '';
+    document.getElementById('p-signal').textContent = node.signal;
+  } else { sigSect.style.display = 'none'; }
+
+  const tn = {1:'Existence',2:'Evolution',3:'Emergence',4:'Collapse',5:'Identity',6:'Meta-System',6.5:'Agency',7:'Integration'};
+  document.getElementById('p-spiral-links').innerHTML = (node.spiralTiers||[])
+    .map(t => `<span class="spiral-link" onclick="switchView('spiral');setSpiralFilterTier('${t}')">Tier ${t}: ${tn[t]||''} →</span>`)
+    .join('') || '<span style="font-size:12px;color:var(--text-faint)">—</span>';
+
+  document.getElementById('arch-panel').classList.add('open');
+}
+
+function openArchPanelById(id) {
+  const n = nodeMap[id];
+  if (n) { archS.selected = id; openArchPanel(n); archDraw(); }
+}
+
+function closeArchPanel() {
+  document.getElementById('arch-panel').classList.remove('open');
+  archS.selected = null; archDraw();
+}
+
+function setLayout(name) {
+  archS.layout = name;
+  document.getElementById('btn-radial').classList.toggle('active', name === 'radial');
+  document.getElementById('btn-spine').classList.toggle('active', name === 'spine');
+  archS.zoom = 1; archS.tx = 0; archS.ty = 0;
+  computeNodePositions(); archDraw();
+}
+
+function resetView() {
+  archS.zoom = 1; archS.tx = 0; archS.ty = 0; archDraw();
+}
+
+function buildLegend() {
+  const el = document.getElementById('arch-legend');
+  el.innerHTML = '<div class="legend-title">Layers</div>';
+  LAYERS.forEach(l => {
+    const count = NODES.filter(n => String(n.layer) === String(l.id)).length;
+    if (count === 0) return;
+    if (String(l.id) === '56') {
+      const div = document.createElement('div');
+      div.className = 'legend-divider'; el.appendChild(div);
+      const sp = document.createElement('div');
+      sp.className = 'legend-special';
+      sp.innerHTML = `<div class="legend-dot" style="background:${l.color}"></div>${l.name} — ${l.label}`;
+      el.appendChild(sp);
+    } else {
+      const div = document.createElement('div');
+      div.className = 'legend-item';
+      div.innerHTML = `<div class="legend-dot" style="background:${l.color}"></div>
+        <span class="legend-label">${l.label}</span><span class="legend-num">${count}</span>`;
+      el.appendChild(div);
+    }
+  });
+}
+
+// ════════════════════════════════════════════════
+// SPIRAL VIEW
+// ════════════════════════════════════════════════
+const TIER_NAMES = {
+  1:'Tier 1 · Existence', 2:'Tier 2 · Evolution', 3:'Tier 3 · Emergence',
+  4:'Tier 4 · Collapse',  5:'Tier 5 · Identity',  6:'Tier 6 · Meta-System',
+  6.5:'Tier 6.5 · Agency', 7:'Tier 7 · Integration'
+};
+const EP_NAMES = { E:'Established', H:'Hypothesis', T:'Theoretical', P:'Philosophical' };
+
+function setSpiralFilter(type, val) {
+  if (type === 'tier') {
+    spiralS.tier = (spiralS.tier === val && val !== 'all') ? 'all' : val;
+    document.querySelectorAll('[data-tier]').forEach(b =>
+      b.classList.toggle('active', String(b.dataset.tier) === String(spiralS.tier)));
+  } else {
+    spiralS.ep = spiralS.ep === val ? null : val;
+    document.querySelectorAll('[data-ep]').forEach(b =>
+      b.classList.toggle('active', b.dataset.ep === spiralS.ep));
+  }
+  renderSpiral();
+}
+
+function setSpiralFilterTier(tier) {
+  spiralS.tier = String(tier);
+  document.querySelectorAll('[data-tier]').forEach(b =>
+    b.classList.toggle('active', String(b.dataset.tier) === String(tier)));
+  renderSpiral();
+}
+
+function initSpiral() {
+  if (TRUTHS.length > 0) renderSpiral();
+}
+
+function renderSpiral() {
+  if (!TRUTHS.length) return;
+  const filtered = TRUTHS.filter(t => {
+    if (spiralS.tier !== 'all' && String(t.tier) !== String(spiralS.tier)) return false;
+    if (spiralS.ep && t.label !== spiralS.ep) return false;
+    return true;
+  });
+  document.getElementById('spiral-count').textContent =
+    `${filtered.length} truth${filtered.length !== 1 ? 's' : ''}`;
+
+  const grid = document.getElementById('spiral-grid');
+  if (spiralS.tier === 'all') {
+    const tiers = [...new Set(filtered.map(t => t.tier))].sort((a,b) => a-b);
+    grid.innerHTML = tiers.map(tier => {
+      const ts = filtered.filter(t => t.tier === tier);
+      return `<div class="tier-band" style="grid-column:1/-1">
+        <div class="tier-header">
+          <span class="tier-label">${TIER_NAMES[tier]||'Tier '+tier}</span>
+          <span class="tier-count">${ts.length} truths</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
+          ${ts.map(t => truthCardHTML(t)).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  } else {
+    grid.innerHTML = filtered.map(t => truthCardHTML(t)).join('');
+  }
+}
+
+function truthCardHTML(t) {
+  const sel = spiralS.selected === t.n ? ' selected' : '';
+  return `<div class="truth-card${sel}" onclick="openSpiralPanel(${t.n})">
+    <div class="tc-header">
+      <span class="tc-num">#${String(t.n).padStart(3,'0')}</span>
+      <span class="tc-label lbl-${t.label}">[${t.label}] ${EP_NAMES[t.label]||''}</span>
+    </div>
+    <div class="tc-tier">${t.tierName||''}</div>
+    <div class="tc-title">${t.title}</div>
+    <div class="tc-def">${t.def}</div>
+  </div>`;
+}
+
+function openSpiralPanel(n) {
+  const t = TRUTHS.find(x => x.n === n); if (!t) return;
+  spiralS.selected = n;
+  document.getElementById('sp-num').textContent = `#${String(t.n).padStart(3,'0')}`;
+  document.getElementById('sp-title').textContent = t.title;
+  const lbl = document.getElementById('sp-label');
+  lbl.textContent = `[${t.label}] ${EP_NAMES[t.label]||''}`;
+  lbl.className = `tc-label lbl-${t.label}`;
+  document.getElementById('sp-tier').textContent = `Tier ${t.tier} · ${t.tierName}`;
+  document.getElementById('sp-def').textContent = t.def;
+  const connected = NODES.filter(n2 => (n2.spiralTiers||[]).some(st => String(st) === String(t.tier)));
+  document.getElementById('sp-arch-links').innerHTML = connected
+    .map(n2 => `<span class="arch-link" onclick="switchView('arch');openArchPanelById('${n2.id}')">${n2.name} →</span>`)
+    .join('') || '<span style="font-size:12px;color:var(--text-faint)">—</span>';
+  document.getElementById('spiral-panel').classList.add('open');
+  renderSpiral();
+}
+
+// ════════════════════════════════════════════════
+// MECHANISM VIEW
+// ════════════════════════════════════════════════
+function initMech() {
+  renderMechCols();
+  requestAnimationFrame(renderMechSVG);
+}
+
+function renderMechCols() {
+  const archCol = document.getElementById('mech-col-arch');
+  archCol.innerHTML = '<div class="mech-col-title">Architecture of Knowledge</div>';
+  LAYERS.forEach(l => {
+    const nodes = NODES.filter(n => String(n.layer) === String(l.id));
+    if (!nodes.length) return;
+    const d = document.createElement('div');
+    d.className = 'mech-layer'; d.id = `mech-arch-${l.id}`;
+    d.style.borderLeft = `2px solid ${l.color}40`;
+    d.innerHTML = `<div class="mech-layer-id" style="color:${l.color}">${l.label}</div>
+      <div class="mech-layer-name">${l.name}</div>
+      <div class="mech-layer-nodes">${nodes.map(n=>n.name).join(' · ')}</div>`;
+    d.onclick = () => openMechItem('layer', l);
+    archCol.appendChild(d);
+  });
+
+  const spiralCol = document.getElementById('mech-col-spiral');
+  spiralCol.innerHTML = '<div class="mech-col-title">The Spiral — 155 Truths</div>';
+  [{tier:1,name:'Existence'},{tier:2,name:'Evolution'},{tier:3,name:'Emergence'},
+   {tier:4,name:'Collapse'},{tier:5,name:'Identity'},{tier:6,name:'Meta-System'},
+   {tier:6.5,name:'Agency ★'},{tier:7,name:'Integration'}].forEach(td => {
+    const count = TRUTHS.filter(t => t.tier === td.tier).length;
+    const d = document.createElement('div');
+    d.className = 'mech-tier'; d.id = `mech-tier-${td.tier}`;
+    d.innerHTML = `<div class="mech-tier-id">Tier ${td.tier}</div>
+      <div class="mech-tier-name">${td.name}</div>
+      <div class="mech-tier-range">${count||'?'} truths</div>`;
+    d.onclick = () => openMechItem('tier', td);
+    spiralCol.appendChild(d);
+  });
+}
+
+function renderMechSVG() {
+  const svg = document.getElementById('mech-svg');
+  svg.innerHTML = '';
+  const svgRect = svg.getBoundingClientRect();
+  if (svgRect.width === 0) return;
+
+  [...BRIDGES, ...GAPS].forEach(item => {
+    const isGap = GAPS.some(g => g.id === item.id);
+    const fromEl = document.getElementById(`mech-arch-${item.layerId}`);
+    const toEl   = document.getElementById(`mech-tier-${item.toTier}`);
+    if (!fromEl || !toEl) return;
+    const fr = fromEl.getBoundingClientRect();
+    const tr = toEl.getBoundingClientRect();
+    const x1 = fr.right  - svgRect.left, y1 = fr.top + fr.height/2 - svgRect.top;
+    const x2 = tr.left   - svgRect.left, y2 = tr.top + tr.height/2 - svgRect.top;
+    const mx = (x1+x2)/2;
+    const path = document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d', `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`);
+    path.setAttribute('fill','none');
+    path.setAttribute('stroke-width','1.5');
+    const baseOp = isGap ? '0.45' : '0.35';
+    const hoverOp = isGap ? '0.85' : '0.75';
+    path.setAttribute('stroke', isGap ? '#ff4444' : '#4a9eff');
+    path.setAttribute('stroke-opacity', baseOp);
+    if (isGap) path.setAttribute('stroke-dasharray','5,4');
+    path.style.cursor = 'pointer';
+    path.addEventListener('mouseenter', () => path.setAttribute('stroke-opacity', hoverOp));
+    path.addEventListener('mouseleave', () => path.setAttribute('stroke-opacity', baseOp));
+    path.onclick = () => openMechItem('connection', item);
+    svg.appendChild(path);
+  });
+}
+
+function openMechItem(type, item) {
+  mechSel = item;
+  document.querySelectorAll('.mech-layer,.mech-tier').forEach(e => e.classList.remove('highlight'));
+  const typeEl  = document.getElementById('mp-type');
+  const titleEl = document.getElementById('mp-title');
+  const descEl  = document.getElementById('mp-desc');
+  const gapBox  = document.getElementById('mp-gap-box');
+
+  if (type === 'layer') {
+    typeEl.textContent = item.label; typeEl.style.color = item.color;
+    titleEl.textContent = item.name;
+    const nodes = NODES.filter(n => String(n.layer) === String(item.id));
+    descEl.innerHTML = nodes.map(n => `<div style="margin-bottom:14px">
+      <div style="font-family:'Cinzel',serif;font-size:14px;color:var(--white);margin-bottom:4px">${n.name}</div>
+      <div style="font-size:13px;line-height:1.6">${n.def}</div>
+    </div>`).join('');
+    gapBox.style.display = 'none';
+    const el = document.getElementById(`mech-arch-${item.id}`);
+    if (el) el.classList.add('highlight');
+
+  } else if (type === 'tier') {
+    typeEl.textContent = `Tier ${item.tier}`; typeEl.style.color = 'var(--gold)';
+    titleEl.textContent = item.name;
+    const ts = TRUTHS.filter(t => t.tier === item.tier);
+    descEl.innerHTML = ts.slice(0,5).map(t => `<div style="margin-bottom:10px">
+      <div style="font-size:11px;color:var(--white);font-weight:bold">#${t.n} ${t.title}</div>
+      <div style="font-size:12px;color:var(--text-dim);margin-top:2px">${t.def.slice(0,130)}…</div>
+    </div>`).join('') + (ts.length>5 ? `<div style="font-size:11px;color:var(--text-faint);margin-top:6px">+ ${ts.length-5} more truths in this tier</div>` : '');
+    gapBox.style.display = 'none';
+    const el = document.getElementById(`mech-tier-${item.tier}`);
+    if (el) el.classList.add('highlight');
+
+  } else {
+    const isGap = GAPS.some(g => g.id === item.id);
+    typeEl.textContent = isGap ? 'Structural Gap' : 'Causal Bridge';
+    typeEl.style.color = isGap ? 'var(--gap)' : 'var(--accent)';
+    titleEl.textContent = item.label;
+    if (isGap) {
+      descEl.textContent = '';
+      gapBox.style.display = '';
+      document.getElementById('mp-gap-text').textContent = item.desc;
+    } else {
+      descEl.textContent = item.desc;
+      gapBox.style.display = 'none';
+    }
+  }
+  document.getElementById('mech-panel').classList.add('open');
+}
+
+// ════════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════════
+window.addEventListener('load', () => { archInit(); });
+window.addEventListener('resize', () => {
+  if (currentView === 'arch') archResize();
+  if (currentView === 'mech') renderMechSVG();
+});
+</script>
+</body>
+</html>

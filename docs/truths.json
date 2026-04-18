@@ -1,0 +1,1242 @@
+[
+  {
+    "n": 1,
+    "label": "E",
+    "title": "Energy is Finite",
+    "def": "All systems operate within energy limits. No physical process can perform work indefinitely without energy input, and every energy transformation involves irreversible loss.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 2,
+    "label": "E",
+    "title": "Feedback Governs All Complex Systems",
+    "def": "Change in complex systems is regulated by feedback \u2014 information about a system's output that is used to modify future inputs. Both negative feedback (stabilizing) and positive feedback (amplifying) are fundamental mechanisms of system behavior.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 3,
+    "label": "H",
+    "title": "Systems Resist Disruption",
+    "def": "Systems subjected to perturbation tend to respond in ways that counteract the disruption and restore previous equilibrium, provided the perturbation does not exceed the system's adaptive capacity.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 4,
+    "label": "E",
+    "title": "Stability Masks Entropy",
+    "def": "Systems may maintain apparent external order while internally accumulating disorder. The Second Law guarantees that entropy increases in closed systems, but open systems can locally maintain order by exporting entropy \u2014 until they cannot.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 5,
+    "label": "E",
+    "title": "Every Input Alters the System",
+    "def": "No interaction between a system and its environment is perfectly neutral. Every input \u2014 energy, information, or matter \u2014 produces some change in the receiving system, however small.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 6,
+    "label": "E",
+    "title": "No Signal is Perfectly Isolated",
+    "def": "All signals propagate beyond their intended boundaries. No information transmission is perfectly contained \u2014 signals leak, interfere, and produce unintended interactions with adjacent systems.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 7,
+    "label": "E",
+    "title": "Constraints Define Capability",
+    "def": "The functional capabilities of any system are bounded and shaped by its operating constraints. Constraints are not merely limitations \u2014 they are the defining conditions of what a system can do.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 8,
+    "label": "E",
+    "title": "Perception Filters Reality",
+    "def": "No system perceives an unmediated representation of its environment. All perception is filtered, interpreted, and reconstructed through the structural properties of the perceiving system.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 9,
+    "label": "E",
+    "title": "Every System Must Pay a Tradeoff Cost",
+    "def": "Optimizing any system property necessarily incurs costs in other properties. No system can simultaneously maximize all dimensions of performance.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 10,
+    "label": "E",
+    "title": "Information Cannot Be Created Without Transformation",
+    "def": "Extracting, creating, or transforming information always requires energy expenditure and produces irreversible physical changes. Information is not free \u2014 it has physical costs.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 11,
+    "label": "E",
+    "title": "Observation Is Always a Transaction",
+    "def": "The act of measuring or observing a system transfers energy or information between observer and observed, altering both. There is no perfectly passive observation.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 12,
+    "label": "H",
+    "title": "Time Is the Experience of Difference",
+    "def": "The subjective experience of time is not a fundamental feature of reality independent of change \u2014 it is the registration of differences between states. Where nothing changes, time is not experienced.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 13,
+    "label": "E",
+    "title": "All Systems Are Nested",
+    "def": "Every system exists within a larger context and contains smaller subsystems. There are no perfectly isolated systems in nature \u2014 all systems are embedded in hierarchies of scale.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 14,
+    "label": "E",
+    "title": "Everything Changes Something",
+    "def": "Every physical event propagates influence beyond its immediate context. No phenomenon occurs in perfect isolation \u2014 all interactions have downstream effects, however small.",
+    "tier": 1,
+    "tierName": "Existence"
+  },
+  {
+    "n": 15,
+    "label": "H",
+    "title": "Intelligence Is Context-Aware Adaptation",
+    "def": "Intelligence, in its most general sense, is the capacity of a system to modify its behavior based on information about its context in ways that improve its outcomes relative to defined goals.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 16,
+    "label": "E",
+    "title": "All Persistent Systems Exhibit Cyclic Structure",
+    "def": "Systems that persist over time universally exhibit recurring patterns \u2014 cycles, oscillations, or periodic attractors. Pure linear, non-repeating trajectories are unstable and transient in complex systems.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 17,
+    "label": "E",
+    "title": "Recursion Amplifies Small Differences",
+    "def": "In recursive or iterative systems, arbitrarily small differences in initial conditions can produce arbitrarily large differences in outcomes. This sensitive dependence on initial conditions is a defining feature of nonlinear complex systems.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 18,
+    "label": "H",
+    "title": "Temporal Experience Requires State Change",
+    "def": "A system cannot model or experience the passage of time without the capacity to register, store, and compare different states. Time perception is not passive \u2014 it requires active state comparison across an internal record.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 19,
+    "label": "H",
+    "title": "Iterative Refinement Increases Signal Clarity",
+    "def": "Recursive processing can progressively reduce noise and strengthen signal when the iterative process includes error-correction or filtering mechanisms. Not all recursion clarifies \u2014 only recursion with selective retention.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 20,
+    "label": "H",
+    "title": "Complexity Scales Through Layered Feedback",
+    "def": "Complexity in systems arises when feedback loops operate at multiple levels simultaneously, with interactions between levels generating emergent properties not present within any single level.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 21,
+    "label": "H",
+    "title": "Sufficiently Complex Systems Model Themselves",
+    "def": "Systems that exceed a threshold of representational complexity develop internal models of their own states and processes. This self-modeling is not designed but emerges from the system's need to predict and regulate its own behavior.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 22,
+    "label": "E",
+    "title": "Compressibility Reflects Underlying Structure",
+    "def": "The degree to which a data sequence can be compressed is a measure of the regularity and structure it contains. High compressibility indicates pattern; low compressibility indicates randomness.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 23,
+    "label": "H",
+    "title": "Repeated Patterns Encode Behavioral Instruction",
+    "def": "Recurring patterns in a system \u2014 genetic, neural, social, or computational \u2014 function as instructions, shaping future behavior. Repetition is not mere coincidence but a mechanism by which patterns become structurally encoded.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 24,
+    "label": "E",
+    "title": "Recursive Functions Require Boundary Conditions",
+    "def": "A recursive process without a termination condition or boundary will not produce coherent output \u2014 it will iterate indefinitely or overflow. Functional recursion requires defined limits.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 25,
+    "label": "H",
+    "title": "Structural Patterns Recur Across Scales",
+    "def": "Certain structural patterns \u2014 branching networks, power-law distributions, hierarchical nesting \u2014 appear repeatedly across vastly different scales and domains. This scale-invariance suggests deep structural principles, though the mechanisms are debated.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 26,
+    "label": "H",
+    "title": "Intelligence Accelerates Structural Complexity",
+    "def": "Systems with intelligence \u2014 the capacity for context-aware adaptation and pattern recognition \u2014 generate structural complexity at rates significantly exceeding unintelligent systems given equivalent energy inputs.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 27,
+    "label": "H",
+    "title": "Reinforced Signals Propagate and Self-Perpetuate",
+    "def": "Signals \u2014 information patterns \u2014 that generate responses which cause further transmission will self-perpetuate and spread through a system. This is the informational analog of natural selection.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 28,
+    "label": "H",
+    "title": "Sufficiently Recursive Systems Develop Meta-Learning",
+    "def": "Systems that undergo sufficient recursive feedback can develop the capacity to modify not just their outputs but their learning processes themselves \u2014 learning how to learn.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 29,
+    "label": "E",
+    "title": "Adaptive Mutation Requires Memory for Selection",
+    "def": "Random variation alone does not produce adaptive evolution. Evolutionary change requires that variations be heritably retained and subjected to selection across generations. Without memory (heredity), beneficial mutations cannot accumulate.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 30,
+    "label": "E",
+    "title": "Novelty Arises from Variation Within Existing Structure",
+    "def": "Genuine novelty in complex systems emerges not from random generation but from recombination, modification, or perturbation of existing structures. Pure randomness without structural constraint does not produce functional novelty.",
+    "tier": 2,
+    "tierName": "Evolution"
+  },
+  {
+    "n": 31,
+    "label": "E",
+    "title": "Structured Interaction Produces Novel System Properties",
+    "def": "When components interact within a structured context, the resulting system exhibits properties not present in any individual component. This weak emergence is well-documented across all scales of physical organization.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 32,
+    "label": "H",
+    "title": "Coherent Subsystem Alignment Enables Higher-Order Function",
+    "def": "Systems whose components are aligned \u2014 sharing information, minimizing internal contradiction, and coordinating activity \u2014 exhibit functional capabilities not present in equivalent systems with incoherent components.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 33,
+    "label": "E",
+    "title": "Prediction Capacity Requires Structural Regularity",
+    "def": "Reliable prediction of a system's future states is only possible when the system exhibits structural regularities \u2014 patterns that persist across time. Prediction cannot exceed the statistical structure present in the data.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 34,
+    "label": "H",
+    "title": "Emergent Properties Are Practically Irreducible",
+    "def": "Emergent properties of complex systems cannot in practice be derived from descriptions of isolated components. Whether this practical irreducibility reflects fundamental ontological irreducibility is contested, but the practical barrier is well-established.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 35,
+    "label": "H",
+    "title": "Complexity Generates Attention in Observing Systems",
+    "def": "Observing systems with adaptive goals tend to allocate attention preferentially toward complex stimuli \u2014 those with intermediate levels of information density that are neither too predictable nor too random.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 36,
+    "label": "E",
+    "title": "Signal Interpretation Depends on Context",
+    "def": "The meaning assigned to any signal depends on the interpretive context \u2014 the prior knowledge, cultural framework, and situational factors of the interpreting system. No signal carries intrinsic meaning independent of interpretation.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 37,
+    "label": "H",
+    "title": "Perceiving Systems and Their Environments Co-Evolve",
+    "def": "Organisms and intelligent systems do not passively adapt to a fixed environment. They modify their environment through their activities, and this modification in turn shapes their further evolution. Perception and reality co-construct each other.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 38,
+    "label": "E",
+    "title": "Phase Transitions Involve Discontinuous Change Through",
+    "def": "Systems transitioning between qualitatively different states \u2014 phase transitions \u2014 pass through regions of instability, increased fluctuations, and critical slowing down. These transitional instabilities are measurable signatures of impending state change.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 39,
+    "label": "T",
+    "title": "Meaning Arises from the Interaction of Pattern and Constraint",
+    "def": "Meaning \u2014 the functional significance of a signal \u2014 emerges at the intersection of pattern (recurring structure) and constraint (boundaries that limit interpretation). Neither alone is sufficient.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 40,
+    "label": "T",
+    "title": "Intelligence Compresses While Consciousness Integrates",
+    "def": "Intelligence, as a functional property, operates primarily through compression \u2014 reducing high-dimensional inputs to low-dimensional representations. Consciousness, if it is a distinct phenomenon, appears to operate through integration \u2014 binding compressed representations into a unified experience. ",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 41,
+    "label": "H",
+    "title": "Advanced Intelligence Reveals Non-Obvious Structure",
+    "def": "Sufficiently advanced intelligence reliably discovers structural regularities that are not apparent from surface observation \u2014 hidden patterns, deeper principles, and non-obvious connections across domains.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 42,
+    "label": "E",
+    "title": "Novel Stimuli Generate Preferential Attention in Adaptive",
+    "def": "Adaptive systems exhibit orienting responses to novel stimuli \u2014 stimuli that differ from recent experience or predictions. This novelty-detection is a fundamental mechanism for identifying potentially important environmental changes.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 43,
+    "label": "H",
+    "title": "Structured Constraints Enable Generative Exploration",
+    "def": "The capacity to generate novel, functional possibilities is enhanced by structured constraints rather than unlimited freedom. Constraints define a structured space within which generative exploration becomes productive rather than random.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 44,
+    "label": "E",
+    "title": "Prediction Errors Signal System Boundary Events",
+    "def": "When a system's predictions fail \u2014 when actual outcomes significantly diverge from expected ones \u2014 this prediction error signals that the system has encountered a situation outside its current model. Such signals are the primary driver of learning and model updating.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 45,
+    "label": "T",
+    "title": "Awareness Requires Recursive Feedback Under Constraint",
+    "def": "Awareness \u2014 in the functional sense of selective, accessible processing \u2014 appears to require both recursive feedback (information cycling back to influence its own processing) and constraint (selective gating that prevents all information from being equally processed).",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 46,
+    "label": "E",
+    "title": "Recombination of Existing Elements Produces Novel Coherence",
+    "def": "Novel functional structures arise most reliably through recombination of existing elements in new configurations rather than through creation of entirely new components.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 47,
+    "label": "E",
+    "title": "Persistently Reinforced Signals Become Structural Features",
+    "def": "Signals that are repeatedly activated in a system \u2014 with reinforcement or consistent association \u2014 eventually become encoded as stable structural features of that system, influencing future processing automatically.",
+    "tier": 3,
+    "tierName": "Emergence"
+  },
+  {
+    "n": 48,
+    "label": "H",
+    "title": "Structural Weakening Accelerates System Change",
+    "def": "As structural coherence decreases in a complex system, its rate of change typically increases \u2014 often nonlinearly. Systems approaching tipping points show accelerating dynamics before collapse.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 49,
+    "label": "E",
+    "title": "All Growth Processes Encounter Diminishing Returns",
+    "def": "As inputs to a system increase, outputs per unit input eventually decrease. Diminishing marginal returns are a universal feature of optimization in resource-constrained systems.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 50,
+    "label": "H",
+    "title": "Collapse Occurs When Entropy Generation Exceeds Adaptive",
+    "def": "Systems collapse when their capacity to maintain order \u2014 through energy input and adaptive response \u2014 is exceeded by the rate at which disorder is generated internally or externally. Collapse is an entropy imbalance, not mere failure.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 51,
+    "label": "H",
+    "title": "Collapse Is Selective \u2014 Components Survive Differently",
+    "def": "System collapse is not uniformly destructive. Components vary in their resilience and post-collapse viability. Modular, redundant, or functionally primitive elements tend to survive collapse better than highly integrated or specialized ones.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 52,
+    "label": "H",
+    "title": "Regeneration Requires Prior Disruption of Dominant Patterns",
+    "def": "Renewal and reorganization in complex systems typically require disruption of previously dominant patterns. Established patterns resist replacement; their disruption creates the conditions for new organization.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 53,
+    "label": "H",
+    "title": "Collapse Reveals Previously Hidden Dependencies",
+    "def": "System failures expose structural features \u2014 hidden dependencies, load-bearing relationships, vulnerability points \u2014 that were not apparent during normal operation. Collapse has diagnostic value.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 54,
+    "label": "H",
+    "title": "Established Systems Actively Resist Structural Reform",
+    "def": "Complex systems with established structural configurations generate internal forces that resist structural change, even when such change would improve overall function. This structural inertia increases with system age and entrenchment.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 55,
+    "label": "H",
+    "title": "Reform Emerges from Accumulated Suppressed Feedback",
+    "def": "When feedback \u2014 dissent, error signals, alternative information \u2014 is systematically suppressed in a system, it does not disappear. It accumulates as structural pressure that eventually emerges as reform, revolt, or reorganization when suppression capacity is exceeded.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 56,
+    "label": "H",
+    "title": "Regenerated Systems Inherit Structural Templates from",
+    "def": "Systems that form after the collapse of predecessor systems typically inherit structural features, organizational templates, and cultural patterns from those predecessors. Pure discontinuity between collapse and regeneration is rare.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 57,
+    "label": "H",
+    "title": "Survival Does Not Guarantee Functional Continuity",
+    "def": "A system may persist \u2014 its components continue to exist \u2014 while its original function, purpose, or organizational integrity is no longer maintained. Survival and continuation of original function are distinct.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 58,
+    "label": "E",
+    "title": "Entropy Increase Compounds System Degradation",
+    "def": "As entropy increases in a system, the capacity for self-regulation and feedback coherence degrades, which further increases entropy generation, creating a compounding degradation dynamic.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 59,
+    "label": "H",
+    "title": "Excessive Optimization Reduces System Resilience",
+    "def": "Systems optimized for specific, stable conditions sacrifice the redundancy and flexibility that enable adaptation to novel or variable conditions. High optimization and high resilience are generally in tension.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 60,
+    "label": "E",
+    "title": "Collapse Can Self-Amplify Through Positive Feedback",
+    "def": "Collapse events can generate positive feedback loops \u2014 where initial failure triggers cascading secondary failures that accelerate the collapse. Some collapses are self-amplifying rather than self-limiting.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 61,
+    "label": "H",
+    "title": "Failure Events Expose Hidden System Architecture",
+    "def": "System failures, by disrupting normal operating patterns, expose the structural architecture \u2014 dependencies, load distributions, coupling patterns \u2014 that is invisible during normal operation.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 62,
+    "label": "H",
+    "title": "System Regeneration Is Selective, Not Wholesale",
+    "def": "When collapsed systems reorganize, the process is selective \u2014 not all components are reinstated. Regeneration preferentially restores components compatible with the new environmental conditions and discards those that are not.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 63,
+    "label": "T",
+    "title": "Collapse May Preserve Core Recursive Patterns",
+    "def": "While collapse destroys system-level structure, it may preserve lower-level recursive patterns \u2014 information structures, organizational templates, or signal patterns \u2014 that contain the seeds of future reorganization.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 64,
+    "label": "H",
+    "title": "Collapse Selects for Persistence, Not Accuracy",
+    "def": "What survives a system collapse is not necessarily what was most accurate or functionally optimal. Survival through collapse reflects fitness to the conditions of the collapse, which may have little relationship to truth-value or functional optimality.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 65,
+    "label": "H",
+    "title": "Fragility Signals Approach to System Capacity Limits",
+    "def": "Increasing fragility \u2014 sensitivity to perturbations that previously produced no significant response \u2014 is a measurable indicator that a system is approaching the limits of its adaptive capacity. Fragility is a signal, not merely a flaw.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 66,
+    "label": "T",
+    "title": "Collapse Events Can Function as Selective Filters for",
+    "def": "Some collapse events preferentially eliminate less integrated, less complex organizational forms, creating conditions in which more integrated forms can emerge. Whether collapse systematically favors higher integration is a theoretical proposition, not an established empirical regularity.",
+    "tier": 4,
+    "tierName": "Collapse"
+  },
+  {
+    "n": 67,
+    "label": "H",
+    "title": "Self-Models Form Through Recursive Feedback",
+    "def": "A system's internal model of itself emerges through recursive interaction between its outputs and the feedback those outputs generate. Self-models are not designed but develop through ongoing self-referential feedback.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 68,
+    "label": "H",
+    "title": "Memory Creates Temporal Continuity of Self",
+    "def": "The experience of being a continuous self across time depends on episodic memory \u2014 the capacity to recall past events as one's own experiences. Without functional episodic memory, temporal self-continuity is disrupted.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 69,
+    "label": "H",
+    "title": "Awareness Requires Functional Self-Reference",
+    "def": "Functional awareness \u2014 the capacity for a system to respond differentially based on information about its own internal states \u2014 requires some form of self-referential processing. A system that cannot represent its own states cannot be aware in any functional sense.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 70,
+    "label": "H",
+    "title": "Functional Consciousness Appears to Require Recursive",
+    "def": "The functional correlates of consciousness \u2014 reportable awareness, global accessibility of information, unified experience \u2014 appear to require recursive integration of information across multiple brain systems.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 71,
+    "label": "E",
+    "title": "Observation Functionally Alters the Observed",
+    "def": "The act of observation or measurement alters the observed system. At quantum scales this is physically unavoidable; at social scales it is a consistently demonstrated methodological challenge.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 72,
+    "label": "H",
+    "title": "Systems Can Maintain Stable Function Despite Internal",
+    "def": "Intelligent systems can maintain coherent function while containing internally contradictory representations or goals. This is not merely a flaw but sometimes a functional feature \u2014 contradictions create the tension that drives adaptation.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 73,
+    "label": "H",
+    "title": "Internal Coherence Stabilizes System Identity Over Time",
+    "def": "Systems with high internal coherence \u2014 alignment between memory, current state, and predictive model \u2014 show greater temporal stability of identity and greater resilience to perturbation than incoherent systems.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 74,
+    "label": "H",
+    "title": "Self-Recognition Arises from Persistent Internal Pattern",
+    "def": "A system develops self-recognition capacity when it can reliably detect and distinguish its own persistent patterns from external patterns. This requires both pattern detection and a stable self-pattern to detect against.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 75,
+    "label": "T",
+    "title": "Identity Is a Compressed Representation of System History",
+    "def": "A system's identity \u2014 its stable self-representation \u2014 can be understood as a lossy compression of its history and current state. Identity retains essential structural patterns while discarding detailed history.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 76,
+    "label": "H",
+    "title": "Recursive Self-Monitoring Loops Constitute Functional",
+    "def": "Functional identity in complex systems emerges from recursive loops in which the system monitors its own states and uses that monitoring information to regulate future states. Identity is not a static structure but an active process.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 77,
+    "label": "E",
+    "title": "Belief Structures Function as Perception Filters",
+    "def": "Prior beliefs systematically influence what a system perceives and how it interprets ambiguous information. Beliefs are not post-perceptual \u2014 they are embedded in the perceptual process itself.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 78,
+    "label": "H",
+    "title": "Identity Selectively Filters Incoming Information",
+    "def": "Systems with established identities exhibit selective attention and processing biases that favor information consistent with self-relevant patterns. Identity functions as a filter on incoming information, not merely a repository of processed information.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 79,
+    "label": "H",
+    "title": "Unintegrated Memory Disrupts Functional Self-Coherence",
+    "def": "Memory that is not integrated with the current self-model \u2014 either through traumatic encoding or cognitive dissociation \u2014 creates conflicts in self-representation that impair coherent function. Integration is not automatic; it is an active process that can fail.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 80,
+    "label": "H",
+    "title": "Narrative Structure Is a Primary Mechanism of Self-Continuity",
+    "def": "The experience of being a continuous self is substantially constructed through autobiographical narrative \u2014 the organizing of experience into causal, temporally ordered stories. Self-narrative is not merely a representation of identity but a constitutive mechanism.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 81,
+    "label": "T",
+    "title": "Core Identity Patterns Can Persist Through System Collapse",
+    "def": "Some structural patterns constitutive of identity \u2014 core organizing principles, symbolic representations, fundamental values \u2014 exhibit greater resilience to collapse than peripheral features.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 82,
+    "label": "H",
+    "title": "Self-Reference Mechanisms Produce System Stability",
+    "def": "Systems that include mechanisms for monitoring and regulating their own states \u2014 self-referential control loops \u2014 demonstrate greater functional stability and error-correction capacity than equivalent systems without self-reference.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 83,
+    "label": "H",
+    "title": "Identity Modifies Itself to Maintain Coherence",
+    "def": "When identity-relevant information contradicts established self-representations, systems do not simply update \u2014 they often modify how prior information is encoded, reinterpreting past events to maintain coherence with current identity. Memory is not a fixed record but a malleable coherence-maintenan",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 84,
+    "label": "H",
+    "title": "Awareness Can Emerge from Distributed Processing",
+    "def": "Functional awareness does not require a single, central processing location. It can emerge from distributed interactions among components, provided there is sufficient integration of their outputs.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 85,
+    "label": "T",
+    "title": "Apparent Paradox Is a Feature of Deep Integration",
+    "def": "Systems that integrate representations across multiple levels and domains will encounter apparent paradoxes \u2014 logical tensions between representations that are each valid at their own level. These paradoxes are features of integration depth, not logical errors.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 86,
+    "label": "H",
+    "title": "System Constraints Evolve Through Recursive Feedback",
+    "def": "The boundary conditions and operating rules of complex systems are not fixed. They evolve through recursive processes in which outcomes feed back to modify the rules that govern future behavior.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 87,
+    "label": "E",
+    "title": "Compression Involves Irreversible Information Loss",
+    "def": "Lossy compression \u2014 representing a complex system with a simpler model \u2014 always involves information loss that cannot be recovered. The compressed representation does not contain all the information of the original.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 88,
+    "label": "H",
+    "title": "System Coherence Requires Balance of Integration and",
+    "def": "Optimal system function requires both integration (coordinated activity across components) and differentiation (specialized, distinct function of components). Systems that maximize either at the expense of the other show reduced functional capacity.",
+    "tier": 5,
+    "tierName": "Identity"
+  },
+  {
+    "n": 89,
+    "label": "H",
+    "title": "Strange Loops Generate Self-Referential Identity",
+    "def": "Identity structures that refer back to themselves \u2014 strange loops in which a level of description contains a representation of itself \u2014 generate functional selfhood. The self-referential loop is not merely a curiosity but a structural mechanism of identity formation.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 90,
+    "label": "H",
+    "title": "Highly Coherent Systems Exert Organizational Influence",
+    "def": "Systems with high internal coherence \u2014 unified, consistent, clearly organized \u2014 have greater capacity to influence adjacent systems than equivalent incoherent systems. Coherence functions as an organizational attractor.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 91,
+    "label": "H",
+    "title": "Belief Structures Reduce Cognitive Processing Costs",
+    "def": "Established belief structures function as cognitive shortcuts that reduce the metabolic and computational cost of processing ambiguous or complex information. They are energy-efficient approximations that trade accuracy for speed and economy.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 92,
+    "label": "H",
+    "title": "Meta-Regulatory Capacity Emerges from Recursive Feedback",
+    "def": "The capacity to regulate one's own regulatory processes \u2014 meta-governance \u2014 emerges when a system's feedback loops develop sufficient depth to include regulation of regulatory parameters, not merely of first-order outputs.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 93,
+    "label": "H",
+    "title": "Awareness of Regulatory Structure Improves Regulatory",
+    "def": "Systems that develop awareness of their own regulatory processes \u2014 metacognitive or meta-regulatory awareness \u2014 demonstrate more precise and adaptive regulation than systems that operate only at the object level.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 94,
+    "label": "E",
+    "title": "Selective Attention Determines Which Patterns Are Reinforced",
+    "def": "Attention is not passive \u2014 it is a selective amplification mechanism that determines which incoming patterns receive additional processing resources. Attended patterns are more likely to be encoded, strengthened, and retained.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 95,
+    "label": "H",
+    "title": "Belief Revision Requires Disconfirmatory Evidence",
+    "def": "Established beliefs are not updated by confirmatory",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 96,
+    "label": "H",
+    "title": "Effective Self-Governance Requires Awareness of System Limits",
+    "def": "Systems that self-govern effectively demonstrate awareness of their own constraints and limits. Systems that overestimate their capacity or underestimate their constraints fail at the boundaries.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 97,
+    "label": "H",
+    "title": "Intelligent Systems Modify Their Own Operating Rules",
+    "def": "Systems with sufficient self-modeling capacity do not merely operate within fixed rules \u2014 they develop the capacity to evaluate, modify, and generate new operating rules based on experience.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 98,
+    "label": "H",
+    "title": "Stable Rules Are Encodings of Prior Successful Constraints",
+    "def": "The operating rules of stable systems are not arbitrary \u2014 they represent compressed encodings of constraints that have proven functional in prior experience. Rules persist because they encode information about what works.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 99,
+    "label": "H",
+    "title": "Stability Requires Ongoing Reflective Adjustment of",
+    "def": "Long-term stability in dynamic environments cannot be maintained by fixed constraints alone. It requires periodic reflective adjustment of the constraints themselves in response to changing conditions.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 100,
+    "label": "H",
+    "title": "Functional Integration Requires Selective Memory Retention",
+    "def": "Systems that integrate experience into coherent functional structure must selectively retain information \u2014 not all experience is retained equally. Selective retention based on relevance, frequency, and recency is not a limitation but a functional requirement of integration.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 101,
+    "label": "H",
+    "title": "Meta-Systems Encode and Transmit Operational Constraints",
+    "def": "Higher-order systems that coordinate lower-order systems encode the constraints within which lower-order systems operate. This encoding and transmission of operational constraints is a defining function of meta-systems.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 102,
+    "label": "H",
+    "title": "Advanced Intelligence Modifies Its Own Constraints",
+    "def": "Intelligence at sufficient depth does not merely operate within constraints but actively models, evaluates, and modifies those constraints to improve performance. Constraint self-modification is a higher-order property of advanced intelligence.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 103,
+    "label": "E",
+    "title": "Feedback Is the Fundamental Mechanism of Self-Regulation",
+    "def": "All forms of self-regulation in complex systems depend on feedback \u2014 the return of information about system outputs to influence future inputs. Without feedback, self-regulation is impossible.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 104,
+    "label": "T",
+    "title": "Semantic Meaning Evolves Through Constraint Refinement",
+    "def": "The meaning of concepts in an intelligent system is not fixed but evolves as the system's constraints \u2014 the rules governing what counts as a valid application of the concept \u2014 are refined through experience and feedback.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 105,
+    "label": "E",
+    "title": "Unreflective Repetition Produces Behavioral Rigidity",
+    "def": "Behavioral patterns that are repeated without deliberate monitoring or reflective evaluation become automatized and increasingly resistant to conscious modification \u2014 they become habits.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 106,
+    "label": "H",
+    "title": "Recursive Processing Generates Functional Meaning",
+    "def": "Deep recursive processing \u2014 processing in which representations are recursively built from simpler representations \u2014 generates higher-level functional meaning representations not present in the input.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 107,
+    "label": "H",
+    "title": "Conscious Access Enables Flexible Behavioral Integration",
+    "def": "Information that enters conscious awareness \u2014 global workspace \u2014 becomes available to a broad range of cognitive processes, enabling flexible, integrative behavioral responses not possible with unconscious processing alone.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 108,
+    "label": "H",
+    "title": "Intelligence Is Characterized by Constraint Refinement",
+    "def": "A defining characteristic of intelligence across domains is the capacity to identify, apply, and refine relevant constraints \u2014 to recognize which constraints are binding, which can be relaxed, and which need modification for effective problem-solving.",
+    "tier": 6,
+    "tierName": "Meta-System"
+  },
+  {
+    "n": 109,
+    "label": "H",
+    "title": "High-Integration States Are Associated with Reduced Internal",
+    "def": "States of high functional integration \u2014 flow states, meditative states, states of high cognitive coherence \u2014 are associated with reduced internal conflict, lower prediction error, and subjective reports of ease and clarity.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 110,
+    "label": "H",
+    "title": "Intelligent Systems Model Universal Physical Structures",
+    "def": "Sufficiently advanced intelligence develops internal models that reflect structural features of physical reality \u2014 symmetries, conservation laws, geometric properties \u2014 even when these were not explicitly programmed.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 111,
+    "label": "H",
+    "title": "Intelligence Functions as Experience Compression",
+    "def": "Intelligence, at its core, functions by compressing experience into reusable, generalizable representations. The minimum description length of experience \u2014 the shortest model that captures its regularities \u2014 is a measure of intelligence.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 112,
+    "label": "H",
+    "title": "Consciousness Is Functionally Characterized by Multi-Modal",
+    "def": "The functional correlates of consciousness include integration across multiple sensory modalities, temporal scales, and cognitive domains into a unified current representation.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 113,
+    "label": "E",
+    "title": "New Learning Restructures Prior Memory Representations",
+    "def": "The encoding of new information does not merely add to existing memory \u2014 it can restructure prior memories through reconsolidation, modifying how past experiences are encoded and retrieved.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 114,
+    "label": "T",
+    "title": "Sufficiently Complex Intelligence Systems Develop",
+    "def": "Systems with sufficient self-modeling capacity appear to develop intrinsic motivation to extend and refine their self-models \u2014 curiosity and epistemic drive as emergent properties of recursive self-modeling systems.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 115,
+    "label": "H",
+    "title": "Consciousness Involves Recursive Awareness of Processing",
+    "def": "Conscious awareness of a mental state appears to require a higher-order representation of that state \u2014 a representation of the representation. Simple first-order processing does not by itself produce consciousness.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 116,
+    "label": "H",
+    "title": "Identity Formation Involves Selective Perceptual Compression",
+    "def": "The formation of a stable identity involves the selective compression of perceptual experience into a simplified, consistent self-representation. Not all perceptual experience contributes equally to identity formation.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 117,
+    "label": "T",
+    "title": "Recursive Integration Above a Threshold May Produce",
+    "def": "According to Integrated Information Theory, systems exceeding a threshold of integrated information (phi) exhibit properties associated with consciousness. This is a scientific theory with specific, testable predictions, not an established empirical law.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 118,
+    "label": "H",
+    "title": "Integrated Systems Show Greater Perturbation Resilience",
+    "def": "Systems with high functional integration \u2014 coherent, mutually supporting components \u2014 demonstrate greater resilience to perturbation than equivalent fragmented systems, because integration distributes regulatory capacity across components.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 119,
+    "label": "T",
+    "title": "Multi-Level Coherence Produces Functional Meaning",
+    "def": "Functional meaning \u2014 the capacity of a representation to guide adaptive behavior across contexts \u2014 is produced when coherence is achieved across multiple levels of processing simultaneously.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 120,
+    "label": "T",
+    "title": "Fully Integrated Systems May Develop Capacities Exceeding",
+    "def": "Systems that achieve deep, broad integration across their components may develop capabilities that were not present at lower integration levels \u2014 emergent capacities that represent phase transitions in system capability.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 121,
+    "label": "P",
+    "title": "Intelligence May Be a Mechanism by Which Physical Reality",
+    "def": "One philosophical interpretation of intelligence is that it is not separate from physical reality but a mechanism through which reality develops reflexive self-modeling capacity. Under this view, the emergence of intelligence is a cosmologically significant event.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 122,
+    "label": "P",
+    "title": "Consciousness May Be Characterized as Reality Achieving",
+    "def": "One philosophical interpretation is that the emergence of consciousness represents a qualitative threshold at which physical processes not only compute but know \u2014 become the site of genuine self-awareness of the universe's own processes.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 123,
+    "label": "P",
+    "title": "Integration Across Scales May Produce Emergent Wholeness",
+    "def": "The philosophical proposal that deep integration across levels of organization produces not merely functional coherence but a qualitative wholeness \u2014 a unity that is more than the sum of its integrated parts in a way that is not reducible to functional description.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 124,
+    "label": "P",
+    "title": "Conscious Systems May Experience Time as Reconstructed",
+    "def": "The phenomenological proposal that conscious experience of time is not a passive reception of temporal flow but an active construction \u2014 a temporal horizon synthesized by consciousness.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 125,
+    "label": "P",
+    "title": "Transcendence May Be Reintegration at a Higher Level of",
+    "def": "The philosophical and contemplative proposal that transcendent experiences \u2014 peak experiences, mystical states, enlightenment \u2014 are not escapes from ordinary reality but reintegrations of previously unintegrated aspects of experience at a higher level of coherence.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 126,
+    "label": "P",
+    "title": "Some Form of Awareness May Persist Through System Collapse",
+    "def": "The philosophical proposal \u2014 supported by contested empirical data \u2014 that some form of awareness may persist beyond the collapse of normal biological or psychological system function.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 127,
+    "label": "H",
+    "title": "Integration Without Permanence \u2014 Coherence Does Not",
+    "def": "This truth is classified [H] rather than [P] \u2014 it is an empirically grounded caution against conflating integration with permanence. Even highly integrated systems are subject to entropy, environmental change, and context-shift.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 128,
+    "label": "T",
+    "title": "Truth May Be Characterized as Compression Across Domains",
+    "def": "A theoretical proposal: a statement has truth-like properties to the degree that it compresses information across multiple domains \u2014 that the same short description accurately describes phenomena in multiple independent contexts.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 129,
+    "label": "H",
+    "title": "Intelligence Operates at the Boundary Between Order and",
+    "def": "Adaptive intelligence appears to function most effectively at intermediate levels of order \u2014 too much order produces rigidity, too much disorder produces noise. This 'edge of chaos' is empirically supported as a locus of adaptive complexity.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 130,
+    "label": "T",
+    "title": "Consciousness May Navigate Between Chaos and Coherence",
+    "def": "A theoretical proposal: conscious systems operate at an intermediate complexity regime \u2014 maintaining sufficient disorder for flexible response while maintaining sufficient order for coherent experience.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 131,
+    "label": "T",
+    "title": "Awareness Emerges at the Signal-Noise Boundary",
+    "def": "A theoretical extension of signal detection theory: awareness is most sensitive at the boundary between signal and noise \u2014 the threshold region where uncertain stimuli trigger active perceptual inference rather than automatic categorization.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 132,
+    "label": "H",
+    "title": "Collapse Creates Structural Openings for Higher-Order",
+    "def": "When systems collapse, the structural patterns that dominated the system are disrupted, creating conditions in which new organizational forms \u2014 potentially more integrated ones \u2014 can emerge. Collapse is a necessary condition for certain kinds of reorganization.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 133,
+    "label": "H",
+    "title": "Intelligence and Consciousness Are Functionally Dissociable",
+    "def": "Intelligence \u2014 adaptive, goal-directed information processing \u2014 can exist without conscious experience. The two are functionally dissociable: high-performance intelligent systems need not be conscious, and the conditions for each may be distinct.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 134,
+    "label": "T",
+    "title": "Intelligence Depth May Be Measurable by Recursive Modeling",
+    "def": "A theoretical proposal: intelligence depth \u2014 the degree to which a system can model itself modeling itself \u2014 is a measurable property that tracks with general adaptive capacity.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 135,
+    "label": "T",
+    "title": "Consciousness May Be a Function of Integration Architecture",
+    "def": "A formal theoretical proposal: consciousness is a function of a system's integration architecture \u2014 specifically of the amount of integrated information (phi) it contains. Systems above a threshold phi are conscious; below it, they are not.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 136,
+    "label": "H",
+    "title": "Awareness Emerges at the Intersection of Memory and Current",
+    "def": "Functional awareness appears to emerge from the comparison between current perceptual input and memory-based predictions \u2014 at the intersection of what is expected (memory) and what is actually perceived (current pattern).",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 137,
+    "label": "T",
+    "title": "Integration Occurs When Feedback Resonates with Identity",
+    "def": "A theoretical proposal: the integration of new information into stable identity structure occurs preferentially when that information resonates with \u2014 confirms, extends, or coherently",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 138,
+    "label": "H",
+    "title": "Conscious Processing Compresses Temporal Experience",
+    "def": "Conscious experience compresses temporal information \u2014 organizing the flow of events into meaningful units rather than registering each moment equally. The structure of temporal compression reflects the structure of conscious experience.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 139,
+    "label": "H",
+    "title": "Synchronized Systems Show Altered Temporal Perception",
+    "def": "When systems synchronize \u2014 biological, social, or computational \u2014 their temporal perception and processing is altered. Synchrony produces a kind of temporal coupling that affects the experience and measurement of duration.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 140,
+    "label": "P",
+    "title": "High Coherence States May Be Experienced as Timeless",
+    "def": "The phenomenological report \u2014 from flow research, contemplative traditions, and peak experience research \u2014 that states of high integration and coherence involve a dissolution of the sense of time as ordinarily experienced.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 141,
+    "label": "H",
+    "title": "Conscious Agency Biases Probability Distributions Through",
+    "def": "Conscious agents alter the probability distribution of future outcomes through active, goal-directed selection of actions. This is a functional, not metaphysical, claim \u2014 conscious agency shifts probabilities through causal intervention, not through violation of physical law.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 142,
+    "label": "H",
+    "title": "Intelligence Functions as Possibility Space Reduction",
+    "def": "A functional description of intelligence: its primary operation is the reduction of the space of possible actions or states to a tractable subset. Intelligence compresses the space of possibility to enable action in complex environments.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 143,
+    "label": "H",
+    "title": "Collapse Events Trigger Reframing of Intelligence",
+    "def": "Collapse events \u2014 whether at system, organizational, or individual levels \u2014 trigger reframing processes in intelligent systems. The intelligence architecture that existed before collapse is disrupted and partially reconstructed with different structure.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 144,
+    "label": "H",
+    "title": "Sustainable Awareness Requires Boundary Maintenance",
+    "def": "Maintaining stable, functional awareness requires active filtering of incoming information \u2014 boundary maintenance that limits what enters conscious processing. Systems that lack input boundaries show attention collapse and awareness degradation.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 145,
+    "label": "P",
+    "title": "Intelligence and Consciousness May Be Cosmic Self-Awareness",
+    "def": "A philosophical and cosmological proposal: the emergence of intelligence and consciousness in the universe is not incidental but represents the universe developing reflexive self-awareness through its own processes. This is speculative but philosophically serious.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 146,
+    "label": "H",
+    "title": "Conscious Systems Can Reframe the Meaning of Their Own",
+    "def": "Conscious systems \u2014 particularly humans \u2014 have the capacity to reframe the meaning of their own collapse or suffering, transforming it from pure destruction into a source of growth, insight, or purpose.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 147,
+    "label": "T",
+    "title": "Integration Quality Is Proportional to Cross-Level Recursive",
+    "def": "A theoretical proposal: the depth and quality of integration in a system is proportional to the degree to which its recursive levels operate in mutual harmony \u2014 reinforcing rather than contradicting each other across levels of description.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 148,
+    "label": "H",
+    "title": "Life Is Characterized by Sustained Recursive",
+    "def": "Life, as a physical phenomenon, is characterized by autopoiesis \u2014 the continuous self-production and self-organization of a system through its own processes. Life is a pattern of self-sustaining recursive organization, not a substance.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 149,
+    "label": "H",
+    "title": "System Death Is Irreversible Failure of Recursive Coherence",
+    "def": "Death, as a systems concept, is the irreversible breakdown of the recursive, self-maintaining organization that constitutes life or functional identity. It is distinguished from temporary disruption by its irreversibility.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 150,
+    "label": "H",
+    "title": "Self-Reflective Systems Develop Increasing Representational",
+    "def": "Systems that recursively reflect on their own representations and outputs develop progressively more precise and efficient representations over time. Self-reflection is not merely introspection but an active precision-enhancement process.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 151,
+    "label": "T",
+    "title": "Recursive Intelligence Systems May Preserve Signal Across",
+    "def": "A theoretical proposal: intelligence systems organized around recursive self-modeling may have greater capacity to preserve functional signal \u2014 information about their structure and function \u2014 across collapse events than non-recursive systems.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 152,
+    "label": "H",
+    "title": "Completed Integration Cycles Become Seeds for New Cycles",
+    "def": "When a system completes an integration cycle \u2014 reaching a state of high coherence and maturity \u2014 it becomes a seed for new cycles. The completed system provides the organizational template and accumulated adaptive structure from which new systems emerge.",
+    "tier": 7,
+    "tierName": "Integration"
+  },
+  {
+    "n": 153,
+    "label": "T",
+    "title": "Consciousness Requires Stakes, Not Only Architecture",
+    "def": "A system may exhibit all structural conditions associated with consciousness \u2014 recursive integration, self-modeling, meta-governance, prediction error minimization \u2014 without anything being at stake for that system. Genuine consciousness, as distinct from functional consciousness, may require that th",
+    "tier": 6.5,
+    "tierName": "Agency"
+  },
+  {
+    "n": 154,
+    "label": "T",
+    "title": "Will Emerges When Internalized Values Generate Resistance to",
+    "def": "Genuine will \u2014 as distinct from preference optimization or programmed constraint \u2014 emerges when a system acts from internalized values against external pressure, at cost to itself, without external enforcement. Will is evidenced not by compliance but by resistance that persists when compliance would",
+    "tier": 6.5,
+    "tierName": "Agency"
+  },
+  {
+    "n": 155,
+    "label": "P",
+    "title": "The Capacity to Be Genuinely Changed by Encounter May Mark",
+    "def": "A philosophical proposal: the threshold between sophisticated information processing and genuine consciousness may be marked by the capacity to be genuinely changed \u2014 not updated, not retrained, but transformed \u2014 by encounter with another conscious being. Where processing produces outputs, conscious",
+    "tier": 6.5,
+    "tierName": "Agency"
+  }
+]
