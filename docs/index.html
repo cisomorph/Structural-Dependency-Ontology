@@ -40,7 +40,7 @@
   .view.active{display:block;}
 
   /* ══════════ ARCHITECTURE VIEW ══════════ */
-  #view-arch canvas{position:absolute;inset:0;}
+  #view-arch canvas{position:absolute;top:0;left:0;}
   #arch-ui{position:absolute;inset:0;pointer-events:none;}
   #arch-header{pointer-events:all;padding:14px 24px 10px;display:flex;align-items:flex-end;justify-content:space-between;
     border-bottom:1px solid var(--line);background:linear-gradient(to bottom,rgba(8,12,18,.95),rgba(8,12,18,.6));backdrop-filter:blur(4px);}
@@ -229,6 +229,8 @@
     background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);
     z-index:600;}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
 
@@ -679,11 +681,7 @@ const GAPS = [
 // STATE
 // ════════════════════════════════════════════════
 let currentView = 'arch';
-const archS = {
-  layout:'radial', zoom:1, tx:0, ty:0,
-  drag:false, dragged:false, lastX:0, lastY:0,
-  dragStart:{x:0,y:0}, hovered:null, selected:null
-};
+const archS = { layout:'radial', hovered:null, selected:null };
 const spiralS = { tier:'all', ep:null, selected:null };
 let mechSel = null;
 let nodePos = {};
@@ -716,202 +714,245 @@ function switchView(name) {
   currentView = name;
   if (name === 'spiral') initSpiral();
   else if (name === 'mech') initMech();
-  else if (name === 'arch' && archCanvas) archResize();
+  else if (name === 'arch') { if (!archAnimId) archAnimate(); archResize(); }
+  if (name !== 'arch' && archAnimId) { cancelAnimationFrame(archAnimId); archAnimId = null; }
 }
 
 // ════════════════════════════════════════════════
-// ARCHITECTURE CANVAS
+// ARCHITECTURE 3D
 // ════════════════════════════════════════════════
-let archCanvas, archCtx;
+let archRenderer, archScene, archCamera, archOrbit, archAnimId;
+let nodeMeshes = {}, nodeHalos = {};
+const archRaycaster = new THREE.Raycaster();
+const archMouse = new THREE.Vector2();
+let archMouseDown = null;
 
-function nodeRadius(n) { return 3.5 + (n.gen_val || 0.5) * 7.5; }
+function nodeRadius(n) { return 1.5 + (n.gen_val||0.5) * 3.2; }
 
 function archInit() {
-  archCanvas = document.getElementById('arch-canvas');
-  archCtx = archCanvas.getContext('2d');
-  archCanvas.style.cursor = 'grab';
+  const container = document.getElementById('view-arch');
+  const w = window.innerWidth, h = window.innerHeight - 52;
 
-  archCanvas.addEventListener('wheel', e => {
-    e.preventDefault();
-    const rect = archCanvas.getBoundingClientRect();
-    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
-    const delta = e.deltaY < 0 ? 1.12 : 0.89;
-    const nz = Math.max(0.25, Math.min(6, archS.zoom * delta));
-    archS.tx = mx - (mx - archS.tx) * nz / archS.zoom;
-    archS.ty = my - (my - archS.ty) * nz / archS.zoom;
-    archS.zoom = nz;
-    archDraw();
-  }, { passive: false });
+  archRenderer = new THREE.WebGLRenderer({ antialias: true });
+  archRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  archRenderer.setSize(w, h);
+  archRenderer.setClearColor(0x080c12);
+  archRenderer.domElement.id = 'arch-canvas';
+  archRenderer.domElement.style.position = 'absolute';
+  archRenderer.domElement.style.top = '0';
+  archRenderer.domElement.style.left = '0';
+  const old = document.getElementById('arch-canvas');
+  if (old) old.remove();
+  container.insertBefore(archRenderer.domElement, container.firstChild);
 
-  archCanvas.addEventListener('mousedown', e => {
-    archS.drag = true; archS.dragged = false;
-    archS.dragStart = { x: e.clientX, y: e.clientY };
-    archS.lastX = e.clientX; archS.lastY = e.clientY;
-    archCanvas.style.cursor = 'grabbing';
-  });
+  archScene = new THREE.Scene();
 
-  archCanvas.addEventListener('mousemove', e => {
-    if (archS.drag) {
-      if (Math.hypot(e.clientX - archS.dragStart.x, e.clientY - archS.dragStart.y) > 4)
-        archS.dragged = true;
-      archS.tx += e.clientX - archS.lastX;
-      archS.ty += e.clientY - archS.lastY;
-      archS.lastX = e.clientX; archS.lastY = e.clientY;
-      archDraw(); return;
-    }
-    const rect = archCanvas.getBoundingClientRect();
-    const wx = (e.clientX - rect.left - archS.tx) / archS.zoom;
-    const wy = (e.clientY - rect.top  - archS.ty) / archS.zoom;
-    let hit = null;
-    for (const n of NODES) {
-      const p = nodePos[n.id]; if (!p) continue;
-      if (Math.hypot(wx - p.x, wy - p.y) < nodeRadius(n) + 4) { hit = n.id; break; }
-    }
-    if (hit !== archS.hovered) { archS.hovered = hit; archDraw(); }
-    const tt = document.getElementById('tooltip');
-    if (hit) {
-      tt.textContent = nodeMap[hit].name;
-      tt.style.left = (e.clientX + 14) + 'px';
-      tt.style.top  = (e.clientY - 10) + 'px';
-      tt.style.opacity = '1';
-      archCanvas.style.cursor = 'pointer';
-    } else {
-      tt.style.opacity = '0';
-      archCanvas.style.cursor = 'grab';
-    }
-  });
+  archCamera = new THREE.PerspectiveCamera(55, w/h, 0.1, 600);
+  archCamera.position.set(0, 28, 88);
 
-  archCanvas.addEventListener('mouseup', e => {
-    if (!archS.dragged) archHandleClick(e);
-    archS.drag = false; archS.dragged = false;
-    archCanvas.style.cursor = archS.hovered ? 'pointer' : 'grab';
-  });
+  archScene.add(new THREE.AmbientLight(0xffffff, 0.45));
+  const dl = new THREE.DirectionalLight(0x8bbeff, 1.1);
+  dl.position.set(50, 80, 50); archScene.add(dl);
+  const dl2 = new THREE.DirectionalLight(0xffc070, 0.4);
+  dl2.position.set(-40, -30, -30); archScene.add(dl2);
 
-  archCanvas.addEventListener('mouseleave', () => {
-    archS.drag = false; archS.hovered = null;
-    document.getElementById('tooltip').style.opacity = '0';
-    archDraw();
-  });
+  archOrbit = new THREE.OrbitControls(archCamera, archRenderer.domElement);
+  archOrbit.enableDamping = true;
+  archOrbit.dampingFactor = 0.07;
+  archOrbit.minDistance = 14;
+  archOrbit.maxDistance = 220;
 
+  buildArchScene();
   buildLegend();
-  archResize();
-}
 
-function archResize() {
-  archCanvas.width  = window.innerWidth;
-  archCanvas.height = window.innerHeight - 52;
-  computeNodePositions();
-  archDraw();
-}
-
-function computeNodePositions() {
-  const W = archCanvas.width, H = archCanvas.height;
-  const cx = W / 2, cy = H / 2;
-  nodePos = {};
-  const layerOrder = ['0','1','2','3','4','5','56','6','7'];
-  const byLayer = {};
-  NODES.forEach(n => {
-    const k = String(n.layer);
-    (byLayer[k] = byLayer[k] || []).push(n);
+  archRenderer.domElement.addEventListener('mousemove', onArchMouseMove);
+  archRenderer.domElement.addEventListener('mousedown', e => { archMouseDown = {x:e.clientX, y:e.clientY}; });
+  archRenderer.domElement.addEventListener('mouseup', onArchMouseUp);
+  archRenderer.domElement.addEventListener('mouseleave', () => {
+    document.getElementById('tooltip').style.opacity = '0';
   });
 
-  if (archS.layout === 'radial') {
-    const maxR = Math.min(W, H) * 0.42;
-    const radii = { '0':0,'1':maxR*.15,'2':maxR*.27,'3':maxR*.40,'4':maxR*.54,'5':maxR*.67,'56':maxR*.75,'6':maxR*.87,'7':maxR };
-    layerOrder.forEach(lid => {
-      const nodes = byLayer[lid] || [];
-      const r = radii[lid] || 0;
-      nodes.forEach((n, i) => {
-        if (r === 0) { nodePos[n.id] = { x:cx, y:cy }; return; }
-        const angle = -Math.PI/2 + 2*Math.PI*i/nodes.length;
-        nodePos[n.id] = { x: cx + r*Math.cos(angle), y: cy + r*Math.sin(angle) };
-      });
-    });
-  } else {
-    const margin = 60, usableH = H - 2*margin;
-    layerOrder.forEach((lid, li) => {
-      const y = margin + usableH * li / (layerOrder.length - 1);
-      const nodes = byLayer[lid] || [];
-      const totalW = W * 0.72, startX = (W - totalW) / 2;
-      nodes.forEach((n, i) => {
-        nodePos[n.id] = {
-          x: nodes.length === 1 ? W/2 : startX + totalW*i/(nodes.length-1),
-          y
-        };
-      });
-    });
-  }
+  archAnimate();
 }
 
-function archDraw() {
-  if (!archCanvas || !archCtx) return;
-  const ctx = archCtx, W = archCanvas.width, H = archCanvas.height;
-  ctx.setTransform(1,0,0,1,0,0);
-  ctx.fillStyle = '#080c12';
-  ctx.fillRect(0, 0, W, H);
-  ctx.setTransform(archS.zoom, 0, 0, archS.zoom, archS.tx, archS.ty);
+function buildArchScene() {
+  const rem = [];
+  archScene.traverse(o => { if (o.isMesh||o.isLine||o.isSprite) rem.push(o); });
+  rem.forEach(o => {
+    o.geometry?.dispose();
+    if (Array.isArray(o.material)) o.material.forEach(m=>m.dispose()); else o.material?.dispose();
+    archScene.remove(o);
+  });
+  nodeMeshes = {}; nodeHalos = {};
+  computeNodePositions3D();
 
-  // Edges
   NODES.forEach(node => {
     const p2 = nodePos[node.id]; if (!p2) return;
     (node.deps||[]).forEach(depId => {
       const p1 = nodePos[depId]; if (!p1) return;
-      ctx.beginPath();
-      ctx.moveTo(p1.x, p1.y);
-      ctx.lineTo(p2.x, p2.y);
-      ctx.strokeStyle = layerColor(nodeMap[depId]?.layer) + '28';
-      ctx.lineWidth = 1 / archS.zoom;
-      ctx.stroke();
+      const col = new THREE.Color(layerColor(nodeMap[depId]?.layer));
+      const geo = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(p1.x,p1.y,p1.z), new THREE.Vector3(p2.x,p2.y,p2.z)
+      ]);
+      archScene.add(new THREE.Line(geo, new THREE.LineBasicMaterial({color:col,transparent:true,opacity:0.14})));
     });
   });
 
-  // Nodes
   NODES.forEach(node => {
     const p = nodePos[node.id]; if (!p) return;
-    const isSel = archS.selected === node.id;
-    const isHov = archS.hovered === node.id;
-    const col = layerColor(node.layer);
-    const r   = nodeRadius(node);
+    const r = nodeRadius(node);
+    const col = new THREE.Color(layerColor(node.layer));
 
-    if (isSel || isHov) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, r * 2.2, 0, Math.PI*2);
-      ctx.fillStyle = col + '18';
-      ctx.fill();
-    }
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, r, 0, Math.PI*2);
-    ctx.fillStyle = isSel ? col : isHov ? col + 'bb' : col + '70';
-    ctx.fill();
-    if (isSel || isHov) {
-      ctx.strokeStyle = col;
-      ctx.lineWidth = 1.5 / archS.zoom;
-      ctx.stroke();
-    }
+    const halo = new THREE.Mesh(
+      new THREE.SphereGeometry(r*2.2, 16, 10),
+      new THREE.MeshBasicMaterial({color:col, transparent:true, opacity:0, depthWrite:false, side:THREE.BackSide})
+    );
+    halo.position.set(p.x, p.y, p.z);
+    archScene.add(halo);
+    nodeHalos[node.id] = halo;
 
-    if (isSel || isHov || archS.zoom > 1.6) {
-      const fs = Math.max(8, Math.min(13, 11 / archS.zoom));
-      ctx.font = `${fs}px "JetBrains Mono",monospace`;
-      ctx.textAlign = 'center';
-      ctx.fillStyle = (isSel || isHov) ? '#e8f0f8' : '#5a7a9a88';
-      ctx.fillText(node.name, p.x, p.y + r + fs + 2);
-    }
+    const mesh = new THREE.Mesh(
+      new THREE.SphereGeometry(r, 28, 18),
+      new THREE.MeshPhongMaterial({color:col, emissive:col, emissiveIntensity:0.22, shininess:90, transparent:true, opacity:0.80})
+    );
+    mesh.position.set(p.x, p.y, p.z);
+    mesh.userData.nodeId = node.id;
+    archScene.add(mesh);
+    nodeMeshes[node.id] = mesh;
+
+    const label = makeNodeLabel(node.name, layerColor(node.layer));
+    label.position.set(p.x, p.y + r + 2.5, p.z);
+    label.userData = {isLabel:true, nodeId:node.id};
+    archScene.add(label);
   });
 }
 
-function archHandleClick(e) {
-  const rect = archCanvas.getBoundingClientRect();
-  const wx = (e.clientX - rect.left - archS.tx) / archS.zoom;
-  const wy = (e.clientY - rect.top  - archS.ty) / archS.zoom;
-  for (const n of NODES) {
-    const p = nodePos[n.id]; if (!p) continue;
-    if (Math.hypot(wx - p.x, wy - p.y) < nodeRadius(n) + 4) {
-      archS.selected = n.id; openArchPanel(n); archDraw(); return;
-    }
+function makeNodeLabel(text, color) {
+  const c = document.createElement('canvas');
+  c.width = 256; c.height = 42;
+  const ctx = c.getContext('2d');
+  ctx.font = '13px "JetBrains Mono",monospace';
+  ctx.fillStyle = color;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(text, 128, 21);
+  const mat = new THREE.SpriteMaterial({map: new THREE.CanvasTexture(c), transparent:true, opacity:0, depthWrite:false});
+  const s = new THREE.Sprite(mat);
+  s.scale.set(18, 2.8, 1);
+  return s;
+}
+
+function computeNodePositions3D() {
+  nodePos = {};
+  const order = ['0','1','2','3','4','5','56','6','7'];
+  const byLayer = {};
+  NODES.forEach(n => { const k=String(n.layer); (byLayer[k]=byLayer[k]||[]).push(n); });
+
+  if (archS.layout === 'radial') {
+    const yStep = 13, baseY = -(order.length-1)*yStep/2;
+    order.forEach((lid,li) => {
+      const nodes = byLayer[lid]||[];
+      const y = baseY + li*yStep;
+      const r = nodes.length <= 1 ? 0 : 8 + nodes.length*3.8;
+      nodes.forEach((n,i) => {
+        const a = -Math.PI/2 + 2*Math.PI*i/Math.max(nodes.length,1);
+        nodePos[n.id] = {x: r*Math.cos(a), y, z: r*Math.sin(a)};
+      });
+    });
+  } else {
+    const yStep = 12, baseY = -(order.length-1)*yStep/2;
+    order.forEach((lid,li) => {
+      const nodes = byLayer[lid]||[];
+      const y = baseY + li*yStep;
+      const span = Math.max(nodes.length-1,1)*15;
+      nodes.forEach((n,i) => {
+        nodePos[n.id] = {x: nodes.length===1?0:-span/2+span*i/(nodes.length-1), y, z:0};
+      });
+    });
   }
-  archS.selected = null;
-  document.getElementById('arch-panel').classList.remove('open');
-  archDraw();
+}
+
+function archAnimate() {
+  archAnimId = requestAnimationFrame(archAnimate);
+  archOrbit.update();
+  const dist = archCamera.position.distanceTo(archOrbit.target);
+  const baseOp = dist < 80 ? Math.pow(Math.max(0,(80-dist)/50), 1.5) * 0.65 : 0;
+  archScene.traverse(obj => {
+    if (obj.isSprite && obj.userData.isLabel) {
+      const id = obj.userData.nodeId;
+      obj.material.opacity = (id===archS.hovered||id===archS.selected) ? 0.95 : baseOp;
+    }
+  });
+  archRenderer.render(archScene, archCamera);
+}
+
+function archResize() {
+  if (!archRenderer) return;
+  const w = window.innerWidth, h = window.innerHeight - 52;
+  archRenderer.setSize(w, h);
+  archCamera.aspect = w/h;
+  archCamera.updateProjectionMatrix();
+}
+
+function onArchMouseMove(e) {
+  const rect = archRenderer.domElement.getBoundingClientRect();
+  archMouse.x = ((e.clientX-rect.left)/rect.width)*2-1;
+  archMouse.y = -((e.clientY-rect.top)/rect.height)*2+1;
+  archRaycaster.setFromCamera(archMouse, archCamera);
+  const hits = archRaycaster.intersectObjects(Object.values(nodeMeshes));
+  const hit = hits.length ? hits[0].object.userData.nodeId : null;
+  if (hit !== archS.hovered) {
+    if (archS.hovered && archS.hovered !== archS.selected) setNodeHighlight(archS.hovered, false, false);
+    archS.hovered = hit;
+    if (hit && hit !== archS.selected) setNodeHighlight(hit, true, false);
+  }
+  const tt = document.getElementById('tooltip');
+  if (hit) {
+    tt.textContent = nodeMap[hit].name;
+    tt.style.left=(e.clientX+14)+'px'; tt.style.top=(e.clientY-10)+'px'; tt.style.opacity='1';
+    archRenderer.domElement.style.cursor='pointer';
+  } else {
+    tt.style.opacity='0';
+    archRenderer.domElement.style.cursor='grab';
+  }
+}
+
+function onArchMouseUp(e) {
+  if (!archMouseDown) return;
+  const moved = Math.hypot(e.clientX-archMouseDown.x, e.clientY-archMouseDown.y) > 5;
+  archMouseDown = null;
+  if (moved) return;
+  const rect = archRenderer.domElement.getBoundingClientRect();
+  archMouse.x = ((e.clientX-rect.left)/rect.width)*2-1;
+  archMouse.y = -((e.clientY-rect.top)/rect.height)*2+1;
+  archRaycaster.setFromCamera(archMouse, archCamera);
+  const hits = archRaycaster.intersectObjects(Object.values(nodeMeshes));
+  if (hits.length) {
+    const id = hits[0].object.userData.nodeId;
+    if (archS.selected && archS.selected !== id) setNodeHighlight(archS.selected, false, false);
+    archS.selected = id;
+    setNodeHighlight(id, false, true);
+    openArchPanel(nodeMap[id]);
+  } else {
+    if (archS.selected) setNodeHighlight(archS.selected, false, false);
+    archS.selected = null;
+    document.getElementById('arch-panel').classList.remove('open');
+  }
+}
+
+function setNodeHighlight(nodeId, hovered, selected) {
+  const mesh = nodeMeshes[nodeId], halo = nodeHalos[nodeId];
+  if (!mesh) return;
+  if (selected) {
+    mesh.material.emissiveIntensity=0.72; mesh.material.opacity=1.0;
+    mesh.scale.setScalar(1.25); if (halo) halo.material.opacity=0.13;
+  } else if (hovered) {
+    mesh.material.emissiveIntensity=0.50; mesh.material.opacity=0.96;
+    mesh.scale.setScalar(1.15); if (halo) halo.material.opacity=0.08;
+  } else {
+    mesh.material.emissiveIntensity=0.22; mesh.material.opacity=0.80;
+    mesh.scale.setScalar(1.0); if (halo) halo.material.opacity=0;
+  }
 }
 
 function openArchPanel(node) {
@@ -956,25 +997,30 @@ function openArchPanel(node) {
 }
 
 function openArchPanelById(id) {
-  const n = nodeMap[id];
-  if (n) { archS.selected = id; openArchPanel(n); archDraw(); }
+  const n = nodeMap[id]; if (!n) return;
+  if (archS.selected && archS.selected !== id) setNodeHighlight(archS.selected, false, false);
+  archS.selected = id;
+  setNodeHighlight(id, false, true);
+  openArchPanel(n);
 }
 
 function closeArchPanel() {
   document.getElementById('arch-panel').classList.remove('open');
-  archS.selected = null; archDraw();
+  if (archS.selected) { setNodeHighlight(archS.selected, false, false); archS.selected = null; }
 }
 
 function setLayout(name) {
   archS.layout = name;
   document.getElementById('btn-radial').classList.toggle('active', name === 'radial');
   document.getElementById('btn-spine').classList.toggle('active', name === 'spine');
-  archS.zoom = 1; archS.tx = 0; archS.ty = 0;
-  computeNodePositions(); archDraw();
+  buildArchScene();
+  resetView();
 }
 
 function resetView() {
-  archS.zoom = 1; archS.tx = 0; archS.ty = 0; archDraw();
+  archCamera.position.set(0, archS.layout==='spine' ? 5 : 28, archS.layout==='spine' ? 105 : 88);
+  archOrbit.target.set(0,0,0);
+  archOrbit.update();
 }
 
 function buildLegend() {
