@@ -798,8 +798,8 @@ function archInit() {
 }
 
 function archResize() {
-  archCanvas.width  = archCanvas.offsetWidth  || window.innerWidth;
-  archCanvas.height = archCanvas.offsetHeight || (window.innerHeight - 52);
+  archCanvas.width  = window.innerWidth;
+  archCanvas.height = window.innerHeight - 52;
   computeNodePositions();
   archDraw();
 }
