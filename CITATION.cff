@@ -39,7 +39,7 @@ references:
     authors:
       - family-names: Wilson
         given-names: Christopher R. B.
-    repository-code: "https://github.com/cisomorph/RIFT"
+    repository-code: "https://github.com/cisomorph/rift-cosmology"
     notes: >
       Companion simulation programme testing RIFT/SFT predictions against
       Planck, DESI, SPARC, and gravitational-wave datasets.

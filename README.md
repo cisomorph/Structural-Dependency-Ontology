@@ -104,6 +104,12 @@ papers/
 └── spiral-field-theory/
 
 truth-list/                  # 155 truths with full epistemic labeling
+
+docs/                        # GitHub Pages site
+├── index.html               # Interactive truth browser
+└── truths.json              # Machine-readable truth list
+
+CITATION.cff                 # Citation metadata
 ```
 
 ---
@@ -118,8 +124,8 @@ This relocates the hard problem rather than dissolving it: the question becomes 
 
 ## Related
 
-**[RIFT — Recursive Intelligence-Field Theory](https://github.com/cisomorph/RIFT)**
-The companion simulation programme. Tests the physical predictions of Spiral Field Theory computationally — 110+ simulations against Planck CMB, DESI, SPARC rotation curves, and gravitational-wave datasets.
+**[RIFT — Recursive Intelligence-Field Theory](https://github.com/cisomorph/rift-cosmology)**
+The companion simulation programme. Tests the physical predictions of Spiral Field Theory computationally — 30 simulations (SIM80–SIM110) against Planck CMB, DESI, SPARC rotation curves, and gravitational-wave datasets.
 
 ---
 
